@@ -1,6 +1,7 @@
 platform :ios, '9.0'
 
 use_frameworks!
+workspace 'MWEMR.xcworkspace'
 
 target 'MW EMR' do
     pod 'Alamofire', '~> 4.5'

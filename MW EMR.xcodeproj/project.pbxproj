@@ -548,7 +548,8 @@
 				TargetAttributes = {
 					A62FECD41CC50B5200AC285A = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = C5554T55C5;
+						DevelopmentTeam = G24T9YMR7S;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -1013,12 +1014,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = C5554T55C5;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = G24T9YMR7S;
 				INFOPLIST_FILE = "MW EMR/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.devt.MW-EMR";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "c0619e47-beeb-4a0e-9737-a94c3895b669";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development com.devt.MW-EMR";
 				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Other/MWEMR-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
@@ -1033,13 +1036,15 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = C5554T55C5;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = G24T9YMR7S;
 				INFOPLIST_FILE = "MW EMR/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.devt.MW-EMR";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "15518eb5-4efe-4fdd-bee5-84020373a76b";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.devt.MW-EMR";
 				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Other/MWEMR-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
