@@ -1,0 +1,6 @@
+framework module Pods_MW_EMR {
+  umbrella header "Pods-MW EMR-umbrella.h"
+
+  export *
+  module * { export * }
+}

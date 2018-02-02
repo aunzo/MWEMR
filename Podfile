@@ -19,17 +19,3 @@ target 'MW EMR' do
     pod 'SearchTextField', '~> 1.2'
 end
 
-#post_install do |installer|
-#    installer.pods_project.targets.each do |target|
-#        if  [ "CryptoSwift" ].include?(target.name)
-#            target.build_configurations.each do |config|
-#                config.build_settings['SWIFT_VERSION'] = '3.2'
-#            end
-#            else
-#            target.build_configurations.each do |config|
-#                config.build_settings['SWIFT_VERSION'] = '4.0'
-#            end
-#        end
-#    end
-#end
-
