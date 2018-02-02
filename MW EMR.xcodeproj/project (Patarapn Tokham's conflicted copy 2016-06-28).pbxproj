@@ -1,0 +1,1048 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		27744C3558EBC93EB518E1C0 /* Pods_MW_EMRTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9756FDBBC1C1FEBD4C03D762 /* Pods_MW_EMRTests.framework */; };
+		3A67209D1CC8DFFF000E905D /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A67209C1CC8DFFF000E905D /* MenuViewController.swift */; };
+		3A6720A01CC8E04F000E905D /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A67209F1CC8E04F000E905D /* MenuCollectionViewCell.swift */; };
+		3A6720A31CC8E2B2000E905D /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6720A21CC8E2B2000E905D /* Menu.swift */; };
+		3A6720A61CC8E39C000E905D /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6720A51CC8E39C000E905D /* MenuViewModel.swift */; };
+		3A6720A81CC8E919000E905D /* MedicalUsingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6720A71CC8E919000E905D /* MedicalUsingViewController.swift */; };
+		3A72A6E51D051A40006E2B1C /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A72A6E41D051A40006E2B1C /* MBProgressHUD.m */; };
+		3AA423851D07CFB400ED094A /* ArrayTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA423841D07CFB400ED094A /* ArrayTransform.swift */; };
+		3AA423871D08050C00ED094A /* UIColorWithhexString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA423861D08050C00ED094A /* UIColorWithhexString.swift */; };
+		3AC074BA1D0FE5F4006A9E58 /* ConsultPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC074B91D0FE5F4006A9E58 /* ConsultPageViewController.swift */; };
+		3AC074BC1D0FE605006A9E58 /* ConsultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC074BB1D0FE605006A9E58 /* ConsultViewController.swift */; };
+		3AC074BE1D100105006A9E58 /* MainConsultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC074BD1D100105006A9E58 /* MainConsultViewController.swift */; };
+		3AC16C041CCF6883001EBF7C /* CustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC16C031CCF6883001EBF7C /* CustomerViewController.swift */; };
+		3AC16C061CCF68D9001EBF7C /* CustomerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC16C051CCF68D9001EBF7C /* CustomerTableViewCell.swift */; };
+		496FA6B59C00ACF0D0A2A81B /* Pods_MW_EMR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71B5BC37769E7E297E624B62 /* Pods_MW_EMR.framework */; };
+		A6090A691CFD6FD50083B9FD /* CGPDFDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = A6090A421CFD6FD50083B9FD /* CGPDFDocument.m */; };
+		A6090A6A1CFD6FD50083B9FD /* ReaderConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = A6090A441CFD6FD50083B9FD /* ReaderConstants.m */; };
+		A6090A6B1CFD6FD50083B9FD /* ReaderContentPage.m in Sources */ = {isa = PBXBuildFile; fileRef = A6090A461CFD6FD50083B9FD /* ReaderContentPage.m */; };
+		A6090A6C1CFD6FD50083B9FD /* ReaderContentTile.m in Sources */ = {isa = PBXBuildFile; fileRef = A6090A481CFD6FD50083B9FD /* ReaderContentTile.m */; };
+		A6090A6D1CFD6FD50083B9FD /* ReaderContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6090A4A1CFD6FD50083B9FD /* ReaderContentView.m */; };
+		A6090A6E1CFD6FD50083B9FD /* ReaderDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = A6090A4C1CFD6FD50083B9FD /* ReaderDocument.m */; };
+		A6090A6F1CFD6FD50083B9FD /* ReaderDocumentOutline.m in Sources */ = {isa = PBXBuildFile; fileRef = A6090A4E1CFD6FD50083B9FD /* ReaderDocumentOutline.m */; };
+		A6090A701CFD6FD50083B9FD /* ReaderMainPagebar.m in Sources */ = {isa = PBXBuildFile; fileRef = A6090A501CFD6FD50083B9FD /* ReaderMainPagebar.m */; };
+		A6090A711CFD6FD50083B9FD /* ReaderMainToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = A6090A521CFD6FD50083B9FD /* ReaderMainToolbar.m */; };
+		A6090A721CFD6FD50083B9FD /* ReaderThumbCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A6090A541CFD6FD50083B9FD /* ReaderThumbCache.m */; };
+		A6090A731CFD6FD50083B9FD /* ReaderThumbFetch.m in Sources */ = {isa = PBXBuildFile; fileRef = A6090A561CFD6FD50083B9FD /* ReaderThumbFetch.m */; };
+		A6090A741CFD6FD50083B9FD /* ReaderThumbQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = A6090A581CFD6FD50083B9FD /* ReaderThumbQueue.m */; };
+		A6090A751CFD6FD50083B9FD /* ReaderThumbRender.m in Sources */ = {isa = PBXBuildFile; fileRef = A6090A5A1CFD6FD50083B9FD /* ReaderThumbRender.m */; };
+		A6090A761CFD6FD50083B9FD /* ReaderThumbRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A6090A5C1CFD6FD50083B9FD /* ReaderThumbRequest.m */; };
+		A6090A771CFD6FD50083B9FD /* ReaderThumbsView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6090A5E1CFD6FD50083B9FD /* ReaderThumbsView.m */; };
+		A6090A781CFD6FD50083B9FD /* ReaderThumbView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6090A601CFD6FD50083B9FD /* ReaderThumbView.m */; };
+		A6090A791CFD6FD50083B9FD /* ReaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6090A621CFD6FD50083B9FD /* ReaderViewController.m */; };
+		A6090A7A1CFD6FD50083B9FD /* ThumbsMainToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = A6090A641CFD6FD50083B9FD /* ThumbsMainToolbar.m */; };
+		A6090A7B1CFD6FD50083B9FD /* ThumbsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6090A661CFD6FD50083B9FD /* ThumbsViewController.m */; };
+		A6090A7C1CFD6FD50083B9FD /* UIXToolbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6090A681CFD6FD50083B9FD /* UIXToolbarView.m */; };
+		A6090A7E1CFE76B90083B9FD /* ElearningTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6090A7D1CFE76B90083B9FD /* ElearningTableViewCell.swift */; };
+		A6090A801CFEA11F0083B9FD /* ElearningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6090A7F1CFEA11F0083B9FD /* ElearningViewModel.swift */; };
+		A6090A841CFEA5C00083B9FD /* ElearningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6090A831CFEA5C00083B9FD /* ElearningViewController.swift */; };
+		A6090A861CFEA8730083B9FD /* Elearning.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6090A851CFEA8730083B9FD /* Elearning.swift */; };
+		A6090A8D1CFED54A0083B9FD /* MedicalBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6090A8C1CFED54A0083B9FD /* MedicalBag.swift */; };
+		A6090A8F1CFED55A0083B9FD /* MedicalBagDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6090A8E1CFED55A0083B9FD /* MedicalBagDetail.swift */; };
+		A6090A911CFEE3E70083B9FD /* MedicalBagViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6090A901CFEE3E70083B9FD /* MedicalBagViewModel.swift */; };
+		A6090A931CFEE3F50083B9FD /* MedicalBagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6090A921CFEE3F50083B9FD /* MedicalBagViewController.swift */; };
+		A6213C0C1CE39978004DE62A /* MasterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6213C0B1CE39978004DE62A /* MasterData.swift */; };
+		A6213C0E1CE39A19004DE62A /* MasterDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6213C0D1CE39A19004DE62A /* MasterDataViewModel.swift */; };
+		A62FECD91CC50B5200AC285A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62FECD81CC50B5200AC285A /* AppDelegate.swift */; };
+		A62FECDE1CC50B5200AC285A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A62FECDC1CC50B5200AC285A /* Main.storyboard */; };
+		A62FECE01CC50B5200AC285A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A62FECDF1CC50B5200AC285A /* Assets.xcassets */; };
+		A62FECE31CC50B5200AC285A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A62FECE11CC50B5200AC285A /* LaunchScreen.storyboard */; };
+		A62FECEE1CC50B5300AC285A /* MW_EMRTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62FECED1CC50B5300AC285A /* MW_EMRTests.swift */; };
+		A62FECFA1CC7D2E200AC285A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62FECF91CC7D2E200AC285A /* LoginViewController.swift */; };
+		A63746DC1D0F07AA00ECDD5E /* SummaryReportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63746DB1D0F07AA00ECDD5E /* SummaryReportViewModel.swift */; };
+		A63746DE1D0F09C600ECDD5E /* SummaryReportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63746DD1D0F09C600ECDD5E /* SummaryReportTableViewCell.swift */; };
+		A638C5841D08771600C06B5D /* BagDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A638C5831D08771600C06B5D /* BagDetailTableViewCell.swift */; };
+		A638C5861D09BB9D00C06B5D /* ConsultResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = A638C5851D09BB9D00C06B5D /* ConsultResult.swift */; };
+		A6778A231CE733AF009C2405 /* EmployeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6778A221CE733AF009C2405 /* EmployeeTableViewCell.swift */; };
+		A6778A271CE7385B009C2405 /* FlightPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6778A261CE7385B009C2405 /* FlightPerson.swift */; };
+		A6778A281CE73A61009C2405 /* FlightPersonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6778A241CE73823009C2405 /* FlightPersonViewModel.swift */; };
+		A6B175A51CCB6FB0006D0516 /* MedicalUsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B175A41CCB6FB0006D0516 /* MedicalUsing.swift */; };
+		A6B175A71CCB738A006D0516 /* MasterTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B175A61CCB738A006D0516 /* MasterTabbarViewController.swift */; };
+		A6B7ECDA1CDF727D00D90458 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B7ECD91CDF727D00D90458 /* Constant.swift */; };
+		A6B7ECE01CDF8E2500D90458 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B7ECDF1CDF8E2500D90458 /* Results.swift */; };
+		A6BF2BCA1CDB879D009DC7D7 /* PreFlightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BF2BC91CDB879D009DC7D7 /* PreFlightViewController.swift */; };
+		A6E2B99E1CDE497D002DA034 /* SummaryReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E2B99D1CDE497D002DA034 /* SummaryReport.swift */; };
+		A6E2B9A01CDE4BA1002DA034 /* Intervention.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E2B99F1CDE4BA1002DA034 /* Intervention.swift */; };
+		A6E2B9A21CDE4C22002DA034 /* PreFlightViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E2B9A11CDE4C22002DA034 /* PreFlightViewModel.swift */; };
+		A6E2B9A41CDE4F08002DA034 /* InterventionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E2B9A31CDE4F08002DA034 /* InterventionViewModel.swift */; };
+		A6E2B9A61CDE5114002DA034 /* InterventionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E2B9A51CDE5114002DA034 /* InterventionTableViewCell.swift */; };
+		A6E2B9A91CDF4AA8002DA034 /* PreFlight.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6E2B9A71CDF4AA8002DA034 /* PreFlight.storyboard */; };
+		A6E2B9AC1CDF4B77002DA034 /* Assessment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6E2B9AA1CDF4B77002DA034 /* Assessment.storyboard */; };
+		A6E2B9AF1CDF4C17002DA034 /* ProgessionRecord.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6E2B9AD1CDF4C17002DA034 /* ProgessionRecord.storyboard */; };
+		A6E2B9B21CDF4C66002DA034 /* MedicalUsing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6E2B9B01CDF4C66002DA034 /* MedicalUsing.storyboard */; };
+		A6E2B9B51CDF4C91002DA034 /* Consult.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6E2B9B31CDF4C91002DA034 /* Consult.storyboard */; };
+		A6E2B9B81CDF686F002DA034 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E2B9B71CDF686F002DA034 /* Customer.swift */; };
+		A6E2B9BA1CDF6B62002DA034 /* CustomerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E2B9B91CDF6B62002DA034 /* CustomerViewModel.swift */; };
+		A6E2B9BD1CDF701A002DA034 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E2B9BC1CDF701A002DA034 /* Connection.swift */; };
+		A6ED68311CE0E85700828148 /* CustomerSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6ED68301CE0E85700828148 /* CustomerSingleton.swift */; };
+		A6EDF92B1D18367500099A1F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EDF92A1D18367500099A1F /* User.swift */; };
+		A6EDF92E1D183C0100099A1F /* Suggestion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6EDF92C1D183C0100099A1F /* Suggestion.storyboard */; };
+		A6EDF9301D183C4900099A1F /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EDF92F1D183C4900099A1F /* UserViewModel.swift */; };
+		A6EDF9321D183EA500099A1F /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EDF9311D183EA500099A1F /* LoadingViewController.swift */; };
+		A6EDF9341D1ADD5D00099A1F /* result.json in Resources */ = {isa = PBXBuildFile; fileRef = A6EDF9331D1ADD5D00099A1F /* result.json */; };
+		A6EDF9361D1AE27200099A1F /* caseResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EDF9351D1AE27200099A1F /* caseResultViewModel.swift */; };
+		A6FB51281CCBB838004986D8 /* MedicalUsingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FB51271CCBB838004986D8 /* MedicalUsingTableViewCell.swift */; };
+		A6FB512A1CCBB93C004986D8 /* MedicalUsingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FB51291CCBB93C004986D8 /* MedicalUsingViewModel.swift */; };
+		A6FB512F1CCBCCB9004986D8 /* AddMedicalUsingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FB512E1CCBCCB9004986D8 /* AddMedicalUsingViewController.swift */; };
+		A6FB51311CCCA6B0004986D8 /* ProgressionRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FB51301CCCA6B0004986D8 /* ProgressionRecordViewController.swift */; };
+		A6FB51331CCCBDCC004986D8 /* ProgressionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FB51321CCCBDCC004986D8 /* ProgressionTableViewCell.swift */; };
+		A6FB51351CCCBEB0004986D8 /* Progression.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FB51341CCCBEB0004986D8 /* Progression.swift */; };
+		A6FB51371CCCBF9E004986D8 /* ProgressionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FB51361CCCBF9E004986D8 /* ProgressionViewModel.swift */; };
+		A6FB51391CCD0743004986D8 /* AddProgressionRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FB51381CCD0743004986D8 /* AddProgressionRecordViewController.swift */; };
+		A6FB513B1CCE6745004986D8 /* AssessmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FB513A1CCE6745004986D8 /* AssessmentViewController.swift */; };
+		A6FEC37A1CFEE8FF00425438 /* MedicalBagTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FEC3791CFEE8FF00425438 /* MedicalBagTableViewCell.swift */; };
+		A6FEC37C1CFEF01D00425438 /* BagDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FEC37B1CFEF01D00425438 /* BagDetailViewController.swift */; };
+		A6FEC37E1CFEF02800425438 /* SuggestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FEC37D1CFEF02800425438 /* SuggestionViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A62FECEA1CC50B5300AC285A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A62FECCD1CC50B5200AC285A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A62FECD41CC50B5200AC285A;
+			remoteInfo = "MW EMR";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3A67209C1CC8DFFF000E905D /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		3A67209F1CC8E04F000E905D /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
+		3A6720A21CC8E2B2000E905D /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		3A6720A51CC8E39C000E905D /* MenuViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
+		3A6720A71CC8E919000E905D /* MedicalUsingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalUsingViewController.swift; sourceTree = "<group>"; };
+		3A72A6E31D051A40006E2B1C /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		3A72A6E41D051A40006E2B1C /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		3AA423841D07CFB400ED094A /* ArrayTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayTransform.swift; sourceTree = "<group>"; };
+		3AA423861D08050C00ED094A /* UIColorWithhexString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorWithhexString.swift; sourceTree = "<group>"; };
+		3AC074B91D0FE5F4006A9E58 /* ConsultPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsultPageViewController.swift; sourceTree = "<group>"; };
+		3AC074BB1D0FE605006A9E58 /* ConsultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsultViewController.swift; sourceTree = "<group>"; };
+		3AC074BD1D100105006A9E58 /* MainConsultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainConsultViewController.swift; sourceTree = "<group>"; };
+		3AC16C031CCF6883001EBF7C /* CustomerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerViewController.swift; sourceTree = "<group>"; };
+		3AC16C051CCF68D9001EBF7C /* CustomerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerTableViewCell.swift; sourceTree = "<group>"; };
+		420AF85D842AE506B781C2E4 /* Pods-MW EMR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MW EMR.release.xcconfig"; path = "Pods/Target Support Files/Pods-MW EMR/Pods-MW EMR.release.xcconfig"; sourceTree = "<group>"; };
+		462BE28B92C977EE800C8A97 /* Pods-MW EMRTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MW EMRTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MW EMRTests/Pods-MW EMRTests.release.xcconfig"; sourceTree = "<group>"; };
+		5ABE842167E9B9AB2E3B3F63 /* Pods-MW EMRTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MW EMRTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MW EMRTests/Pods-MW EMRTests.debug.xcconfig"; sourceTree = "<group>"; };
+		71B5BC37769E7E297E624B62 /* Pods_MW_EMR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MW_EMR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9756FDBBC1C1FEBD4C03D762 /* Pods_MW_EMRTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MW_EMRTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6090A411CFD6FD50083B9FD /* CGPDFDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPDFDocument.h; sourceTree = "<group>"; };
+		A6090A421CFD6FD50083B9FD /* CGPDFDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGPDFDocument.m; sourceTree = "<group>"; };
+		A6090A431CFD6FD50083B9FD /* ReaderConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReaderConstants.h; sourceTree = "<group>"; };
+		A6090A441CFD6FD50083B9FD /* ReaderConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReaderConstants.m; sourceTree = "<group>"; };
+		A6090A451CFD6FD50083B9FD /* ReaderContentPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReaderContentPage.h; sourceTree = "<group>"; };
+		A6090A461CFD6FD50083B9FD /* ReaderContentPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReaderContentPage.m; sourceTree = "<group>"; };
+		A6090A471CFD6FD50083B9FD /* ReaderContentTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReaderContentTile.h; sourceTree = "<group>"; };
+		A6090A481CFD6FD50083B9FD /* ReaderContentTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReaderContentTile.m; sourceTree = "<group>"; };
+		A6090A491CFD6FD50083B9FD /* ReaderContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReaderContentView.h; sourceTree = "<group>"; };
+		A6090A4A1CFD6FD50083B9FD /* ReaderContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReaderContentView.m; sourceTree = "<group>"; };
+		A6090A4B1CFD6FD50083B9FD /* ReaderDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReaderDocument.h; sourceTree = "<group>"; };
+		A6090A4C1CFD6FD50083B9FD /* ReaderDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReaderDocument.m; sourceTree = "<group>"; };
+		A6090A4D1CFD6FD50083B9FD /* ReaderDocumentOutline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReaderDocumentOutline.h; sourceTree = "<group>"; };
+		A6090A4E1CFD6FD50083B9FD /* ReaderDocumentOutline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReaderDocumentOutline.m; sourceTree = "<group>"; };
+		A6090A4F1CFD6FD50083B9FD /* ReaderMainPagebar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReaderMainPagebar.h; sourceTree = "<group>"; };
+		A6090A501CFD6FD50083B9FD /* ReaderMainPagebar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReaderMainPagebar.m; sourceTree = "<group>"; };
+		A6090A511CFD6FD50083B9FD /* ReaderMainToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReaderMainToolbar.h; sourceTree = "<group>"; };
+		A6090A521CFD6FD50083B9FD /* ReaderMainToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReaderMainToolbar.m; sourceTree = "<group>"; };
+		A6090A531CFD6FD50083B9FD /* ReaderThumbCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReaderThumbCache.h; sourceTree = "<group>"; };
+		A6090A541CFD6FD50083B9FD /* ReaderThumbCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReaderThumbCache.m; sourceTree = "<group>"; };
+		A6090A551CFD6FD50083B9FD /* ReaderThumbFetch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReaderThumbFetch.h; sourceTree = "<group>"; };
+		A6090A561CFD6FD50083B9FD /* ReaderThumbFetch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReaderThumbFetch.m; sourceTree = "<group>"; };
+		A6090A571CFD6FD50083B9FD /* ReaderThumbQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReaderThumbQueue.h; sourceTree = "<group>"; };
+		A6090A581CFD6FD50083B9FD /* ReaderThumbQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReaderThumbQueue.m; sourceTree = "<group>"; };
+		A6090A591CFD6FD50083B9FD /* ReaderThumbRender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReaderThumbRender.h; sourceTree = "<group>"; };
+		A6090A5A1CFD6FD50083B9FD /* ReaderThumbRender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReaderThumbRender.m; sourceTree = "<group>"; };
+		A6090A5B1CFD6FD50083B9FD /* ReaderThumbRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReaderThumbRequest.h; sourceTree = "<group>"; };
+		A6090A5C1CFD6FD50083B9FD /* ReaderThumbRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReaderThumbRequest.m; sourceTree = "<group>"; };
+		A6090A5D1CFD6FD50083B9FD /* ReaderThumbsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReaderThumbsView.h; sourceTree = "<group>"; };
+		A6090A5E1CFD6FD50083B9FD /* ReaderThumbsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReaderThumbsView.m; sourceTree = "<group>"; };
+		A6090A5F1CFD6FD50083B9FD /* ReaderThumbView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReaderThumbView.h; sourceTree = "<group>"; };
+		A6090A601CFD6FD50083B9FD /* ReaderThumbView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReaderThumbView.m; sourceTree = "<group>"; };
+		A6090A611CFD6FD50083B9FD /* ReaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReaderViewController.h; sourceTree = "<group>"; };
+		A6090A621CFD6FD50083B9FD /* ReaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReaderViewController.m; sourceTree = "<group>"; };
+		A6090A631CFD6FD50083B9FD /* ThumbsMainToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThumbsMainToolbar.h; sourceTree = "<group>"; };
+		A6090A641CFD6FD50083B9FD /* ThumbsMainToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThumbsMainToolbar.m; sourceTree = "<group>"; };
+		A6090A651CFD6FD50083B9FD /* ThumbsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThumbsViewController.h; sourceTree = "<group>"; };
+		A6090A661CFD6FD50083B9FD /* ThumbsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThumbsViewController.m; sourceTree = "<group>"; };
+		A6090A671CFD6FD50083B9FD /* UIXToolbarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIXToolbarView.h; sourceTree = "<group>"; };
+		A6090A681CFD6FD50083B9FD /* UIXToolbarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIXToolbarView.m; sourceTree = "<group>"; };
+		A6090A7D1CFE76B90083B9FD /* ElearningTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElearningTableViewCell.swift; sourceTree = "<group>"; };
+		A6090A7F1CFEA11F0083B9FD /* ElearningViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElearningViewModel.swift; sourceTree = "<group>"; };
+		A6090A831CFEA5C00083B9FD /* ElearningViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElearningViewController.swift; sourceTree = "<group>"; };
+		A6090A851CFEA8730083B9FD /* Elearning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Elearning.swift; sourceTree = "<group>"; };
+		A6090A891CFEC3E70083B9FD /* MWEMR-PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MWEMR-PrefixHeader.pch"; sourceTree = "<group>"; };
+		A6090A8C1CFED54A0083B9FD /* MedicalBag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalBag.swift; sourceTree = "<group>"; };
+		A6090A8E1CFED55A0083B9FD /* MedicalBagDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalBagDetail.swift; sourceTree = "<group>"; };
+		A6090A901CFEE3E70083B9FD /* MedicalBagViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalBagViewModel.swift; sourceTree = "<group>"; };
+		A6090A921CFEE3F50083B9FD /* MedicalBagViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalBagViewController.swift; sourceTree = "<group>"; };
+		A6213C0B1CE39978004DE62A /* MasterData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterData.swift; sourceTree = "<group>"; };
+		A6213C0D1CE39A19004DE62A /* MasterDataViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterDataViewModel.swift; sourceTree = "<group>"; };
+		A62FECD51CC50B5200AC285A /* MW EMR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MW EMR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A62FECD81CC50B5200AC285A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
+		A62FECDD1CC50B5200AC285A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A62FECDF1CC50B5200AC285A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A62FECE21CC50B5200AC285A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A62FECE41CC50B5300AC285A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A62FECE91CC50B5300AC285A /* MW EMRTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MW EMRTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A62FECED1CC50B5300AC285A /* MW_EMRTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MW_EMRTests.swift; sourceTree = "<group>"; };
+		A62FECEF1CC50B5300AC285A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A62FECF91CC7D2E200AC285A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A63746DB1D0F07AA00ECDD5E /* SummaryReportViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryReportViewModel.swift; sourceTree = "<group>"; };
+		A63746DD1D0F09C600ECDD5E /* SummaryReportTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryReportTableViewCell.swift; sourceTree = "<group>"; };
+		A638C5831D08771600C06B5D /* BagDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BagDetailTableViewCell.swift; sourceTree = "<group>"; };
+		A638C5851D09BB9D00C06B5D /* ConsultResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsultResult.swift; sourceTree = "<group>"; };
+		A6778A221CE733AF009C2405 /* EmployeeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeTableViewCell.swift; sourceTree = "<group>"; };
+		A6778A241CE73823009C2405 /* FlightPersonViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightPersonViewModel.swift; sourceTree = "<group>"; };
+		A6778A261CE7385B009C2405 /* FlightPerson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightPerson.swift; sourceTree = "<group>"; };
+		A6B175A41CCB6FB0006D0516 /* MedicalUsing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalUsing.swift; sourceTree = "<group>"; };
+		A6B175A61CCB738A006D0516 /* MasterTabbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterTabbarViewController.swift; sourceTree = "<group>"; };
+		A6B7ECD91CDF727D00D90458 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		A6B7ECDF1CDF8E2500D90458 /* Results.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
+		A6BF2BC91CDB879D009DC7D7 /* PreFlightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreFlightViewController.swift; sourceTree = "<group>"; };
+		A6E2B99D1CDE497D002DA034 /* SummaryReport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryReport.swift; sourceTree = "<group>"; };
+		A6E2B99F1CDE4BA1002DA034 /* Intervention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Intervention.swift; sourceTree = "<group>"; };
+		A6E2B9A11CDE4C22002DA034 /* PreFlightViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreFlightViewModel.swift; sourceTree = "<group>"; };
+		A6E2B9A31CDE4F08002DA034 /* InterventionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterventionViewModel.swift; sourceTree = "<group>"; };
+		A6E2B9A51CDE5114002DA034 /* InterventionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterventionTableViewCell.swift; sourceTree = "<group>"; };
+		A6E2B9A81CDF4AA8002DA034 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/PreFlight.storyboard; sourceTree = "<group>"; };
+		A6E2B9AB1CDF4B77002DA034 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Assessment.storyboard; sourceTree = "<group>"; };
+		A6E2B9AE1CDF4C17002DA034 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ProgessionRecord.storyboard; sourceTree = "<group>"; };
+		A6E2B9B11CDF4C66002DA034 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MedicalUsing.storyboard; sourceTree = "<group>"; };
+		A6E2B9B41CDF4C91002DA034 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Consult.storyboard; sourceTree = "<group>"; };
+		A6E2B9B71CDF686F002DA034 /* Customer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
+		A6E2B9B91CDF6B62002DA034 /* CustomerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerViewModel.swift; sourceTree = "<group>"; };
+		A6E2B9BC1CDF701A002DA034 /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
+		A6ED68301CE0E85700828148 /* CustomerSingleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerSingleton.swift; sourceTree = "<group>"; };
+		A6EDF92A1D18367500099A1F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A6EDF92D1D183C0100099A1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Suggestion.storyboard; sourceTree = "<group>"; };
+		A6EDF92F1D183C4900099A1F /* UserViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		A6EDF9311D183EA500099A1F /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		A6EDF9331D1ADD5D00099A1F /* result.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = result.json; sourceTree = "<group>"; };
+		A6EDF9351D1AE27200099A1F /* caseResultViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = caseResultViewModel.swift; sourceTree = "<group>"; };
+		A6FB51271CCBB838004986D8 /* MedicalUsingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalUsingTableViewCell.swift; sourceTree = "<group>"; };
+		A6FB51291CCBB93C004986D8 /* MedicalUsingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalUsingViewModel.swift; sourceTree = "<group>"; };
+		A6FB512E1CCBCCB9004986D8 /* AddMedicalUsingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMedicalUsingViewController.swift; sourceTree = "<group>"; };
+		A6FB51301CCCA6B0004986D8 /* ProgressionRecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressionRecordViewController.swift; sourceTree = "<group>"; };
+		A6FB51321CCCBDCC004986D8 /* ProgressionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressionTableViewCell.swift; sourceTree = "<group>"; };
+		A6FB51341CCCBEB0004986D8 /* Progression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Progression.swift; sourceTree = "<group>"; };
+		A6FB51361CCCBF9E004986D8 /* ProgressionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressionViewModel.swift; sourceTree = "<group>"; };
+		A6FB51381CCD0743004986D8 /* AddProgressionRecordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProgressionRecordViewController.swift; sourceTree = "<group>"; };
+		A6FB513A1CCE6745004986D8 /* AssessmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssessmentViewController.swift; sourceTree = "<group>"; };
+		A6FEC3791CFEE8FF00425438 /* MedicalBagTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalBagTableViewCell.swift; sourceTree = "<group>"; };
+		A6FEC37B1CFEF01D00425438 /* BagDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BagDetailViewController.swift; sourceTree = "<group>"; };
+		A6FEC37D1CFEF02800425438 /* SuggestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionViewController.swift; sourceTree = "<group>"; };
+		B8275EE0B6F3DF93223D976B /* Pods-MW EMR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MW EMR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MW EMR/Pods-MW EMR.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A62FECD21CC50B5200AC285A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				496FA6B59C00ACF0D0A2A81B /* Pods_MW_EMR.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A62FECE61CC50B5300AC285A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27744C3558EBC93EB518E1C0 /* Pods_MW_EMRTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3A67209E1CC8E01C000E905D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3A67209F1CC8E04F000E905D /* MenuCollectionViewCell.swift */,
+				A6FB51271CCBB838004986D8 /* MedicalUsingTableViewCell.swift */,
+				A6FB51321CCCBDCC004986D8 /* ProgressionTableViewCell.swift */,
+				3AC16C051CCF68D9001EBF7C /* CustomerTableViewCell.swift */,
+				A6E2B9A51CDE5114002DA034 /* InterventionTableViewCell.swift */,
+				A6778A221CE733AF009C2405 /* EmployeeTableViewCell.swift */,
+				A6090A7D1CFE76B90083B9FD /* ElearningTableViewCell.swift */,
+				A6FEC3791CFEE8FF00425438 /* MedicalBagTableViewCell.swift */,
+				A638C5831D08771600C06B5D /* BagDetailTableViewCell.swift */,
+				A63746DD1D0F09C600ECDD5E /* SummaryReportTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		3A6720A11CC8E29A000E905D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3AA423841D07CFB400ED094A /* ArrayTransform.swift */,
+				3A6720A21CC8E2B2000E905D /* Menu.swift */,
+				A6B175A41CCB6FB0006D0516 /* MedicalUsing.swift */,
+				A6FB51341CCCBEB0004986D8 /* Progression.swift */,
+				A6E2B99D1CDE497D002DA034 /* SummaryReport.swift */,
+				A6E2B99F1CDE4BA1002DA034 /* Intervention.swift */,
+				A6E2B9B71CDF686F002DA034 /* Customer.swift */,
+				A6213C0B1CE39978004DE62A /* MasterData.swift */,
+				A6778A261CE7385B009C2405 /* FlightPerson.swift */,
+				A6090A851CFEA8730083B9FD /* Elearning.swift */,
+				A6090A8C1CFED54A0083B9FD /* MedicalBag.swift */,
+				A6090A8E1CFED55A0083B9FD /* MedicalBagDetail.swift */,
+				A638C5851D09BB9D00C06B5D /* ConsultResult.swift */,
+				A6EDF92A1D18367500099A1F /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3A6720A41CC8E373000E905D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3A6720A51CC8E39C000E905D /* MenuViewModel.swift */,
+				A6FB51291CCBB93C004986D8 /* MedicalUsingViewModel.swift */,
+				A6FB51361CCCBF9E004986D8 /* ProgressionViewModel.swift */,
+				A6E2B9A11CDE4C22002DA034 /* PreFlightViewModel.swift */,
+				A6E2B9A31CDE4F08002DA034 /* InterventionViewModel.swift */,
+				A6E2B9B91CDF6B62002DA034 /* CustomerViewModel.swift */,
+				A6778A241CE73823009C2405 /* FlightPersonViewModel.swift */,
+				A6090A7F1CFEA11F0083B9FD /* ElearningViewModel.swift */,
+				A6090A901CFEE3E70083B9FD /* MedicalBagViewModel.swift */,
+				A63746DB1D0F07AA00ECDD5E /* SummaryReportViewModel.swift */,
+				A6213C0D1CE39A19004DE62A /* MasterDataViewModel.swift */,
+				A6EDF92F1D183C4900099A1F /* UserViewModel.swift */,
+				A6EDF9351D1AE27200099A1F /* caseResultViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		61DECCF01A8EED38CB4005ED /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B8275EE0B6F3DF93223D976B /* Pods-MW EMR.debug.xcconfig */,
+				420AF85D842AE506B781C2E4 /* Pods-MW EMR.release.xcconfig */,
+				5ABE842167E9B9AB2E3B3F63 /* Pods-MW EMRTests.debug.xcconfig */,
+				462BE28B92C977EE800C8A97 /* Pods-MW EMRTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A6090A401CFD6FD50083B9FD /* pdfviewer */ = {
+			isa = PBXGroup;
+			children = (
+				A6090A411CFD6FD50083B9FD /* CGPDFDocument.h */,
+				A6090A421CFD6FD50083B9FD /* CGPDFDocument.m */,
+				A6090A431CFD6FD50083B9FD /* ReaderConstants.h */,
+				A6090A441CFD6FD50083B9FD /* ReaderConstants.m */,
+				A6090A451CFD6FD50083B9FD /* ReaderContentPage.h */,
+				A6090A461CFD6FD50083B9FD /* ReaderContentPage.m */,
+				A6090A471CFD6FD50083B9FD /* ReaderContentTile.h */,
+				A6090A481CFD6FD50083B9FD /* ReaderContentTile.m */,
+				A6090A491CFD6FD50083B9FD /* ReaderContentView.h */,
+				A6090A4A1CFD6FD50083B9FD /* ReaderContentView.m */,
+				A6090A4B1CFD6FD50083B9FD /* ReaderDocument.h */,
+				A6090A4C1CFD6FD50083B9FD /* ReaderDocument.m */,
+				A6090A4D1CFD6FD50083B9FD /* ReaderDocumentOutline.h */,
+				A6090A4E1CFD6FD50083B9FD /* ReaderDocumentOutline.m */,
+				A6090A4F1CFD6FD50083B9FD /* ReaderMainPagebar.h */,
+				A6090A501CFD6FD50083B9FD /* ReaderMainPagebar.m */,
+				A6090A511CFD6FD50083B9FD /* ReaderMainToolbar.h */,
+				A6090A521CFD6FD50083B9FD /* ReaderMainToolbar.m */,
+				A6090A531CFD6FD50083B9FD /* ReaderThumbCache.h */,
+				A6090A541CFD6FD50083B9FD /* ReaderThumbCache.m */,
+				A6090A551CFD6FD50083B9FD /* ReaderThumbFetch.h */,
+				A6090A561CFD6FD50083B9FD /* ReaderThumbFetch.m */,
+				A6090A571CFD6FD50083B9FD /* ReaderThumbQueue.h */,
+				A6090A581CFD6FD50083B9FD /* ReaderThumbQueue.m */,
+				A6090A591CFD6FD50083B9FD /* ReaderThumbRender.h */,
+				A6090A5A1CFD6FD50083B9FD /* ReaderThumbRender.m */,
+				A6090A5B1CFD6FD50083B9FD /* ReaderThumbRequest.h */,
+				A6090A5C1CFD6FD50083B9FD /* ReaderThumbRequest.m */,
+				A6090A5D1CFD6FD50083B9FD /* ReaderThumbsView.h */,
+				A6090A5E1CFD6FD50083B9FD /* ReaderThumbsView.m */,
+				A6090A5F1CFD6FD50083B9FD /* ReaderThumbView.h */,
+				A6090A601CFD6FD50083B9FD /* ReaderThumbView.m */,
+				A6090A611CFD6FD50083B9FD /* ReaderViewController.h */,
+				A6090A621CFD6FD50083B9FD /* ReaderViewController.m */,
+				A6090A631CFD6FD50083B9FD /* ThumbsMainToolbar.h */,
+				A6090A641CFD6FD50083B9FD /* ThumbsMainToolbar.m */,
+				A6090A651CFD6FD50083B9FD /* ThumbsViewController.h */,
+				A6090A661CFD6FD50083B9FD /* ThumbsViewController.m */,
+				A6090A671CFD6FD50083B9FD /* UIXToolbarView.h */,
+				A6090A681CFD6FD50083B9FD /* UIXToolbarView.m */,
+			);
+			name = pdfviewer;
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		A62FECCC1CC50B5200AC285A = {
+			isa = PBXGroup;
+			children = (
+				A62FECD71CC50B5200AC285A /* MW EMR */,
+				A62FECEC1CC50B5300AC285A /* MW EMRTests */,
+				A62FECD61CC50B5200AC285A /* Products */,
+				61DECCF01A8EED38CB4005ED /* Pods */,
+				F5908CA074E9AA3519DE8B11 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A62FECD61CC50B5200AC285A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A62FECD51CC50B5200AC285A /* MW EMR.app */,
+				A62FECE91CC50B5300AC285A /* MW EMRTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A62FECD71CC50B5200AC285A /* MW EMR */ = {
+			isa = PBXGroup;
+			children = (
+				A6E2B9BB1CDF6FD3002DA034 /* Other */,
+				3A6720A11CC8E29A000E905D /* Model */,
+				3A6720A41CC8E373000E905D /* ViewModel */,
+				A62FECF81CC7D29100AC285A /* ViewController */,
+				A6E2B9B61CDF4D4A002DA034 /* View */,
+				3A67209E1CC8E01C000E905D /* Cell */,
+				A62FECDF1CC50B5200AC285A /* Assets.xcassets */,
+				A62FECE41CC50B5300AC285A /* Info.plist */,
+			);
+			path = "MW EMR";
+			sourceTree = "<group>";
+		};
+		A62FECEC1CC50B5300AC285A /* MW EMRTests */ = {
+			isa = PBXGroup;
+			children = (
+				A62FECED1CC50B5300AC285A /* MW_EMRTests.swift */,
+				A62FECEF1CC50B5300AC285A /* Info.plist */,
+			);
+			path = "MW EMRTests";
+			sourceTree = "<group>";
+		};
+		A62FECF81CC7D29100AC285A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A62FECD81CC50B5200AC285A /* AppDelegate.swift */,
+				A62FECF91CC7D2E200AC285A /* LoginViewController.swift */,
+				3A67209C1CC8DFFF000E905D /* MenuViewController.swift */,
+				A6B175A61CCB738A006D0516 /* MasterTabbarViewController.swift */,
+				3A6720A71CC8E919000E905D /* MedicalUsingViewController.swift */,
+				A6FB512E1CCBCCB9004986D8 /* AddMedicalUsingViewController.swift */,
+				A6FB51301CCCA6B0004986D8 /* ProgressionRecordViewController.swift */,
+				A6FB51381CCD0743004986D8 /* AddProgressionRecordViewController.swift */,
+				A6FB513A1CCE6745004986D8 /* AssessmentViewController.swift */,
+				3AC16C031CCF6883001EBF7C /* CustomerViewController.swift */,
+				A6BF2BC91CDB879D009DC7D7 /* PreFlightViewController.swift */,
+				A6090A831CFEA5C00083B9FD /* ElearningViewController.swift */,
+				A6090A921CFEE3F50083B9FD /* MedicalBagViewController.swift */,
+				A6FEC37B1CFEF01D00425438 /* BagDetailViewController.swift */,
+				A6FEC37D1CFEF02800425438 /* SuggestionViewController.swift */,
+				3AC074B91D0FE5F4006A9E58 /* ConsultPageViewController.swift */,
+				3AC074BB1D0FE605006A9E58 /* ConsultViewController.swift */,
+				3AC074BD1D100105006A9E58 /* MainConsultViewController.swift */,
+				A6EDF9311D183EA500099A1F /* LoadingViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		A6E2B9B61CDF4D4A002DA034 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A62FECDC1CC50B5200AC285A /* Main.storyboard */,
+				A6EDF92C1D183C0100099A1F /* Suggestion.storyboard */,
+				A6E2B9B31CDF4C91002DA034 /* Consult.storyboard */,
+				A6E2B9B01CDF4C66002DA034 /* MedicalUsing.storyboard */,
+				A6E2B9AD1CDF4C17002DA034 /* ProgessionRecord.storyboard */,
+				A6E2B9AA1CDF4B77002DA034 /* Assessment.storyboard */,
+				A6E2B9A71CDF4AA8002DA034 /* PreFlight.storyboard */,
+				A62FECE11CC50B5200AC285A /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		A6E2B9BB1CDF6FD3002DA034 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				A6EDF9331D1ADD5D00099A1F /* result.json */,
+				3AA423861D08050C00ED094A /* UIColorWithhexString.swift */,
+				3A72A6E31D051A40006E2B1C /* MBProgressHUD.h */,
+				3A72A6E41D051A40006E2B1C /* MBProgressHUD.m */,
+				A6090A401CFD6FD50083B9FD /* pdfviewer */,
+				A6E2B9BC1CDF701A002DA034 /* Connection.swift */,
+				A6B7ECD91CDF727D00D90458 /* Constant.swift */,
+				A6B7ECDF1CDF8E2500D90458 /* Results.swift */,
+				A6ED68301CE0E85700828148 /* CustomerSingleton.swift */,
+				A6090A891CFEC3E70083B9FD /* MWEMR-PrefixHeader.pch */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		F5908CA074E9AA3519DE8B11 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				71B5BC37769E7E297E624B62 /* Pods_MW_EMR.framework */,
+				9756FDBBC1C1FEBD4C03D762 /* Pods_MW_EMRTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A62FECD41CC50B5200AC285A /* MW EMR */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A62FECF21CC50B5300AC285A /* Build configuration list for PBXNativeTarget "MW EMR" */;
+			buildPhases = (
+				04449F49D093FF89847F6C4C /* [CP] Check Pods Manifest.lock */,
+				A62FECD11CC50B5200AC285A /* Sources */,
+				A62FECD21CC50B5200AC285A /* Frameworks */,
+				A62FECD31CC50B5200AC285A /* Resources */,
+				4CB6BE4B22DD3B6B58AE3229 /* [CP] Embed Pods Frameworks */,
+				15EEDAC91F40B3A618FD2B39 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MW EMR";
+			productName = "MW EMR";
+			productReference = A62FECD51CC50B5200AC285A /* MW EMR.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A62FECE81CC50B5300AC285A /* MW EMRTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A62FECF51CC50B5300AC285A /* Build configuration list for PBXNativeTarget "MW EMRTests" */;
+			buildPhases = (
+				790E1E29DD602C325D0B09B5 /* [CP] Check Pods Manifest.lock */,
+				A62FECE51CC50B5300AC285A /* Sources */,
+				A62FECE61CC50B5300AC285A /* Frameworks */,
+				A62FECE71CC50B5300AC285A /* Resources */,
+				41F50C6F2F64F2F10D56D083 /* [CP] Embed Pods Frameworks */,
+				D3211EBCAD165944B8BFCE3D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A62FECEB1CC50B5300AC285A /* PBXTargetDependency */,
+			);
+			name = "MW EMRTests";
+			productName = "MW EMRTests";
+			productReference = A62FECE91CC50B5300AC285A /* MW EMRTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A62FECCD1CC50B5200AC285A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = AunzNuBee;
+				TargetAttributes = {
+					A62FECD41CC50B5200AC285A = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 76342YDHK9;
+					};
+					A62FECE81CC50B5300AC285A = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = A62FECD41CC50B5200AC285A;
+					};
+				};
+			};
+			buildConfigurationList = A62FECD01CC50B5200AC285A /* Build configuration list for PBXProject "MW EMR" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A62FECCC1CC50B5200AC285A;
+			productRefGroup = A62FECD61CC50B5200AC285A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A62FECD41CC50B5200AC285A /* MW EMR */,
+				A62FECE81CC50B5300AC285A /* MW EMRTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A62FECD31CC50B5200AC285A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6EDF9341D1ADD5D00099A1F /* result.json in Resources */,
+				A6E2B9A91CDF4AA8002DA034 /* PreFlight.storyboard in Resources */,
+				A6E2B9B51CDF4C91002DA034 /* Consult.storyboard in Resources */,
+				A6E2B9B21CDF4C66002DA034 /* MedicalUsing.storyboard in Resources */,
+				A62FECE31CC50B5200AC285A /* LaunchScreen.storyboard in Resources */,
+				A6EDF92E1D183C0100099A1F /* Suggestion.storyboard in Resources */,
+				A6E2B9AF1CDF4C17002DA034 /* ProgessionRecord.storyboard in Resources */,
+				A62FECE01CC50B5200AC285A /* Assets.xcassets in Resources */,
+				A62FECDE1CC50B5200AC285A /* Main.storyboard in Resources */,
+				A6E2B9AC1CDF4B77002DA034 /* Assessment.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A62FECE71CC50B5300AC285A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		04449F49D093FF89847F6C4C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		15EEDAC91F40B3A618FD2B39 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MW EMR/Pods-MW EMR-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		41F50C6F2F64F2F10D56D083 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MW EMRTests/Pods-MW EMRTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4CB6BE4B22DD3B6B58AE3229 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MW EMR/Pods-MW EMR-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		790E1E29DD602C325D0B09B5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D3211EBCAD165944B8BFCE3D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MW EMRTests/Pods-MW EMRTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A62FECD11CC50B5200AC285A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6E2B9A61CDE5114002DA034 /* InterventionTableViewCell.swift in Sources */,
+				A6FB51351CCCBEB0004986D8 /* Progression.swift in Sources */,
+				A6EDF9361D1AE27200099A1F /* caseResultViewModel.swift in Sources */,
+				3AC074BC1D0FE605006A9E58 /* ConsultViewController.swift in Sources */,
+				A6B175A71CCB738A006D0516 /* MasterTabbarViewController.swift in Sources */,
+				A6213C0C1CE39978004DE62A /* MasterData.swift in Sources */,
+				A6090A751CFD6FD50083B9FD /* ReaderThumbRender.m in Sources */,
+				A6B7ECE01CDF8E2500D90458 /* Results.swift in Sources */,
+				A6778A231CE733AF009C2405 /* EmployeeTableViewCell.swift in Sources */,
+				A638C5841D08771600C06B5D /* BagDetailTableViewCell.swift in Sources */,
+				A638C5861D09BB9D00C06B5D /* ConsultResult.swift in Sources */,
+				A62FECFA1CC7D2E200AC285A /* LoginViewController.swift in Sources */,
+				3A67209D1CC8DFFF000E905D /* MenuViewController.swift in Sources */,
+				A6E2B9A21CDE4C22002DA034 /* PreFlightViewModel.swift in Sources */,
+				A6B175A51CCB6FB0006D0516 /* MedicalUsing.swift in Sources */,
+				A6090A761CFD6FD50083B9FD /* ReaderThumbRequest.m in Sources */,
+				A62FECD91CC50B5200AC285A /* AppDelegate.swift in Sources */,
+				A63746DC1D0F07AA00ECDD5E /* SummaryReportViewModel.swift in Sources */,
+				A6213C0E1CE39A19004DE62A /* MasterDataViewModel.swift in Sources */,
+				A6090A711CFD6FD50083B9FD /* ReaderMainToolbar.m in Sources */,
+				A6090A6A1CFD6FD50083B9FD /* ReaderConstants.m in Sources */,
+				A6FB51331CCCBDCC004986D8 /* ProgressionTableViewCell.swift in Sources */,
+				A6FB51391CCD0743004986D8 /* AddProgressionRecordViewController.swift in Sources */,
+				3A6720A61CC8E39C000E905D /* MenuViewModel.swift in Sources */,
+				3A6720A81CC8E919000E905D /* MedicalUsingViewController.swift in Sources */,
+				A6FEC37A1CFEE8FF00425438 /* MedicalBagTableViewCell.swift in Sources */,
+				A6090A6B1CFD6FD50083B9FD /* ReaderContentPage.m in Sources */,
+				A6090A701CFD6FD50083B9FD /* ReaderMainPagebar.m in Sources */,
+				A6FB513B1CCE6745004986D8 /* AssessmentViewController.swift in Sources */,
+				A6090A791CFD6FD50083B9FD /* ReaderViewController.m in Sources */,
+				3A72A6E51D051A40006E2B1C /* MBProgressHUD.m in Sources */,
+				A6090A731CFD6FD50083B9FD /* ReaderThumbFetch.m in Sources */,
+				3A6720A01CC8E04F000E905D /* MenuCollectionViewCell.swift in Sources */,
+				A6E2B99E1CDE497D002DA034 /* SummaryReport.swift in Sources */,
+				A6E2B9A41CDE4F08002DA034 /* InterventionViewModel.swift in Sources */,
+				A6090A931CFEE3F50083B9FD /* MedicalBagViewController.swift in Sources */,
+				A6090A7B1CFD6FD50083B9FD /* ThumbsViewController.m in Sources */,
+				A6778A281CE73A61009C2405 /* FlightPersonViewModel.swift in Sources */,
+				A6FB51311CCCA6B0004986D8 /* ProgressionRecordViewController.swift in Sources */,
+				A6090A801CFEA11F0083B9FD /* ElearningViewModel.swift in Sources */,
+				3AC074BA1D0FE5F4006A9E58 /* ConsultPageViewController.swift in Sources */,
+				A6B7ECDA1CDF727D00D90458 /* Constant.swift in Sources */,
+				A6EDF92B1D18367500099A1F /* User.swift in Sources */,
+				A6090A911CFEE3E70083B9FD /* MedicalBagViewModel.swift in Sources */,
+				A6090A741CFD6FD50083B9FD /* ReaderThumbQueue.m in Sources */,
+				A6FEC37C1CFEF01D00425438 /* BagDetailViewController.swift in Sources */,
+				A6090A861CFEA8730083B9FD /* Elearning.swift in Sources */,
+				A6E2B9A01CDE4BA1002DA034 /* Intervention.swift in Sources */,
+				A6FB51281CCBB838004986D8 /* MedicalUsingTableViewCell.swift in Sources */,
+				A6090A691CFD6FD50083B9FD /* CGPDFDocument.m in Sources */,
+				A6090A6E1CFD6FD50083B9FD /* ReaderDocument.m in Sources */,
+				A6EDF9321D183EA500099A1F /* LoadingViewController.swift in Sources */,
+				A6090A6F1CFD6FD50083B9FD /* ReaderDocumentOutline.m in Sources */,
+				3AC16C041CCF6883001EBF7C /* CustomerViewController.swift in Sources */,
+				A6090A781CFD6FD50083B9FD /* ReaderThumbView.m in Sources */,
+				3AC16C061CCF68D9001EBF7C /* CustomerTableViewCell.swift in Sources */,
+				A6778A271CE7385B009C2405 /* FlightPerson.swift in Sources */,
+				A6FEC37E1CFEF02800425438 /* SuggestionViewController.swift in Sources */,
+				A6090A721CFD6FD50083B9FD /* ReaderThumbCache.m in Sources */,
+				A6ED68311CE0E85700828148 /* CustomerSingleton.swift in Sources */,
+				A6BF2BCA1CDB879D009DC7D7 /* PreFlightViewController.swift in Sources */,
+				A6FB51371CCCBF9E004986D8 /* ProgressionViewModel.swift in Sources */,
+				A6090A8D1CFED54A0083B9FD /* MedicalBag.swift in Sources */,
+				3AC074BE1D100105006A9E58 /* MainConsultViewController.swift in Sources */,
+				A63746DE1D0F09C600ECDD5E /* SummaryReportTableViewCell.swift in Sources */,
+				A6FB512A1CCBB93C004986D8 /* MedicalUsingViewModel.swift in Sources */,
+				A6090A841CFEA5C00083B9FD /* ElearningViewController.swift in Sources */,
+				3AA423871D08050C00ED094A /* UIColorWithhexString.swift in Sources */,
+				A6090A6C1CFD6FD50083B9FD /* ReaderContentTile.m in Sources */,
+				A6090A7C1CFD6FD50083B9FD /* UIXToolbarView.m in Sources */,
+				A6E2B9BA1CDF6B62002DA034 /* CustomerViewModel.swift in Sources */,
+				A6090A7A1CFD6FD50083B9FD /* ThumbsMainToolbar.m in Sources */,
+				A6E2B9B81CDF686F002DA034 /* Customer.swift in Sources */,
+				A6090A771CFD6FD50083B9FD /* ReaderThumbsView.m in Sources */,
+				A6090A7E1CFE76B90083B9FD /* ElearningTableViewCell.swift in Sources */,
+				A6EDF9301D183C4900099A1F /* UserViewModel.swift in Sources */,
+				3A6720A31CC8E2B2000E905D /* Menu.swift in Sources */,
+				A6E2B9BD1CDF701A002DA034 /* Connection.swift in Sources */,
+				A6090A8F1CFED55A0083B9FD /* MedicalBagDetail.swift in Sources */,
+				A6FB512F1CCBCCB9004986D8 /* AddMedicalUsingViewController.swift in Sources */,
+				3AA423851D07CFB400ED094A /* ArrayTransform.swift in Sources */,
+				A6090A6D1CFD6FD50083B9FD /* ReaderContentView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A62FECE51CC50B5300AC285A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A62FECEE1CC50B5300AC285A /* MW_EMRTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A62FECEB1CC50B5300AC285A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A62FECD41CC50B5200AC285A /* MW EMR */;
+			targetProxy = A62FECEA1CC50B5300AC285A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A62FECDC1CC50B5200AC285A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A62FECDD1CC50B5200AC285A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A62FECE11CC50B5200AC285A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A62FECE21CC50B5200AC285A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A6E2B9A71CDF4AA8002DA034 /* PreFlight.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A6E2B9A81CDF4AA8002DA034 /* Base */,
+			);
+			name = PreFlight.storyboard;
+			sourceTree = "<group>";
+		};
+		A6E2B9AA1CDF4B77002DA034 /* Assessment.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A6E2B9AB1CDF4B77002DA034 /* Base */,
+			);
+			name = Assessment.storyboard;
+			sourceTree = "<group>";
+		};
+		A6E2B9AD1CDF4C17002DA034 /* ProgessionRecord.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A6E2B9AE1CDF4C17002DA034 /* Base */,
+			);
+			name = ProgessionRecord.storyboard;
+			sourceTree = "<group>";
+		};
+		A6E2B9B01CDF4C66002DA034 /* MedicalUsing.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A6E2B9B11CDF4C66002DA034 /* Base */,
+			);
+			name = MedicalUsing.storyboard;
+			sourceTree = "<group>";
+		};
+		A6E2B9B31CDF4C91002DA034 /* Consult.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A6E2B9B41CDF4C91002DA034 /* Base */,
+			);
+			name = Consult.storyboard;
+			sourceTree = "<group>";
+		};
+		A6EDF92C1D183C0100099A1F /* Suggestion.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A6EDF92D1D183C0100099A1F /* Base */,
+			);
+			name = Suggestion.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A62FECF01CC50B5300AC285A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		A62FECF11CC50B5300AC285A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A62FECF31CC50B5300AC285A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8275EE0B6F3DF93223D976B /* Pods-MW EMR.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Pornchai Amornsrijiratorn (76342YDHK9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Pornchai Amornsrijiratorn (76342YDHK9)";
+				INFOPLIST_FILE = "MW EMR/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.devt.MW-EMR";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "743072b0-fcc1-444d-8ad4-70504532eaee";
+				SWIFT_OBJC_BRIDGING_HEADER = "MW EMR/Other/MWEMR-PrefixHeader.pch";
+			};
+			name = Debug;
+		};
+		A62FECF41CC50B5300AC285A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 420AF85D842AE506B781C2E4 /* Pods-MW EMR.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Pornchai Amornsrijiratorn (76342YDHK9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Pornchai Amornsrijiratorn (76342YDHK9)";
+				INFOPLIST_FILE = "MW EMR/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.devt.MW-EMR";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "743072b0-fcc1-444d-8ad4-70504532eaee";
+				SWIFT_OBJC_BRIDGING_HEADER = "MW EMR/Other/MWEMR-PrefixHeader.pch";
+			};
+			name = Release;
+		};
+		A62FECF61CC50B5300AC285A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5ABE842167E9B9AB2E3B3F63 /* Pods-MW EMRTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "MW EMRTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.me.MW-EMRTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MW EMR.app/MW EMR";
+			};
+			name = Debug;
+		};
+		A62FECF71CC50B5300AC285A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 462BE28B92C977EE800C8A97 /* Pods-MW EMRTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "MW EMRTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.me.MW-EMRTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MW EMR.app/MW EMR";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A62FECD01CC50B5200AC285A /* Build configuration list for PBXProject "MW EMR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A62FECF01CC50B5300AC285A /* Debug */,
+				A62FECF11CC50B5300AC285A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A62FECF21CC50B5300AC285A /* Build configuration list for PBXNativeTarget "MW EMR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A62FECF31CC50B5300AC285A /* Debug */,
+				A62FECF41CC50B5300AC285A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A62FECF51CC50B5300AC285A /* Build configuration list for PBXNativeTarget "MW EMRTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A62FECF61CC50B5300AC285A /* Debug */,
+				A62FECF71CC50B5300AC285A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A62FECCD1CC50B5200AC285A /* Project object */;
+}
