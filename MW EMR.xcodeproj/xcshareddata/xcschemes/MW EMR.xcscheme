@@ -29,6 +29,16 @@
       language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3AA023242025EE6C006CEA66"
+               BuildableName = "MWEMRUITest.xctest"
+               BlueprintName = "MWEMRUITest"
+               ReferencedContainer = "container:MW EMR.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

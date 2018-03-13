@@ -14,6 +14,8 @@
 		3A6720A31CC8E2B2000E905D /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6720A21CC8E2B2000E905D /* Menu.swift */; };
 		3A6720A61CC8E39C000E905D /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6720A51CC8E39C000E905D /* MenuViewModel.swift */; };
 		3A6720A81CC8E919000E905D /* MedicalUsingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6720A71CC8E919000E905D /* MedicalUsingViewController.swift */; };
+		3AA023282025EE6C006CEA66 /* MWEMRUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA023272025EE6C006CEA66 /* MWEMRUITest.swift */; };
+		3AA023302025EE90006CEA66 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA0232F2025EE8F006CEA66 /* SnapshotHelper.swift */; };
 		3AA423851D07CFB400ED094A /* ArrayTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA423841D07CFB400ED094A /* ArrayTransform.swift */; };
 		3AA423871D08050C00ED094A /* UIColorWithhexString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA423861D08050C00ED094A /* UIColorWithhexString.swift */; };
 		3AC074BA1D0FE5F4006A9E58 /* ConsultPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC074B91D0FE5F4006A9E58 /* ConsultPageViewController.swift */; };
@@ -120,6 +122,16 @@
 		A6FEC37E1CFEF02800425438 /* SuggestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FEC37D1CFEF02800425438 /* SuggestionViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		3AA0232A2025EE6C006CEA66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A62FECCD1CC50B5200AC285A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A62FECD41CC50B5200AC285A;
+			remoteInfo = "MW EMR";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		3A1E22C71EAF04AB00C86D74 /* MWEMR-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MWEMR-Bridging-Header.h"; sourceTree = "<group>"; };
 		3A5B63F11D25043200350989 /* CaseResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaseResult.swift; sourceTree = "<group>"; };
@@ -128,6 +140,10 @@
 		3A6720A21CC8E2B2000E905D /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		3A6720A51CC8E39C000E905D /* MenuViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
 		3A6720A71CC8E919000E905D /* MedicalUsingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalUsingViewController.swift; sourceTree = "<group>"; };
+		3AA023252025EE6C006CEA66 /* MWEMRUITest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MWEMRUITest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AA023272025EE6C006CEA66 /* MWEMRUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWEMRUITest.swift; sourceTree = "<group>"; };
+		3AA023292025EE6C006CEA66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AA0232F2025EE8F006CEA66 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		3AA423841D07CFB400ED094A /* ArrayTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayTransform.swift; sourceTree = "<group>"; };
 		3AA423861D08050C00ED094A /* UIColorWithhexString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorWithhexString.swift; sourceTree = "<group>"; };
 		3AC074B91D0FE5F4006A9E58 /* ConsultPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsultPageViewController.swift; sourceTree = "<group>"; };
@@ -260,6 +276,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3AA023222025EE6C006CEA66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A62FECD21CC50B5200AC285A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -330,6 +353,16 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		3AA023262025EE6C006CEA66 /* MWEMRUITest */ = {
+			isa = PBXGroup;
+			children = (
+				3AA0232F2025EE8F006CEA66 /* SnapshotHelper.swift */,
+				3AA023272025EE6C006CEA66 /* MWEMRUITest.swift */,
+				3AA023292025EE6C006CEA66 /* Info.plist */,
+			);
+			path = MWEMRUITest;
+			sourceTree = "<group>";
+		};
 		61DECCF01A8EED38CB4005ED /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -391,6 +424,7 @@
 			isa = PBXGroup;
 			children = (
 				A62FECD71CC50B5200AC285A /* MW EMR */,
+				3AA023262025EE6C006CEA66 /* MWEMRUITest */,
 				A62FECD61CC50B5200AC285A /* Products */,
 				61DECCF01A8EED38CB4005ED /* Pods */,
 				F5908CA074E9AA3519DE8B11 /* Frameworks */,
@@ -401,6 +435,7 @@
 			isa = PBXGroup;
 			children = (
 				A62FECD51CC50B5200AC285A /* MW EMR.app */,
+				3AA023252025EE6C006CEA66 /* MWEMRUITest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -513,6 +548,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		3AA023242025EE6C006CEA66 /* MWEMRUITest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AA0232E2025EE6C006CEA66 /* Build configuration list for PBXNativeTarget "MWEMRUITest" */;
+			buildPhases = (
+				3AA023212025EE6C006CEA66 /* Sources */,
+				3AA023222025EE6C006CEA66 /* Frameworks */,
+				3AA023232025EE6C006CEA66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3AA0232B2025EE6C006CEA66 /* PBXTargetDependency */,
+			);
+			name = MWEMRUITest;
+			productName = MWEMRUITest;
+			productReference = 3AA023252025EE6C006CEA66 /* MWEMRUITest.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		A62FECD41CC50B5200AC285A /* MW EMR */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A62FECF21CC50B5300AC285A /* Build configuration list for PBXNativeTarget "MW EMR" */;
@@ -526,6 +579,7 @@
 				15EEDAC91F40B3A618FD2B39 /* [CP] Copy Pods Resources */,
 				E37D8266B1AC92B9DFE41EE4 /* 📦 Embed Pods Frameworks */,
 				3A047AE6B4F573EBAB20C910 /* 📦 Copy Pods Resources */,
+				3AA023202024C4E0006CEA66 /* Run Fabric */,
 			);
 			buildRules = (
 			);
@@ -542,10 +596,16 @@
 		A62FECCD1CC50B5200AC285A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0730;
+				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = AunzNuBee;
 				TargetAttributes = {
+					3AA023242025EE6C006CEA66 = {
+						CreatedOnToolsVersion = 9.2;
+						DevelopmentTeam = G24T9YMR7S;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A62FECD41CC50B5200AC285A;
+					};
 					A62FECD41CC50B5200AC285A = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = G24T9YMR7S;
@@ -567,11 +627,19 @@
 			projectRoot = "";
 			targets = (
 				A62FECD41CC50B5200AC285A /* MW EMR */,
+				3AA023242025EE6C006CEA66 /* MWEMRUITest */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3AA023232025EE6C006CEA66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A62FECD31CC50B5200AC285A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -636,6 +704,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MW EMR/Pods-MW EMR-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		3AA023202024C4E0006CEA66 /* Run Fabric */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Fabric";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run cf7357b13e13fc8ea0f1347cfce7eef3723dcdb6 304daa17d7b6c21f4361a772edb368650821292cce4f86d687a69bf807ebb108";
 		};
 		4CB6BE4B22DD3B6B58AE3229 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -727,6 +809,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3AA023212025EE6C006CEA66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AA023282025EE6C006CEA66 /* MWEMRUITest.swift in Sources */,
+				3AA023302025EE90006CEA66 /* SnapshotHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A62FECD11CC50B5200AC285A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -836,6 +927,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		3AA0232B2025EE6C006CEA66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A62FECD41CC50B5200AC285A /* MW EMR */;
+			targetProxy = 3AA0232A2025EE6C006CEA66 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		A62FECDC1CC50B5200AC285A /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -904,6 +1003,53 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		3AA0232C2025EE6C006CEA66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G24T9YMR7S;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = MWEMRUITest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.devt.mobile.MWEMRUITest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "056cb9b2-3687-4803-81b4-512faeac3049";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "MW EMR";
+			};
+			name = Debug;
+		};
+		3AA0232D2025EE6C006CEA66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G24T9YMR7S;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = MWEMRUITest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.devt.mobile.MWEMRUITest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "056cb9b2-3687-4803-81b4-512faeac3049";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "MW EMR";
+			};
+			name = Release;
+		};
 		A62FECF01CC50B5300AC285A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1015,6 +1161,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 17;
 				DEVELOPMENT_TEAM = G24T9YMR7S;
 				INFOPLIST_FILE = "MW EMR/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1026,6 +1173,8 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Other/MWEMR-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 2;
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -1038,23 +1187,35 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 17;
 				DEVELOPMENT_TEAM = G24T9YMR7S;
 				INFOPLIST_FILE = "MW EMR/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.devt.MW-EMR";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "15518eb5-4efe-4fdd-bee5-84020373a76b";
-				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.devt.MW-EMR";
+				PROVISIONING_PROFILE = "17168fc1-3a3e-417b-bb00-4f88eebce856";
+				PROVISIONING_PROFILE_SPECIFIER = "match AdHoc com.devt.MW-EMR";
 				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Other/MWEMR-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 2;
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3AA0232E2025EE6C006CEA66 /* Build configuration list for PBXNativeTarget "MWEMRUITest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AA0232C2025EE6C006CEA66 /* Debug */,
+				3AA0232D2025EE6C006CEA66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A62FECD01CC50B5200AC285A /* Build configuration list for PBXProject "MW EMR" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

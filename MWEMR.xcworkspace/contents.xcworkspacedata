@@ -7,9 +7,16 @@
       <FileRef
          location = "group:Fastfile.swift">
       </FileRef>
+      <FileRef
+         location = "group:Snapfile.swift">
+      </FileRef>
       <Group
          location = "group:screenshots"
          name = "screenshots">
+         <Group
+            location = "container:"
+            name = "en-US">
+         </Group>
          <FileRef
             location = "group:README.txt">
          </FileRef>
@@ -120,6 +127,12 @@
       </FileRef>
       <FileRef
          location = "group:Deliverfile.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Matchfile.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Scanfile.swift">
       </FileRef>
       <Group
          location = "group:metadata"

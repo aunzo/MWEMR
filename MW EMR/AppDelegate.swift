@@ -1,6 +1,8 @@
 import UIKit
 import RealmSwift
 import IQKeyboardManagerSwift
+import Fabric
+import Crashlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -11,8 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var config = Realm.Configuration()
         
         config.schemaVersion = 3
-        
-//        IQKeyboardManager.sharedManager().enable = true
+        Fabric.with([Crashlytics.self])
         Realm.Configuration.defaultConfiguration = config
         
         return true

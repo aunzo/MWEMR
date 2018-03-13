@@ -2,8 +2,11 @@ PODS:
   - ActionSheetPicker-3.0 (2.3.0)
   - Alamofire (4.5.1)
   - ALCameraViewController (3.0.2)
+  - Crashlytics (3.10.1):
+    - Fabric (~> 1.7.5)
   - CryptoSwift (0.8.1)
   - DACircularProgress (2.3.1)
+  - Fabric (1.7.5)
   - IQKeyboardManagerSwift (5.0.6)
   - Material (2.12.16):
     - Material/Core (= 2.12.16)
@@ -41,7 +44,9 @@ DEPENDENCIES:
   - ActionSheetPicker-3.0 (~> 2.3)
   - Alamofire (~> 4.5)
   - ALCameraViewController
+  - Crashlytics
   - CryptoSwift
+  - Fabric
   - IQKeyboardManagerSwift (~> 5.0)
   - Material (~> 2.12)
   - MGSwipeTableCell (~> 1.6)
@@ -57,8 +62,10 @@ SPEC CHECKSUMS:
   ActionSheetPicker-3.0: eef157d75e151f255c5333d26656c7fbfe905a51
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
   ALCameraViewController: 1edce3497633f0df138523645ed1228961ee2eab
+  Crashlytics: aee1a064cbbf99b32efa3f056a5f458d846bc8ff
   CryptoSwift: 4b07d5b508c1eb67bfa314a727b705f8048a85de
   DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
+  Fabric: ae7146a5f505ea370a1e44820b4b1dc8890e2890
   IQKeyboardManagerSwift: 02bfbb0dff71c66d0ab77d80d25dfce0c3717735
   Material: 00fdeb39f5d97dc19f09b160e8b95c47e2ed708d
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
@@ -74,6 +81,6 @@ SPEC CHECKSUMS:
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SearchTextField: a5bb7e4c33affadb115afdbe8100d84ef10a8024
 
-PODFILE CHECKSUM: 8658cf52cfa7d33be181a635c3c8784e8c48e42a
+PODFILE CHECKSUM: 560dca9695e44a422c5362ff7099942a70aaca33
 
 COCOAPODS: 1.4.0

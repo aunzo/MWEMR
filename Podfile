@@ -18,5 +18,7 @@ target 'MW EMR' do
     pod 'ALCameraViewController'
     pod 'MWPhotoBrowser', '~> 2.1'
     pod 'SearchTextField', '~> 1.2'
+    pod 'Fabric'
+    pod 'Crashlytics'
 end
 
