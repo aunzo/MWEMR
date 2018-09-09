@@ -491,23 +491,33 @@ extension PreFlightViewController
     }
     
     //MARK:- intervention method
-    @IBAction func addIntervention(sender:UIButton) {
-        if self.interventionTextField.text != "" && self.interventionDateTextField.text != "" {
-            if interventionItem == nil {
-                self.interventionViewModel.addOrUpdate(item: ["intervention":self.interventionTextField.text!,"date":self.interventionDateTextField.text!])
-            }else{
-                let id = interventionItem!["id"]
-                self.interventionViewModel.addOrUpdate(item: ["interventionId":id!,"intervention":self.interventionTextField.text!,"date":self.interventionDateTextField.text!])
-            }
-            
-        }else{
+    @IBAction func addIntervention(sender:UIButton)
+    {
+        guard let interventionText = interventionTextField.text?.mapEmptyStringToNil(),
+            let interventionDate = interventionDateTextField.text?.mapEmptyStringToNil() else
+        {
             let alertEdit = UIAlertController(title: "Can't Add Intervention", message: "Please input all data.", preferredStyle: UIAlertControllerStyle.alert)
             alertEdit.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.default, handler: { (alert) in
             }))
             
             present(alertEdit, animated: true, completion: nil)
+            
+            return
         }
         
+        let intervention = Intervention()
+        intervention.intervention = interventionText
+        intervention.date = interventionDate
+        
+        if let id = Int(interventionItem?["id"] ?? "")
+        {
+            intervention.interventionId = id
+            interventionViewModel.update(item: intervention)
+        }
+        else
+        {
+            interventionViewModel.add(item: intervention)
+        }
     }
     
     func actionInterventionData(action : DataAction,indexPath : IndexPath){
@@ -1061,20 +1071,31 @@ extension PreFlightViewController
     //MARK:- Other Physical
     
     @IBAction func addPosition(sender: AnyObject) {
-        if self.otherPhysicalNameTextField.text != "" && self.otherPhycicalPositionButton.titleLabel?.text != "" {
-            if flightPositionItem == nil {
-                self.flightPersonViewModel.addOrUpdate(item: ["name":self.otherPhysicalNameTextField.text!,"position":self.otherPhycicalPositionButton.titleLabel!.text!])
-            }else{
-                let id = flightPositionItem!["id"]
-                self.flightPersonViewModel.addOrUpdate(item: ["flightPersonId":id!,"name":self.otherPhysicalNameTextField.text!,"position":otherPhycicalPositionButton.titleLabel!.text!])
-            }
-            
-        }else{
+        guard let name = otherPhysicalNameTextField.text?.mapEmptyStringToNil(),
+            let position = otherPhycicalPositionButton.titleLabel?.text?.mapEmptyStringToNil() else
+        {
             let alertEdit = UIAlertController(title: "Can't Add Flight Person", message: "Please input all data.", preferredStyle: UIAlertControllerStyle.alert)
             alertEdit.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.default, handler: { (alert) in
             }))
             
             present(alertEdit, animated: true, completion: nil)
+            
+            return
+        }
+        
+        let person = FlightPerson()
+        
+        person.name = name
+        person.position = position
+        
+        if let id = Int(flightPositionItem?["id"] ?? "")
+        {
+            person.flightPersonId = id
+            flightPersonViewModel.update(item: person)
+        }
+        else
+        {
+            flightPersonViewModel.add(item: person)
         }
     }
     
@@ -1384,16 +1405,23 @@ extension PreFlightViewController
             //intervention 
             if self.interventionViewModel.numberOfItems() == 0 {
                 for item in caseRes.interventions {
-                    let data : [String : Any] = ["interventionId":item.id,"intervention":item.detail,"date":item.date]
-                    self.interventionViewModel.consultInit(item: data)
+                    let intervention = Intervention()
+                    intervention.interventionId = item.id
+                    intervention.intervention = item.detail
+                    intervention.date = item.date
+                    interventionViewModel.consultInit(item: intervention)
                 }
             }
             
             //report
             if self.summaryViewModel.numberOfItems() == 0 {
                 for item in caseRes.summaryReport {
-                    let data : [String : Any] = ["id":item.id,"title":item.title,"path":item.path]
-                    self.summaryViewModel.consultInit(item: data)
+                    let report = SummaryReport()
+                    report.id = item.id
+                    report.title = item.title
+                    report.path = item.path
+                    
+                    summaryViewModel.consultInit(item: report)
                 }
             }
             
@@ -1930,7 +1958,7 @@ extension PreFlightViewController {
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) -> Void in
         }))
         
-        alert.addAction(UIAlertAction(title: "Save", style: .default, handler: { (action) -> Void in
+        alert.addAction(UIAlertAction(title: "Save", style: .default, handler: { [unowned self] (action) -> Void in
             let textField = alert.textFields![0] as UITextField
             if let data = UIImagePNGRepresentation(pickedImage) {
                 let profile = CustomerSingleton.sharedInstance.customerProfile
@@ -1946,11 +1974,19 @@ extension PreFlightViewController {
                 let path = URL(fileURLWithPath: imagePath)
                 try! data.write(to: path, options: [.atomicWrite ])
                 
-                var item = ["title":textField.text!,"path":imageName]
-                if id != 0 {
-                    item["id"] = "\(id)"
+                let report = SummaryReport()
+                report.title = textField.text ?? ""
+                report.path = imageName
+                
+                if id != 0
+                {
+                    report.id = id
+                    self.summaryViewModel.update(item: report)
                 }
-                self.summaryViewModel.addOrUpdate(item: item)
+                else
+                {
+                    self.summaryViewModel.add(item: report)
+                }
             }
             
         }))

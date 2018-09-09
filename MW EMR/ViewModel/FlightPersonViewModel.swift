@@ -11,43 +11,56 @@ import UIKit
 class FlightPersonViewModel:PreFlightViewModel {
     private let customer = CustomerSingleton.sharedInstance.customerProfile
     
-    func load(){
-        let items = realm.objects(FlightPerson.self).filter("caseId == \(customer.caseId)")
-        self.flightPersonItems = items
-        self.flightPersonChange.onNext(.list)
+    func load()
+    {
+        flightPersonItems = realm.objects(FlightPerson.self).filter("caseId == \(customer.caseId)")
+        flightPersonChange.onNext(.list)
     }
     
-    func addOrUpdate(item:[String:String]){
-        var itemEdit = item
-        
-        try! realm.write {
-            if itemEdit["flightPersonId"] == nil {
-                let obj = realm.objects(FlightPerson.self).last
-                let insertObj = FlightPerson()
-                if obj != nil {
-                    insertObj.flightPersonId = (obj?.flightPersonId)! + 1
-                }
-                insertObj.customerId = customer.customerId
-                insertObj.caseId = customer.caseId
-                insertObj.name = itemEdit["name"]!
-                insertObj.position  = itemEdit["position"]!
-                realm.add(insertObj, update: false)
-            }else{
-                realm.create(FlightPerson.self, value: itemEdit, update: true)
-            }
-        }
-        
-        self.flightPersonChange.onNext(.addOrUpdate)
-        self.flightPersonChange.onNext(.list)
+    private func reload()
+    {
+        flightPersonChange.onNext(.addOrUpdate)
+        flightPersonChange.onNext(.list)
     }
     
-    func remove(id:String){
-        let itemFind = realm.objects(FlightPerson.self).filter("flightPersonId == \(id)")
-        
-        try! realm.write {
-            realm.delete(itemFind)
-            self.flightPersonChange.onNext(.delete)
+    func add(item: FlightPerson)
+    {
+        realm.beginWrite()
+        if let obj = realm.objects(FlightPerson.self).last
+        {
+            item.flightPersonId = obj.flightPersonId + 1
         }
+        item.customerId = customer.customerId
+        item.caseId = customer.caseId
+        realm.add(item, update: false)
+        
+        try? realm.commitWrite()
+        
+        reload()
+    }
+    
+    func update(item: FlightPerson)
+    {
+        realm.beginWrite()
+        
+        item.customerId = customer.customerId
+        item.caseId = customer.caseId
+        
+        realm.create(FlightPerson.self, value: item, update: true)
+        
+        try? realm.commitWrite()
+        
+        reload()
+    }
+    
+    func remove(id: String)
+    {
+        realm.beginWrite()
+        
+        realm.delete(realm.objects(FlightPerson.self).filter("flightPersonId == " + id))
+        flightPersonChange.onNext(.delete)
+        
+        try? realm.commitWrite()
     }
     
     func numberOfItems() -> Int {

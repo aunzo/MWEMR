@@ -2,11 +2,11 @@ PODS:
   - ActionSheetPicker-3.0 (2.3.0)
   - Alamofire (4.5.1)
   - ALCameraViewController (3.0.2)
-  - Crashlytics (3.10.1):
-    - Fabric (~> 1.7.5)
+  - Crashlytics (3.10.7):
+    - Fabric (~> 1.7.11)
   - CryptoSwift (0.8.1)
   - DACircularProgress (2.3.1)
-  - Fabric (1.7.5)
+  - Fabric (1.7.11)
   - IQKeyboardManagerSwift (5.0.6)
   - Material (2.12.16):
     - Material/Core (= 2.12.16)
@@ -20,13 +20,13 @@ PODS:
   - MWPhotoBrowser (2.1.2):
     - DACircularProgress (~> 2.3)
     - MBProgressHUD (~> 0.9)
-    - SDWebImage (!= 3.7.2, ~> 3.7)
-  - ObjectMapper (3.1.0)
-  - Realm (3.0.2):
-    - Realm/Headers (= 3.0.2)
-  - Realm/Headers (3.0.2)
-  - RealmSwift (3.0.2):
-    - Realm (= 3.0.2)
+    - "SDWebImage (!= 3.7.2, ~> 3.7)"
+  - ObjectMapper (3.3.0)
+  - Realm (3.8.0):
+    - Realm/Headers (= 3.8.0)
+  - Realm/Headers (3.8.0)
+  - RealmSwift (3.8.0):
+    - Realm (= 3.8.0)
   - RxAlamofire (4.0.0):
     - RxAlamofire/Core (= 4.0.0)
   - RxAlamofire/Core (4.0.0):
@@ -58,29 +58,53 @@ DEPENDENCIES:
   - RxSwift (~> 4.0)
   - SearchTextField (~> 1.2)
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - ActionSheetPicker-3.0
+    - Alamofire
+    - ALCameraViewController
+    - Crashlytics
+    - CryptoSwift
+    - DACircularProgress
+    - Fabric
+    - IQKeyboardManagerSwift
+    - Material
+    - MBProgressHUD
+    - MGSwipeTableCell
+    - Motion
+    - MWPhotoBrowser
+    - ObjectMapper
+    - Realm
+    - RealmSwift
+    - RxAlamofire
+    - RxCocoa
+    - RxSwift
+    - SDWebImage
+    - SearchTextField
+
 SPEC CHECKSUMS:
   ActionSheetPicker-3.0: eef157d75e151f255c5333d26656c7fbfe905a51
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
   ALCameraViewController: 1edce3497633f0df138523645ed1228961ee2eab
-  Crashlytics: aee1a064cbbf99b32efa3f056a5f458d846bc8ff
+  Crashlytics: ccaac42660eb9351b9960c0d66106b0bcf99f4fa
   CryptoSwift: 4b07d5b508c1eb67bfa314a727b705f8048a85de
   DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
-  Fabric: ae7146a5f505ea370a1e44820b4b1dc8890e2890
+  Fabric: f233c9492b3bbc1f04e3882986740f7988a58edb
   IQKeyboardManagerSwift: 02bfbb0dff71c66d0ab77d80d25dfce0c3717735
   Material: 00fdeb39f5d97dc19f09b160e8b95c47e2ed708d
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   MGSwipeTableCell: c3bc6e261e7bc06c112909fe3fb8205de286082c
   Motion: 88a8bee21926af792333f4b9e7170f710e9e48f3
   MWPhotoBrowser: 5836d7aa041dc05a13de380c246826578adc5ea5
-  ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
-  Realm: 6f23fd1f178a09342eac21bfa7c2bf4312a7a180
-  RealmSwift: 695393add1b8f9d5fa75dd16e6355cf3935f71e2
+  ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
+  Realm: 3fdae59de78838064e9f77638d7cdb7b8cff9dc8
+  RealmSwift: c990518b800e106d1f77099d3a4648c3b100337d
   RxAlamofire: 6ea579ac53bf14cb4bc7049a3866e5a769989b1d
   RxCocoa: d62846ca96495d862fa4c59ea7d87e5031d7340e
   RxSwift: fd680d75283beb5e2559486f3c0ff852f0d35334
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SearchTextField: a5bb7e4c33affadb115afdbe8100d84ef10a8024
 
-PODFILE CHECKSUM: 560dca9695e44a422c5362ff7099942a70aaca33
+PODFILE CHECKSUM: 24ebf08dde5a2e9bbeea73b376616ce4042e3087
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3

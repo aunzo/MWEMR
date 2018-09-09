@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.13.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.9"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -24,48 +24,30 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgWingNew" translatesAutoresizingMaskIntoConstraints="NO" id="h9D-PP-X6i">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="4kT-tl-vKY">
-                                <rect key="frame" x="105" y="414" width="300" height="196"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="196" id="Qyo-WX-DuY"/>
-                                    <constraint firstAttribute="width" constant="300" id="v9a-GE-Jyi"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo2" translatesAutoresizingMaskIntoConstraints="NO" id="EdR-BW-LrC">
-                                <rect key="frame" x="433" y="528" width="230" height="62"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="62" id="4te-Iv-xdS"/>
-                                    <constraint firstAttribute="width" constant="230" id="HkR-0e-C2i"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoEuramiCheck" translatesAutoresizingMaskIntoConstraints="NO" id="hDr-Vw-KFV">
-                                <rect key="frame" x="433" y="431" width="230" height="98"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="98" id="CpU-Nn-ntt"/>
-                                    <constraint firstAttribute="width" constant="230" id="k08-db-Z58"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 1.6.5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nqb-7g-b89">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 1.6.8" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nqb-7g-b89">
                                 <rect key="frame" x="651" y="983" width="97" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="4kT-tl-vKY">
+                                <rect key="frame" x="141" y="412" width="486" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="486" id="TyO-8M-O1H"/>
+                                    <constraint firstAttribute="height" constant="200" id="lfe-N0-Bch"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="4kT-tl-vKY" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="6oq-nx-PJa"/>
+                            <constraint firstItem="4kT-tl-vKY" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="7kR-zG-fme"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="Nqb-7g-b89" secondAttribute="bottom" constant="20" id="ASt-aT-uGD"/>
-                            <constraint firstItem="4kT-tl-vKY" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="DAt-wN-paL"/>
-                            <constraint firstItem="4kT-tl-vKY" firstAttribute="top" secondItem="hDr-Vw-KFV" secondAttribute="bottom" constant="-115" id="F3z-v4-O7u"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="h9D-PP-X6i" secondAttribute="bottom" id="J9t-H8-5Ic"/>
-                            <constraint firstItem="hDr-Vw-KFV" firstAttribute="centerX" secondItem="EdR-BW-LrC" secondAttribute="centerX" id="Jba-q0-An9"/>
                             <constraint firstAttribute="trailing" secondItem="Nqb-7g-b89" secondAttribute="trailing" constant="20" id="LfZ-Qd-cw9"/>
                             <constraint firstAttribute="trailing" secondItem="h9D-PP-X6i" secondAttribute="trailing" id="Mjh-j0-JLD"/>
                             <constraint firstItem="h9D-PP-X6i" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="RY0-xf-tJ5"/>
-                            <constraint firstItem="EdR-BW-LrC" firstAttribute="leading" secondItem="4kT-tl-vKY" secondAttribute="trailing" constant="28" id="dl0-xp-aZk"/>
                             <constraint firstItem="h9D-PP-X6i" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="hWa-Bl-Yqk"/>
-                            <constraint firstItem="4kT-tl-vKY" firstAttribute="centerX" secondItem="h9D-PP-X6i" secondAttribute="centerX" constant="-129" id="iwx-Gl-YVF"/>
-                            <constraint firstItem="EdR-BW-LrC" firstAttribute="top" secondItem="hDr-Vw-KFV" secondAttribute="bottom" constant="-1" id="mes-lo-DjB"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -75,9 +57,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LogoEuramiCheck" width="250" height="107"/>
         <image name="bgWingNew" width="768" height="1023"/>
-        <image name="logo" width="387" height="257"/>
-        <image name="logo2" width="462" height="128"/>
+        <image name="logo" width="486" height="200"/>
     </resources>
 </document>

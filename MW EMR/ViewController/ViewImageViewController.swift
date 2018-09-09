@@ -52,8 +52,9 @@ class ViewImageViewController: UIViewController {
         }
     }
 
-    @IBAction func changeFileDescription(sender: AnyObject) {
-        print("5555")
+    @IBAction func changeFileDescription(sender: AnyObject)
+    {
+        
         if isLocal {
             let alert = UIAlertController(title: "Input image description", message: "Enter a text", preferredStyle: .alert)
             alert.addTextField(configurationHandler: { (textField) -> Void in
@@ -64,11 +65,14 @@ class ViewImageViewController: UIViewController {
             alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) -> Void in
             }))
             
-            alert.addAction(UIAlertAction(title: "Save", style: .default, handler: { (action) -> Void in
+            alert.addAction(UIAlertAction(title: "Save", style: .default, handler: { [unowned self] (action) -> Void in
                 let textField = alert.textFields![0] as UITextField
                 let summaryViewModel = SummaryReportViewModel()
                 self.titleLabel.text = textField.text!
-                summaryViewModel.addOrUpdate(item: ["id":"\(self.idReport)","title":textField.text!])
+                let report = SummaryReport()
+                report.id =  self.idReport
+                report.title = textField.text ?? ""
+                summaryViewModel.add(item: report)
                 self.finishEditCallback!()
                 
             }))
@@ -77,16 +81,6 @@ class ViewImageViewController: UIViewController {
         }
         
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {viewImageFile
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension ViewImageViewController:UIScrollViewDelegate {

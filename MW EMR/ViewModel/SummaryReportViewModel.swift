@@ -1,64 +1,65 @@
 import UIKit
 
-class SummaryReportViewModel: PreFlightViewModel {
+class SummaryReportViewModel: PreFlightViewModel
+{
     var selectIndex = 0
-    func load(){
-        let customer = CustomerSingleton.sharedInstance.customerProfile
-        let items = realm.objects(SummaryReport.self).filter("caseId == \(customer.caseId)")
-        self.summaryReportItems = items
-        self.summaryReportChange.onNext(.list)
+    private let customer = CustomerSingleton.sharedInstance.customerProfile
+    
+    func load()
+    {
+        summaryReportItems = realm.objects(SummaryReport.self).filter("caseId == \(customer.caseId)")
+        summaryReportChange.onNext(.list)
     }
     
-    func addOrUpdate(item:[String:Any]){
-        var itemEdit = item
-        let customer = CustomerSingleton.sharedInstance.customerProfile
-        try! realm.write {
-            if itemEdit["id"] == nil {
-                let obj = realm.objects(SummaryReport.self).last
-                let insertObj = SummaryReport()
-                if obj != nil {
-                    insertObj.id = (obj?.id)! + 1
-                }
-                insertObj.customerId = customer.customerId
-                insertObj.caseId = customer.caseId
-                insertObj.title = itemEdit["title"]! as! String
-                insertObj.path = itemEdit["path"]! as! String
-                insertObj.isUpload = true
-                realm.add(insertObj, update: false)
-            }else{
-                realm.create(SummaryReport.self, value: itemEdit, update: true)
-            }
-        }
-        
-        self.summaryReportChange.onNext(.addOrUpdate)
-        self.summaryReportChange.onNext(.list)
+    private func reload()
+    {
+        summaryReportChange.onNext(.addOrUpdate)
+        summaryReportChange.onNext(.list)
     }
     
-    func consultInit(item:[String:Any]){
-        var itemEdit = item
-        let customer = CustomerSingleton.sharedInstance.customerProfile
-        itemEdit["customerId"] = customer.customerId
-        itemEdit["caseId"] = customer.caseId
-        
-        try! realm.write {
-            if itemEdit["id"] == nil {
-                let obj = realm.objects(SummaryReport.self).last
-                let insertObj = SummaryReport()
-                if obj != nil {
-                    insertObj.id = (obj?.id)! + 1
-                }
-                insertObj.customerId = Int(itemEdit["customerId"]! as! String)!
-                insertObj.caseId = Int(itemEdit["caseId"]! as! String)!
-                insertObj.title = itemEdit["title"]! as! String
-                insertObj.path = itemEdit["path"]! as! String
-                
-                realm.add(insertObj, update: false)
-            }else{
-                realm.create(SummaryReport.self, value: itemEdit, update: true)
-            }
+    func add(item: SummaryReport)
+    {
+        realm.beginWrite()
+        if let obj = realm.objects(SummaryReport.self).last
+        {
+            item.id = obj.id + 1
         }
+        item.customerId = customer.customerId
+        item.caseId = customer.caseId
+        item.isUpload = true
+        realm.add(item, update: false)
         
-        self.summaryReportChange.onNext(.list)
+        try? realm.commitWrite()
+        
+        reload()
+    }
+    
+    func update(item: SummaryReport)
+    {
+        realm.beginWrite()
+        
+        item.customerId = customer.customerId
+        item.caseId = customer.caseId
+        
+        realm.create(SummaryReport.self, value: item, update: true)
+        
+        try? realm.commitWrite()
+        
+        reload()
+    }
+    
+    func consultInit(item: SummaryReport)
+    {
+        item.customerId = customer.customerId
+        item.caseId = customer.caseId
+        
+        realm.beginWrite()
+        
+        realm.add(item, update: false)
+        
+        try? realm.commitWrite()
+        
+        summaryReportChange.onNext(.list)
     }
     
     func remove(id:String){

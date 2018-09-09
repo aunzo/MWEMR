@@ -10,7 +10,7 @@ import Foundation
 
 class Fastfile: LaneFile
 {
-    var fastlaneVersion: String { return "2.80.0" }
+    var fastlaneVersion: String { return "2.104.0" }
     
 //    func beforeAll()
 //    {
@@ -48,7 +48,7 @@ class Fastfile: LaneFile
         desc("Submit a new Beta Build to Frbric. This will also make sure the profile is up to date")
         incrementBuildNumber()
         
-        let exportOptions: [String: Any] = [ "provisioningProfiles": [ AppIdentifier: "match AppStore com.devt.MW-EMR" ] ]
+        let exportOptions: [String: Any] = [ "provisioningProfiles": [ AppIdentifier: "match AdHoc com.devt.MW-EMR" ] ]
         
         gym(
             workspace: MWEMRWorkspace,
@@ -63,7 +63,7 @@ class Fastfile: LaneFile
             apiToken: "cf7357b13e13fc8ea0f1347cfce7eef3723dcdb6",
             buildSecret: "304daa17d7b6c21f4361a772edb368650821292cce4f86d687a69bf807ebb108",
             notes: "build for enterprise use",
-            emails: "angkan@aircharterthailand.com,Chaiwat.inp@dev-t.net")
+            emails: "angkan@aircharterthailand.com,Chaiwat.inp@dev-t.net,it@aircharterthailand.com")
     }
     
     func releaseLane()

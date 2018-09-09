@@ -4,61 +4,61 @@ class InterventionViewModel:PreFlightViewModel {
     
     private let customer = CustomerSingleton.sharedInstance.customerProfile
     
-    func load(){
-        let caseId = customer.caseId
-        let items = realm.objects(Intervention.self).filter("caseId == \(caseId)")
-        self.interventionItems = items
-        self.interventionChange.onNext(.list)
+    func load()
+    {
+        interventionItems = realm.objects(Intervention.self).filter("caseId == \(customer.caseId)")
+        interventionChange.onNext(.list)
     }
     
-    func addOrUpdate(item:[String:Any]){
-        var itemEdit = item
-        let customer = CustomerSingleton.sharedInstance.customerProfile
-        
-        try! realm.write {
-            if itemEdit["interventionId"] == nil {
-                let obj = realm.objects(Intervention.self).last
-                let insertObj = Intervention()
-                if obj != nil {
-                    insertObj.interventionId = (obj?.interventionId)! + 1
-                }
-                insertObj.customerId = customer.customerId
-                insertObj.caseId = customer.caseId
-                insertObj.intervention = itemEdit["intervention"]! as! String
-                insertObj.date = itemEdit["date"]! as! String
-                realm.add(insertObj, update: false)
-            }else{
-                realm.create(Intervention.self, value: itemEdit, update: true)
-            }
-        }
-        
-        self.interventionChange.onNext(.addOrUpdate)
-        self.interventionChange.onNext(.list)
+    private func reload()
+    {
+        interventionChange.onNext(.addOrUpdate)
+        interventionChange.onNext(.list)
     }
     
-    func consultInit(item:[String:Any]){
-        var itemEdit = item
-        let customer = CustomerSingleton.sharedInstance.customerProfile
-        itemEdit["customerId"] = customer.customerId
-        itemEdit["caseId"] = customer.caseId
-        
-        try! realm.write {
-            if itemEdit["interventionId"] == nil {
-                let obj = realm.objects(Intervention.self).last
-                let insertObj = Intervention()
-                if obj != nil {
-                    insertObj.interventionId = (obj?.interventionId)! + 1
-                }
-                insertObj.customerId = Int(itemEdit["customerId"]! as! String)!
-                insertObj.caseId = Int(itemEdit["caseId"]! as! String)!
-                insertObj.intervention = itemEdit["intervention"]! as! String
-                insertObj.date = itemEdit["date"]! as! String
-                realm.add(insertObj, update: false)
-            }else{
-                realm.create(Intervention.self, value: itemEdit, update: true)
-            }
+    func add(item: Intervention)
+    {
+        realm.beginWrite()
+        if let obj = realm.objects(Intervention.self).last
+        {
+            item.interventionId = obj.interventionId + 1
         }
-        self.interventionChange.onNext(.list)
+        
+        item.customerId = customer.customerId
+        item.caseId = customer.caseId
+        realm.add(item, update: false)
+        
+        try? realm.commitWrite()
+        
+        reload()
+    }
+    
+    func update(item: Intervention)
+    {
+        realm.beginWrite()
+        
+        item.customerId = customer.customerId
+        item.caseId = customer.caseId
+        
+        realm.create(Intervention.self, value: item, update: true)
+        
+        try? realm.commitWrite()
+        
+        reload()
+    }
+    
+    func consultInit(item: Intervention)
+    {
+        item.customerId = customer.customerId
+        item.caseId = customer.caseId
+        
+        realm.beginWrite()
+        
+        realm.add(item, update: false)
+        
+        try? realm.commitWrite()
+        
+        interventionChange.onNext(.list)
     }
     
     func remove(id:String){
