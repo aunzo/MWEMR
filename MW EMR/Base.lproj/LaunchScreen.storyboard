@@ -24,16 +24,16 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgWingNew" translatesAutoresizingMaskIntoConstraints="NO" id="h9D-PP-X6i">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 1.6.8" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nqb-7g-b89">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 1.6.9" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nqb-7g-b89">
                                 <rect key="frame" x="651" y="983" width="97" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="4kT-tl-vKY">
-                                <rect key="frame" x="141" y="412" width="486" height="200"/>
+                                <rect key="frame" x="130" y="412" width="508" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="486" id="TyO-8M-O1H"/>
+                                    <constraint firstAttribute="width" constant="508" id="TyO-8M-O1H"/>
                                     <constraint firstAttribute="height" constant="200" id="lfe-N0-Bch"/>
                                 </constraints>
                             </imageView>
@@ -58,6 +58,6 @@
     </scenes>
     <resources>
         <image name="bgWingNew" width="768" height="1023"/>
-        <image name="logo" width="486" height="200"/>
+        <image name="logo" width="1500" height="600"/>
     </resources>
 </document>

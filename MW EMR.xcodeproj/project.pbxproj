@@ -25,6 +25,7 @@
 		3AC16C061CCF68D9001EBF7C /* CustomerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC16C051CCF68D9001EBF7C /* CustomerTableViewCell.swift */; };
 		3AE6ED231EC3445D0070687E /* UIButton+Selected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE6ED221EC3445D0070687E /* UIButton+Selected.swift */; };
 		8E0ADB81211F3503008C4F9A /* String+Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0ADB80211F3503008C4F9A /* String+Empty.swift */; };
+		8E23C401214A2031001612F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E23C400214A2031001612F6 /* Assets.xcassets */; };
 		A6090A691CFD6FD50083B9FD /* CGPDFDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = A6090A421CFD6FD50083B9FD /* CGPDFDocument.m */; };
 		A6090A6A1CFD6FD50083B9FD /* ReaderConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = A6090A441CFD6FD50083B9FD /* ReaderConstants.m */; };
 		A6090A6B1CFD6FD50083B9FD /* ReaderContentPage.m in Sources */ = {isa = PBXBuildFile; fileRef = A6090A461CFD6FD50083B9FD /* ReaderContentPage.m */; };
@@ -57,7 +58,6 @@
 		A6213C0E1CE39A19004DE62A /* MasterDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6213C0D1CE39A19004DE62A /* MasterDataViewModel.swift */; };
 		A62FECD91CC50B5200AC285A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62FECD81CC50B5200AC285A /* AppDelegate.swift */; };
 		A62FECDE1CC50B5200AC285A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A62FECDC1CC50B5200AC285A /* Main.storyboard */; };
-		A62FECE01CC50B5200AC285A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A62FECDF1CC50B5200AC285A /* Assets.xcassets */; };
 		A62FECE31CC50B5200AC285A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A62FECE11CC50B5200AC285A /* LaunchScreen.storyboard */; };
 		A62FECFA1CC7D2E200AC285A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62FECF91CC7D2E200AC285A /* LoginViewController.swift */; };
 		A63746DC1D0F07AA00ECDD5E /* SummaryReportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63746DB1D0F07AA00ECDD5E /* SummaryReportViewModel.swift */; };
@@ -155,6 +155,7 @@
 		3AE6ED221EC3445D0070687E /* UIButton+Selected.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Selected.swift"; sourceTree = "<group>"; };
 		420AF85D842AE506B781C2E4 /* Pods-MW EMR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MW EMR.release.xcconfig"; path = "Pods/Target Support Files/Pods-MW EMR/Pods-MW EMR.release.xcconfig"; sourceTree = "<group>"; };
 		8E0ADB80211F3503008C4F9A /* String+Empty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Empty.swift"; sourceTree = "<group>"; };
+		8E23C400214A2031001612F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A6090A411CFD6FD50083B9FD /* CGPDFDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPDFDocument.h; sourceTree = "<group>"; };
 		A6090A421CFD6FD50083B9FD /* CGPDFDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGPDFDocument.m; sourceTree = "<group>"; };
 		A6090A431CFD6FD50083B9FD /* ReaderConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReaderConstants.h; sourceTree = "<group>"; };
@@ -208,7 +209,6 @@
 		A62FECD51CC50B5200AC285A /* MW EMR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MW EMR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A62FECD81CC50B5200AC285A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		A62FECDD1CC50B5200AC285A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A62FECDF1CC50B5200AC285A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A62FECE21CC50B5200AC285A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A62FECE41CC50B5300AC285A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A62FECF91CC7D2E200AC285A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -468,7 +468,7 @@
 				A62FECF81CC7D29100AC285A /* ViewController */,
 				A6E2B9B61CDF4D4A002DA034 /* View */,
 				3A67209E1CC8E01C000E905D /* Cell */,
-				A62FECDF1CC50B5200AC285A /* Assets.xcassets */,
+				8E23C400214A2031001612F6 /* Assets.xcassets */,
 				A62FECE41CC50B5300AC285A /* Info.plist */,
 			);
 			path = "MW EMR";
@@ -665,10 +665,10 @@
 				A6E2B9A91CDF4AA8002DA034 /* PreFlight.storyboard in Resources */,
 				A6E2B9B51CDF4C91002DA034 /* Consult.storyboard in Resources */,
 				A6E2B9B21CDF4C66002DA034 /* MedicalUsing.storyboard in Resources */,
+				8E23C401214A2031001612F6 /* Assets.xcassets in Resources */,
 				A62FECE31CC50B5200AC285A /* LaunchScreen.storyboard in Resources */,
 				A6EDF92E1D183C0100099A1F /* Suggestion.storyboard in Resources */,
 				A6E2B9AF1CDF4C17002DA034 /* ProgessionRecord.storyboard in Resources */,
-				A62FECE01CC50B5200AC285A /* Assets.xcassets in Resources */,
 				A62FECDE1CC50B5200AC285A /* Main.storyboard in Resources */,
 				A6E2B9AC1CDF4B77002DA034 /* Assessment.storyboard in Resources */,
 			);
@@ -1149,7 +1149,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 32;
+				CURRENT_PROJECT_VERSION = 33;
 				DEVELOPMENT_TEAM = G24T9YMR7S;
 				INFOPLIST_FILE = "MW EMR/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1175,7 +1175,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 32;
+				CURRENT_PROJECT_VERSION = 33;
 				DEVELOPMENT_TEAM = G24T9YMR7S;
 				INFOPLIST_FILE = "MW EMR/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
