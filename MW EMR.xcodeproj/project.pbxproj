@@ -26,6 +26,7 @@
 		3AE6ED231EC3445D0070687E /* UIButton+Selected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE6ED221EC3445D0070687E /* UIButton+Selected.swift */; };
 		8E0ADB81211F3503008C4F9A /* String+Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0ADB80211F3503008C4F9A /* String+Empty.swift */; };
 		8E23C401214A2031001612F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E23C400214A2031001612F6 /* Assets.xcassets */; };
+		8E99FA5E24FBEA5C00E3ECB3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8E99FA5D24FBEA5C00E3ECB3 /* GoogleService-Info.plist */; };
 		A6090A691CFD6FD50083B9FD /* CGPDFDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = A6090A421CFD6FD50083B9FD /* CGPDFDocument.m */; };
 		A6090A6A1CFD6FD50083B9FD /* ReaderConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = A6090A441CFD6FD50083B9FD /* ReaderConstants.m */; };
 		A6090A6B1CFD6FD50083B9FD /* ReaderContentPage.m in Sources */ = {isa = PBXBuildFile; fileRef = A6090A461CFD6FD50083B9FD /* ReaderContentPage.m */; };
@@ -156,6 +157,7 @@
 		420AF85D842AE506B781C2E4 /* Pods-MW EMR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MW EMR.release.xcconfig"; path = "Pods/Target Support Files/Pods-MW EMR/Pods-MW EMR.release.xcconfig"; sourceTree = "<group>"; };
 		8E0ADB80211F3503008C4F9A /* String+Empty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Empty.swift"; sourceTree = "<group>"; };
 		8E23C400214A2031001612F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8E99FA5D24FBEA5C00E3ECB3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A6090A411CFD6FD50083B9FD /* CGPDFDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPDFDocument.h; sourceTree = "<group>"; };
 		A6090A421CFD6FD50083B9FD /* CGPDFDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGPDFDocument.m; sourceTree = "<group>"; };
 		A6090A431CFD6FD50083B9FD /* ReaderConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReaderConstants.h; sourceTree = "<group>"; };
@@ -470,6 +472,7 @@
 				3A67209E1CC8E01C000E905D /* Cell */,
 				8E23C400214A2031001612F6 /* Assets.xcassets */,
 				A62FECE41CC50B5300AC285A /* Info.plist */,
+				8E99FA5D24FBEA5C00E3ECB3 /* GoogleService-Info.plist */,
 			);
 			path = "MW EMR";
 			sourceTree = "<group>";
@@ -670,6 +673,7 @@
 				A62FECE31CC50B5200AC285A /* LaunchScreen.storyboard in Resources */,
 				A6EDF92E1D183C0100099A1F /* Suggestion.storyboard in Resources */,
 				A6E2B9AF1CDF4C17002DA034 /* ProgessionRecord.storyboard in Resources */,
+				8E99FA5E24FBEA5C00E3ECB3 /* GoogleService-Info.plist in Resources */,
 				A62FECDE1CC50B5200AC285A /* Main.storyboard in Resources */,
 				A6E2B9AC1CDF4B77002DA034 /* Assessment.storyboard in Resources */,
 			);
@@ -719,6 +723,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/DACircularProgress/DACircularProgress.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MGSwipeTableCell/MGSwipeTableCell.framework",
@@ -726,6 +731,7 @@
 				"${BUILT_PRODUCTS_DIR}/Material/Material.framework",
 				"${BUILT_PRODUCTS_DIR}/Motion/Motion.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
@@ -733,6 +739,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SearchTextField/SearchTextField.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -741,6 +748,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DACircularProgress.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MGSwipeTableCell.framework",
@@ -748,6 +756,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Material.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Motion.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
@@ -755,6 +764,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SearchTextField.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1150,10 +1160,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 36;
+				CURRENT_PROJECT_VERSION = 39;
 				DEVELOPMENT_TEAM = G24T9YMR7S;
 				INFOPLIST_FILE = "MW EMR/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.7.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.devt.MW-EMR";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "c0619e47-beeb-4a0e-9737-a94c3895b669";
@@ -1176,10 +1187,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 36;
+				CURRENT_PROJECT_VERSION = 39;
 				DEVELOPMENT_TEAM = G24T9YMR7S;
 				INFOPLIST_FILE = "MW EMR/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.7.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.devt.MW-EMR";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "17168fc1-3a3e-417b-bb00-4f88eebce856";

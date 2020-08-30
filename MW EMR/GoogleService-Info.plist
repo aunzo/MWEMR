@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>65784865760-5d7h6i31h05aflts3jbfifuaf6uetojo.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.65784865760-5d7h6i31h05aflts3jbfifuaf6uetojo</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDgm8aagRWjFD_X1hukeN4xF6ElAAuWSxU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>65784865760</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.devt.MW-EMR</string>
+	<key>PROJECT_ID</key>
+	<string>mwemr-c7efa</string>
+	<key>STORAGE_BUCKET</key>
+	<string>mwemr-c7efa.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:65784865760:ios:e037a5b0ab0565818c0185</string>
+	<key>DATABASE_URL</key>
+	<string>https://mwemr-c7efa.firebaseio.com</string>
+</dict>
+</plist>

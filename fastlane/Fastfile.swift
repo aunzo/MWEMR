@@ -10,7 +10,7 @@ import Foundation
 
 class Fastfile: LaneFile
 {
-    var fastlaneVersion: String { return "2.104.0" }
+    var fastlaneVersion: String { return "2.157.2" }
     
 //    func beforeAll()
 //    {
@@ -64,6 +64,24 @@ class Fastfile: LaneFile
             buildSecret: "304daa17d7b6c21f4361a772edb368650821292cce4f86d687a69bf807ebb108",
             notes: "build for enterprise use",
             emails: "angkan@aircharterthailand.com,Chaiwat.inp@dev-t.net,it@aircharterthailand.com")
+    }
+    
+    func firebaseLane()
+    {
+        desc("Submit a new Beta Build to Firebase Distribute")
+        
+        incrementBuildNumber()
+        
+        buildApp(
+            workspace: MWEMRWorkspace,
+            scheme: "MW EMR",
+            exportMethod: ExportMethod.adHoc.rawValue)
+        
+        firebaseAppDistribution(
+            ipaPath: "./MW EMR.ipa",
+            app: "1:65784865760:ios:e037a5b0ab0565818c0185",
+            testers: "Chaiwat.inp@dev-t.net",
+            releaseNotes: "MWEMR application")
     }
     
     func releaseLane()

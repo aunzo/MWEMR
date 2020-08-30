@@ -5,7 +5,7 @@ workspace 'MWEMR.xcworkspace'
 
 target 'MW EMR' do
     pod 'Alamofire', '~> 4.5'
-    pod 'RealmSwift', '~> 3.0'
+    pod 'RealmSwift', '~> 3.20.0'
     pod 'RxSwift',    '~> 4.0'
     pod 'RxCocoa',    '~> 4.0'
     pod 'RxAlamofire', '~> 4.0'
@@ -18,8 +18,7 @@ target 'MW EMR' do
     pod 'ALCameraViewController'
     pod 'MWPhotoBrowser', '~> 2.1'
     pod 'SearchTextField', '~> 1.2'
-    pod 'Fabric'
-    pod 'Crashlytics'
+    pod 'Firebase/Analytics'
 end
 
 post_install do |installer|
