@@ -1,8 +1,8 @@
 PODS:
   - ActionSheetPicker-3.0 (2.3.0)
   - Alamofire (4.5.1)
-  - ALCameraViewController (3.0.2)
-  - CryptoSwift (0.8.1)
+  - ALCameraViewController (3.1)
+  - CryptoSwift (1.4.1)
   - DACircularProgress (2.3.1)
   - Firebase/Analytics (6.31.0):
     - Firebase/Core
@@ -118,25 +118,12 @@ DEPENDENCIES:
   - SearchTextField (~> 1.2)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  trunk:
     - ActionSheetPicker-3.0
     - Alamofire
     - ALCameraViewController
     - CryptoSwift
     - DACircularProgress
-    - IQKeyboardManagerSwift
-    - Material
-    - MBProgressHUD
-    - MGSwipeTableCell
-    - Motion
-    - MWPhotoBrowser
-    - ObjectMapper
-    - RxAlamofire
-    - RxCocoa
-    - RxSwift
-    - SDWebImage
-    - SearchTextField
-  trunk:
     - Firebase
     - FirebaseAnalytics
     - FirebaseCore
@@ -145,16 +132,28 @@ SPEC REPOS:
     - GoogleAppMeasurement
     - GoogleDataTransport
     - GoogleUtilities
+    - IQKeyboardManagerSwift
+    - Material
+    - MBProgressHUD
+    - MGSwipeTableCell
+    - Motion
+    - MWPhotoBrowser
     - nanopb
+    - ObjectMapper
     - PromisesObjC
     - Realm
     - RealmSwift
+    - RxAlamofire
+    - RxCocoa
+    - RxSwift
+    - SDWebImage
+    - SearchTextField
 
 SPEC CHECKSUMS:
   ActionSheetPicker-3.0: eef157d75e151f255c5333d26656c7fbfe905a51
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
-  ALCameraViewController: 1edce3497633f0df138523645ed1228961ee2eab
-  CryptoSwift: 4b07d5b508c1eb67bfa314a727b705f8048a85de
+  ALCameraViewController: 144dea45fd749a623aafd8cb7b10cea88499fcc3
+  CryptoSwift: 0bc800a7e6a24c4fc9ebeab97d44b0d5f73a78bd
   DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
   Firebase: 87483fa19acfdf99244523f2389e931927b91457
   FirebaseAnalytics: 0ca9aa2af7cc4dc92392b7a78bfc49feaa2eb60f
@@ -183,4 +182,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 3b5c92036ee47c4ba596f19ad15340acc6416bfe
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.10.2

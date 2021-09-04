@@ -106,27 +106,27 @@ extension MenuViewController : UICollectionViewDataSource {
         
         if !isLoadedBag {
             if indexPath.row > 1 && indexPath.row < 9 {
-                cell.alpha = 0.5
+                cell.contentView.alpha = 0.5
             }
         }else{
             if indexPath.row > 1 && indexPath.row < 9 {
-                cell.alpha = 1
+                cell.contentView.alpha = 1
             }
         }
         
         if !isLoadedCase {
             if indexPath.row > 2 && indexPath.row < 9 {
-                cell.alpha = 0.5
+                cell.contentView.alpha = 0.5
             }
         }else{
             if indexPath.row > 2 && indexPath.row < 9 {
-                cell.alpha = 1
+                cell.contentView.alpha = 1
             }
         }
         
         if !Reachability.isConnectedToNetwork() {
             if indexPath.row == 2 {
-                cell.alpha = 0.5
+                cell.contentView.alpha = 0.5
             }
         }
         
