@@ -5,7 +5,7 @@ import ActionSheetPicker_3_0
 import MGSwipeTableCell
 import ObjectMapper
 import RealmSwift
-import ALCameraViewController
+import YPImagePicker
 
 class PreFlightViewController: UIViewController {
     
@@ -471,23 +471,15 @@ extension PreFlightViewController
     }
     
     @IBAction func addSummaryReport(sender: Any) {
-        let cameraViewController = CameraViewController(
-            croppingParameters: CroppingParameters(
-                isEnabled: false,
-                allowResizing: true,
-                allowMoving: false,
-                minimumSize: .zero),
-            allowsLibraryAccess: true,
-            allowsSwapCameraOrientation: false,
-            allowVolumeButtonCapture: true) { (image, asset) in
-                self.dismiss(animated: true, completion: {
-                    if image != nil {
-                        self.alertReportImageDescription(pickedImage: image!)
-                    }
-                })
+        let picker = YPImagePicker()
+        picker.didFinishPicking { [unowned picker] items, _ in
+            picker.dismiss(animated: true) {
+                if let photo = items.singlePhoto {
+                    self.alertReportImageDescription(pickedImage: photo.image)
+                }
+            }
         }
-        
-        self.present(cameraViewController, animated: true, completion: nil)
+        present(picker, animated: true, completion: nil)
     }
     
     //MARK:- intervention method
@@ -1402,7 +1394,7 @@ extension PreFlightViewController
             self.briefHistoryTextField.text = preflight.brief
             
             
-            //intervention 
+            //intervention
             if self.interventionViewModel.numberOfItems() == 0 {
                 for item in caseRes.interventions {
                     let intervention = Intervention()
