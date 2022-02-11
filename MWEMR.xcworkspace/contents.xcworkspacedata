@@ -1,26 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <FileRef
+      location = "group:Gemfile">
+   </FileRef>
    <Group
       location = "group:fastlane"
       name = "fastlane">
       <FileRef
-         location = "group:Fastfile.swift">
+         location = "group:Deliverfile.swift">
       </FileRef>
       <FileRef
-         location = "group:Snapfile.swift">
+         location = "group:Matchfile.swift">
       </FileRef>
-      <Group
-         location = "group:screenshots"
-         name = "screenshots">
-         <Group
-            location = "container:"
-            name = "en-US">
-         </Group>
-         <FileRef
-            location = "group:README.txt">
-         </FileRef>
-      </Group>
+      <FileRef
+         location = "group:Fastfile.swift">
+      </FileRef>
       <Group
          location = "group:swift"
          name = "swift">
@@ -43,7 +38,13 @@
             location = "group:ScanfileProtocol.swift">
          </FileRef>
          <FileRef
+            location = "group:OptionalConfigValue.swift">
+         </FileRef>
+         <FileRef
             location = "group:Snapshotfile.swift">
+         </FileRef>
+         <FileRef
+            location = "group:MainProcess.swift">
          </FileRef>
          <FileRef
             location = "group:Runner.swift">
@@ -53,6 +54,9 @@
          </FileRef>
          <FileRef
             location = "group:RubyCommandable.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Plugins.swift">
          </FileRef>
          <FileRef
             location = "group:GymfileProtocol.swift">
@@ -81,6 +85,19 @@
          <FileRef
             location = "group:SocketClientDelegateProtocol.swift">
          </FileRef>
+         <Group
+            location = "group:formatting"
+            name = "formatting">
+            <FileRef
+               location = "group:Brewfile.lock.json">
+            </FileRef>
+            <FileRef
+               location = "group:Rakefile">
+            </FileRef>
+            <FileRef
+               location = "group:Brewfile">
+            </FileRef>
+         </Group>
          <FileRef
             location = "group:upgrade_manifest.json">
          </FileRef>
@@ -89,6 +106,9 @@
          </FileRef>
          <FileRef
             location = "group:Precheckfile.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Atomic.swift">
          </FileRef>
          <FileRef
             location = "group:Appfile.swift">
@@ -119,127 +139,15 @@
             </FileRef>
          </Group>
          <FileRef
+            location = "group:Actions.swift">
+         </FileRef>
+         <FileRef
             location = "group:SocketClient.swift">
          </FileRef>
       </Group>
       <FileRef
          location = "group:Appfile.swift">
       </FileRef>
-      <FileRef
-         location = "group:Deliverfile.swift">
-      </FileRef>
-      <FileRef
-         location = "group:Matchfile.swift">
-      </FileRef>
-      <FileRef
-         location = "group:Scanfile.swift">
-      </FileRef>
-      <Group
-         location = "group:metadata"
-         name = "metadata">
-         <FileRef
-            location = "group:copyright.txt">
-         </FileRef>
-         <Group
-            location = "group:trade_representative_contact_information"
-            name = "trade_representative_contact_information">
-            <FileRef
-               location = "group:address_line1.txt">
-            </FileRef>
-            <FileRef
-               location = "group:country.txt">
-            </FileRef>
-            <FileRef
-               location = "group:city_name.txt">
-            </FileRef>
-            <FileRef
-               location = "group:address_line2.txt">
-            </FileRef>
-            <FileRef
-               location = "group:trade_name.txt">
-            </FileRef>
-            <FileRef
-               location = "group:is_displayed_on_app_store.txt">
-            </FileRef>
-            <FileRef
-               location = "group:postal_code.txt">
-            </FileRef>
-         </Group>
-         <FileRef
-            location = "group:secondary_first_sub_category.txt">
-         </FileRef>
-         <FileRef
-            location = "group:secondary_category.txt">
-         </FileRef>
-         <FileRef
-            location = "group:secondary_second_sub_category.txt">
-         </FileRef>
-         <FileRef
-            location = "group:primary_second_sub_category.txt">
-         </FileRef>
-         <Group
-            location = "group:review_information"
-            name = "review_information">
-            <FileRef
-               location = "group:phone_number.txt">
-            </FileRef>
-            <FileRef
-               location = "group:demo_user.txt">
-            </FileRef>
-            <FileRef
-               location = "group:notes.txt">
-            </FileRef>
-            <FileRef
-               location = "group:email_address.txt">
-            </FileRef>
-            <FileRef
-               location = "group:last_name.txt">
-            </FileRef>
-            <FileRef
-               location = "group:first_name.txt">
-            </FileRef>
-            <FileRef
-               location = "group:demo_password.txt">
-            </FileRef>
-         </Group>
-         <FileRef
-            location = "group:primary_first_sub_category.txt">
-         </FileRef>
-         <Group
-            location = "group:en-US"
-            name = "en-US">
-            <FileRef
-               location = "group:privacy_url.txt">
-            </FileRef>
-            <FileRef
-               location = "group:subtitle.txt">
-            </FileRef>
-            <FileRef
-               location = "group:support_url.txt">
-            </FileRef>
-            <FileRef
-               location = "group:keywords.txt">
-            </FileRef>
-            <FileRef
-               location = "group:promotional_text.txt">
-            </FileRef>
-            <FileRef
-               location = "group:release_notes.txt">
-            </FileRef>
-            <FileRef
-               location = "group:name.txt">
-            </FileRef>
-            <FileRef
-               location = "group:marketing_url.txt">
-            </FileRef>
-            <FileRef
-               location = "group:description.txt">
-            </FileRef>
-         </Group>
-         <FileRef
-            location = "group:primary_category.txt">
-         </FileRef>
-      </Group>
    </Group>
    <FileRef
       location = "group:MW EMR.xcodeproj">

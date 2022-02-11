@@ -181,29 +181,41 @@ extension CustomerViewController {
         alert.addAction(UIAlertAction(title: "Send", style: UIAlertActionStyle.destructive, handler: { (alert) in
             self.viewModel.sendCaseToServer(index: sender.tag, view: self.view).subscribe(onError: { (error) in
                 var errorMsg = ""
-                switch error as! caseError {
-                case .notSend : errorMsg = "Case isn't send to server."
-                    break
-                case .requireField(let msg) : errorMsg = "Please input all require field." + msg
-                    break
-                default :
-                    break
+                
+                if let error = error as? caseError
+                {
+                    switch error
+                    {
+                        case .notSend:
+                            errorMsg = "Case isn't send to server."
+                            break
+                        case .requireField(let msg):
+                            errorMsg = "Please input all require field." + msg
+                            break
+                        default:
+                            break
+                    }
+                }
+                else
+                {
+                    errorMsg = error.localizedDescription
                 }
                 
+
                 let alert = UIAlertController(title: "Send Failure", message: errorMsg , preferredStyle: UIAlertControllerStyle.alert)
-                
+
                 alert.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.default, handler: { (alert) in
                     self.customerTableView.reloadData()
                 }))
-                
+
                 self.present(alert, animated: true, completion: nil)
                 }, onCompleted: {
                     let alert = UIAlertController(title: "Send Success", message: "Case is already send.", preferredStyle: UIAlertControllerStyle.alert)
-                    
+
                     alert.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.default, handler: { (alert) in
                         self.customerTableView.reloadData()
                     }))
-                    
+
                     self.present(alert, animated: true, completion: nil)
             }).disposed(by: self.bag)
 
