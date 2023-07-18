@@ -1,8 +1,8 @@
 // MatchfileProtocol.swift
-// Copyright (c) 2022 FastlaneTools
+// Copyright (c) 2023 FastlaneTools
 
 public protocol MatchfileProtocol: AnyObject {
-    /// Define the profile type, can be appstore, adhoc, development, enterprise, developer_id, mac_installer_distribution
+    /// Define the profile type, can be appstore, adhoc, development, enterprise, developer_id, mac_installer_distribution, developer_id_installer
     var type: String { get }
 
     /// Create additional cert types needed for macOS installers (valid values: mac_installer_distribution, developer_id_installer)
@@ -74,6 +74,9 @@ public protocol MatchfileProtocol: AnyObject {
     /// ID of the Google Cloud project to use for authentication
     var googleCloudProjectId: String? { get }
 
+    /// Skips confirming to use the system google account
+    var skipGoogleCloudAccountConfirmation: Bool { get }
+
     /// Name of the S3 region
     var s3Region: String? { get }
 
@@ -89,6 +92,12 @@ public protocol MatchfileProtocol: AnyObject {
     /// Prefix to be used on all objects uploaded to S3
     var s3ObjectPrefix: String? { get }
 
+    /// GitLab Project Path (i.e. 'gitlab-org/gitlab')
+    var gitlabProject: String? { get }
+
+    /// GitLab Host (i.e. 'https://gitlab.com')
+    var gitlabHost: String { get }
+
     /// Keychain the items should be imported to
     var keychainName: String { get }
 
@@ -101,10 +110,13 @@ public protocol MatchfileProtocol: AnyObject {
     /// Renew the provisioning profiles if the device count on the developer portal has changed. Ignored for profile types 'appstore' and 'developer_id'
     var forceForNewDevices: Bool { get }
 
+    /// Include Apple Silicon Mac devices in provisioning profiles for iOS/iPadOS apps
+    var includeMacInProfiles: Bool { get }
+
     /// Include all matching certificates in the provisioning profile. Works only for the 'development' provisioning profile type
     var includeAllCertificates: Bool { get }
 
-    /// Renew the provisioning profiles if the device count on the developer portal has changed. Works only for the 'development' provisioning profile type. Requires 'include_all_certificates' option to be 'true'
+    /// Renew the provisioning profiles if the certificate count on the developer portal has changed. Works only for the 'development' provisioning profile type. Requires 'include_all_certificates' option to be 'true'
     var forceForNewCertificates: Bool { get }
 
     /// Disables confirmation prompts during nuke, answering them with yes
@@ -169,15 +181,19 @@ public extension MatchfileProtocol {
     var googleCloudBucketName: String? { return nil }
     var googleCloudKeysFile: String? { return nil }
     var googleCloudProjectId: String? { return nil }
+    var skipGoogleCloudAccountConfirmation: Bool { return false }
     var s3Region: String? { return nil }
     var s3AccessKey: String? { return nil }
     var s3SecretAccessKey: String? { return nil }
     var s3Bucket: String? { return nil }
     var s3ObjectPrefix: String? { return nil }
+    var gitlabProject: String? { return nil }
+    var gitlabHost: String { return "https://gitlab.com" }
     var keychainName: String { return "login.keychain" }
     var keychainPassword: String? { return nil }
     var force: Bool { return false }
     var forceForNewDevices: Bool { return false }
+    var includeMacInProfiles: Bool { return false }
     var includeAllCertificates: Bool { return false }
     var forceForNewCertificates: Bool { return false }
     var skipConfirmation: Bool { return false }
@@ -196,4 +212,4 @@ public extension MatchfileProtocol {
 
 // Please don't remove the lines below
 // They are used to detect outdated files
-// FastlaneRunnerAPIVersion [0.9.95]
+// FastlaneRunnerAPIVersion [0.9.114]

@@ -12,6 +12,7 @@
 		1257253924B7992C00E04FA3 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1257253824B7992B00E04FA3 /* main.swift */; };
 		1267C3F42773A43E004DE48A /* Atomic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267C3F32773A43E004DE48A /* Atomic.swift */; };
 		12D2EB8D2620D83C00844013 /* OptionalConfigValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D2EB8C2620D83B00844013 /* OptionalConfigValue.swift */; };
+		260670AE41534FC80495F4BD /* FastlaneRunner in FastlaneRunnerCopySigned */ = {isa = PBXBuildFile; fileRef = D556D6A91F6A08F5003108E3 /* FastlaneRunner */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		B302067B1F5E3E9000DE6EBD /* SnapshotfileProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30206741F5E3E9000DE6EBD /* SnapshotfileProtocol.swift */; };
 		B302067C1F5E3E9000DE6EBD /* GymfileProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30206751F5E3E9000DE6EBD /* GymfileProtocol.swift */; };
 		B302067D1F5E3E9000DE6EBD /* MatchfileProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30206761F5E3E9000DE6EBD /* MatchfileProtocol.swift */; };
@@ -27,7 +28,6 @@
 		B3BA65AC1F5A269100B34850 /* SocketClientDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BA65A31F5A269100B34850 /* SocketClientDelegateProtocol.swift */; };
 		B3BA65AD1F5A269100B34850 /* SocketResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BA65A41F5A269100B34850 /* SocketResponse.swift */; };
 		B3BA65AF1F5A2D5C00B34850 /* RunnerArgument.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BA65AE1F5A2D5C00B34850 /* RunnerArgument.swift */; };
-		C0459CAC27261897002CDFB9 /* FastlaneRunner in CopyFiles */ = {isa = PBXBuildFile; fileRef = D556D6A91F6A08F5003108E3 /* FastlaneRunner */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		D55B28C31F6C588300DC42C5 /* Deliverfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55B28BC1F6C588300DC42C5 /* Deliverfile.swift */; };
 		D55B28C41F6C588300DC42C5 /* Gymfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55B28BD1F6C588300DC42C5 /* Gymfile.swift */; };
 		D55B28C51F6C588300DC42C5 /* Matchfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55B28BE1F6C588300DC42C5 /* Matchfile.swift */; };
@@ -43,14 +43,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		C0459CAB27261886002CDFB9 /* CopyFiles */ = {
+		46A627D5B24825602FCF28A3 /* FastlaneRunnerCopySigned */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "$SRCROOT/../..";
 			dstSubfolderSpec = 0;
 			files = (
-				C0459CAC27261897002CDFB9 /* FastlaneRunner in CopyFiles */,
+				260670AE41534FC80495F4BD /* FastlaneRunner in FastlaneRunnerCopySigned */,
 			);
+			name = FastlaneRunnerCopySigned;
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -198,7 +199,7 @@
 			buildPhases = (
 				B33BAF531F51F8D90001A751 /* Sources */,
 				B33BAF541F51F8D90001A751 /* Frameworks */,
-				C0459CAB27261886002CDFB9 /* CopyFiles */,
+				46A627D5B24825602FCF28A3 /* FastlaneRunnerCopySigned */,
 			);
 			buildRules = (
 			);
@@ -404,6 +405,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "-";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
@@ -416,6 +418,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "-";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 			};

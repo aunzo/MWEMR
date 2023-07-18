@@ -15,18 +15,19 @@ class Fastfile: LaneFile {
         
         incrementBuildNumber()
         
-        //        buildApp(
-        //            workspace: MWEMRWorkspace,
-        //            scheme: "MW EMR",
-        //            exportMethod: ExportMethod.adHoc.rawValue)
-        
         buildApp(
-            workspace: "MWEMR.xcworkspace", scheme: "MW EMR")
+            workspace: .userDefined(MWEMRWorkspace),
+            scheme: "MW EMR",
+            exportMethod: .userDefined(ExportMethod.adHoc.rawValue))
+        
+//        buildApp(
+//            workspace: .userDefined(MWEMRWorkspace),
+//            scheme: "MW EMR")
         
         firebaseAppDistribution(
             ipaPath: "./MW EMR.ipa",
             app: "1:65784865760:ios:e037a5b0ab0565818c0185",
-            testers: "Chaiwat.inp@dev-t.net, it@aircharterthailand.com, june.dissaya@gmail.com, siamlandit@gmail.com, sunisa@aircharterthailand.com",
+            testers: "chaiwat.inp@dev-t.net, it@aircharterthailand.com, june.dissaya@gmail.com, siamlandit@gmail.com, sunisa@aircharterthailand.com",
             releaseNotes: "MWEMR application")
     }
     

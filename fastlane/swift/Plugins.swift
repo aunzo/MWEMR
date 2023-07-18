@@ -10,15 +10,16 @@ import Foundation
    - androidArtifactType: Android artifact type. Set to 'APK' or 'AAB'. Defaults to 'APK' if not set
    - app: Your app's Firebase App ID. You can find the App ID in the Firebase console, on the General Settings page
    - firebaseCliPath: **DEPRECATED!** This plugin no longer uses the Firebase CLI - The absolute path of the firebase cli command
-   - groups: The groups used for distribution, separated by commas
-   - groupsFile: The groups used for distribution, separated by commas
+   - groups: The group aliases used for distribution, separated by commas
+   - groupsFile: The group aliases used for distribution, separated by commas
    - testers: Pass email addresses of testers, separated by commas
    - testersFile: Pass email addresses of testers, separated by commas
    - releaseNotes: Release notes for this build
    - releaseNotesFile: Release notes file for this build
-   - firebaseCliToken: Auth token generated using 'fastlane run firebase_app_distribution_login', or the Firebase CLI's login:ci command
+   - firebaseCliToken: Auth token generated using the Firebase CLI's login:ci command
    - debug: Print verbose debug output
    - serviceCredentialsFile: Path to Google service account json
+   - uploadTimeout: The amount of seconds before the upload will timeout, if not completed
 
  Release your beta builds with Firebase App Distribution
 */
@@ -37,7 +38,8 @@ public func firebaseAppDistribution(ipaPath: OptionalConfigValue<String?> = .fas
                                     releaseNotesFile: OptionalConfigValue<String?> = .fastlaneDefault(nil),
                                     firebaseCliToken: OptionalConfigValue<String?> = .fastlaneDefault(nil),
                                     debug: OptionalConfigValue<Bool> = .fastlaneDefault(false),
-                                    serviceCredentialsFile: OptionalConfigValue<String?> = .fastlaneDefault(nil)) {
+                                    serviceCredentialsFile: OptionalConfigValue<String?> = .fastlaneDefault(nil),
+                                    uploadTimeout: Int = 300) {
 let ipaPathArg = ipaPath.asRubyArgument(name: "ipa_path", type: nil)
 let googleserviceInfoPlistPathArg = RubyCommand.Argument(name: "googleservice_info_plist_path", value: googleserviceInfoPlistPath, type: nil)
 let apkPathArg = apkPath.asRubyArgument(name: "apk_path", type: nil)
@@ -54,6 +56,7 @@ let releaseNotesFileArg = releaseNotesFile.asRubyArgument(name: "release_notes_f
 let firebaseCliTokenArg = firebaseCliToken.asRubyArgument(name: "firebase_cli_token", type: nil)
 let debugArg = debug.asRubyArgument(name: "debug", type: nil)
 let serviceCredentialsFileArg = serviceCredentialsFile.asRubyArgument(name: "service_credentials_file", type: nil)
+let uploadTimeoutArg = RubyCommand.Argument(name: "upload_timeout", value: uploadTimeout, type: nil)
 let array: [RubyCommand.Argument?] = [ipaPathArg,
 googleserviceInfoPlistPathArg,
 apkPathArg,
@@ -69,7 +72,8 @@ releaseNotesArg,
 releaseNotesFileArg,
 firebaseCliTokenArg,
 debugArg,
-serviceCredentialsFileArg]
+serviceCredentialsFileArg,
+uploadTimeoutArg]
 let args: [RubyCommand.Argument] = array
 .filter { $0?.value != nil }
 .compactMap { $0 }
@@ -84,8 +88,9 @@ let command = RubyCommand(commandID: "", methodName: "firebase_app_distribution"
    - projectNumber: Your Firebase project number. You can find the project number in the Firebase console, on the General Settings page
    - emails: Comma separated list of tester emails to be created. A maximum of 1000 testers can be created at a time
    - file: Path to a file containing a comma separated list of tester emails to be created. A maximum of 1000 testers can be deleted at a time
+   - groupAlias: Alias of the group to add the specified testers to. The group must already exist. If not specified, testers will not be added to a group
    - serviceCredentialsFile: Path to Google service credentials file
-   - firebaseCliToken: Auth token generated using 'fastlane run firebase_app_distribution_login', or the Firebase CLI's login:ci command
+   - firebaseCliToken: Auth token generated using the Firebase CLI's login:ci command
    - debug: Print verbose debug output
 
  Create testers in bulk from a comma-separated list or a file
@@ -93,18 +98,21 @@ let command = RubyCommand(commandID: "", methodName: "firebase_app_distribution"
 public func firebaseAppDistributionAddTesters(projectNumber: Int,
                                               emails: OptionalConfigValue<String?> = .fastlaneDefault(nil),
                                               file: OptionalConfigValue<String?> = .fastlaneDefault(nil),
+                                              groupAlias: OptionalConfigValue<String?> = .fastlaneDefault(nil),
                                               serviceCredentialsFile: OptionalConfigValue<String?> = .fastlaneDefault(nil),
                                               firebaseCliToken: OptionalConfigValue<String?> = .fastlaneDefault(nil),
                                               debug: OptionalConfigValue<Bool> = .fastlaneDefault(false)) {
 let projectNumberArg = RubyCommand.Argument(name: "project_number", value: projectNumber, type: nil)
 let emailsArg = emails.asRubyArgument(name: "emails", type: nil)
 let fileArg = file.asRubyArgument(name: "file", type: nil)
+let groupAliasArg = groupAlias.asRubyArgument(name: "group_alias", type: nil)
 let serviceCredentialsFileArg = serviceCredentialsFile.asRubyArgument(name: "service_credentials_file", type: nil)
 let firebaseCliTokenArg = firebaseCliToken.asRubyArgument(name: "firebase_cli_token", type: nil)
 let debugArg = debug.asRubyArgument(name: "debug", type: nil)
 let array: [RubyCommand.Argument?] = [projectNumberArg,
 emailsArg,
 fileArg,
+groupAliasArg,
 serviceCredentialsFileArg,
 firebaseCliTokenArg,
 debugArg]
@@ -116,11 +124,83 @@ let command = RubyCommand(commandID: "", methodName: "firebase_app_distribution_
 }
 
 /**
+ Create a tester group
+
+ - parameters:
+   - projectNumber: Your Firebase project number. You can find the project number in the Firebase console, on the General Settings page
+   - alias: Alias of the group to be created
+   - displayName: Display name for the group to be created
+   - serviceCredentialsFile: Path to Google service credentials file
+   - firebaseCliToken: Auth token generated using the Firebase CLI's login:ci command
+   - debug: Print verbose debug output
+
+ Create a tester group
+*/
+public func firebaseAppDistributionCreateGroup(projectNumber: Int,
+                                               alias: String,
+                                               displayName: String,
+                                               serviceCredentialsFile: OptionalConfigValue<String?> = .fastlaneDefault(nil),
+                                               firebaseCliToken: OptionalConfigValue<String?> = .fastlaneDefault(nil),
+                                               debug: OptionalConfigValue<Bool> = .fastlaneDefault(false)) {
+let projectNumberArg = RubyCommand.Argument(name: "project_number", value: projectNumber, type: nil)
+let aliasArg = RubyCommand.Argument(name: "alias", value: alias, type: nil)
+let displayNameArg = RubyCommand.Argument(name: "display_name", value: displayName, type: nil)
+let serviceCredentialsFileArg = serviceCredentialsFile.asRubyArgument(name: "service_credentials_file", type: nil)
+let firebaseCliTokenArg = firebaseCliToken.asRubyArgument(name: "firebase_cli_token", type: nil)
+let debugArg = debug.asRubyArgument(name: "debug", type: nil)
+let array: [RubyCommand.Argument?] = [projectNumberArg,
+aliasArg,
+displayNameArg,
+serviceCredentialsFileArg,
+firebaseCliTokenArg,
+debugArg]
+let args: [RubyCommand.Argument] = array
+.filter { $0?.value != nil }
+.compactMap { $0 }
+let command = RubyCommand(commandID: "", methodName: "firebase_app_distribution_create_group", className: nil, args: args)
+  _ = runner.executeCommand(command)
+}
+
+/**
+ Delete a tester group
+
+ - parameters:
+   - projectNumber: Your Firebase project number. You can find the project number in the Firebase console, on the General Settings page
+   - alias: Alias of the group to be deleted
+   - serviceCredentialsFile: Path to Google service credentials file
+   - firebaseCliToken: Auth token generated using the Firebase CLI's login:ci command
+   - debug: Print verbose debug output
+
+ Delete a tester group
+*/
+public func firebaseAppDistributionDeleteGroup(projectNumber: Int,
+                                               alias: String,
+                                               serviceCredentialsFile: OptionalConfigValue<String?> = .fastlaneDefault(nil),
+                                               firebaseCliToken: OptionalConfigValue<String?> = .fastlaneDefault(nil),
+                                               debug: OptionalConfigValue<Bool> = .fastlaneDefault(false)) {
+let projectNumberArg = RubyCommand.Argument(name: "project_number", value: projectNumber, type: nil)
+let aliasArg = RubyCommand.Argument(name: "alias", value: alias, type: nil)
+let serviceCredentialsFileArg = serviceCredentialsFile.asRubyArgument(name: "service_credentials_file", type: nil)
+let firebaseCliTokenArg = firebaseCliToken.asRubyArgument(name: "firebase_cli_token", type: nil)
+let debugArg = debug.asRubyArgument(name: "debug", type: nil)
+let array: [RubyCommand.Argument?] = [projectNumberArg,
+aliasArg,
+serviceCredentialsFileArg,
+firebaseCliTokenArg,
+debugArg]
+let args: [RubyCommand.Argument] = array
+.filter { $0?.value != nil }
+.compactMap { $0 }
+let command = RubyCommand(commandID: "", methodName: "firebase_app_distribution_delete_group", className: nil, args: args)
+  _ = runner.executeCommand(command)
+}
+
+/**
  Fetches the latest release in Firebase App Distribution
 
  - parameters:
    - app: Your app's Firebase App ID. You can find the App ID in the Firebase console, on the General Settings page
-   - firebaseCliToken: Auth token generated using 'fastlane run firebase_app_distribution_login', or the Firebase CLI's login:ci command
+   - firebaseCliToken: Auth token generated using Firebase CLI's login:ci command
    - serviceCredentialsFile: Path to Google service account json
    - debug: Print verbose debug output
 
@@ -153,7 +233,7 @@ let command = RubyCommand(commandID: "", methodName: "firebase_app_distribution_
  - parameters:
    - app: Your app's Firebase App ID. You can find the App ID in the Firebase console, on the General Settings page
    - outputFile: The path to the file where the tester UDIDs will be written
-   - firebaseCliToken: Auth token generated using 'fastlane run firebase_app_distribution_login', or the Firebase CLI's login:ci command
+   - firebaseCliToken: Auth token generated using the Firebase CLI's login:ci command
    - serviceCredentialsFile: Path to Google service account json
    - debug: Print verbose debug output
 
@@ -182,26 +262,15 @@ let command = RubyCommand(commandID: "", methodName: "firebase_app_distribution_
 }
 
 /**
- Authenticate with Firebase App Distribution using a Google account.
-
- Log in to Firebase App Distribution using a Google account to generate an authentication token. This token is stored within an environment variable and used to authenticate with your Firebase project. See https://firebase.google.com/docs/app-distribution/ios/distribute-fastlane for more information.
-*/
-public func firebaseAppDistributionLogin() {
-
-let args: [RubyCommand.Argument] = []
-let command = RubyCommand(commandID: "", methodName: "firebase_app_distribution_login", className: nil, args: args)
-  _ = runner.executeCommand(command)
-}
-
-/**
  Delete testers in bulk from a comma-separated list or a file
 
  - parameters:
    - projectNumber: Your Firebase project number. You can find the project number in the Firebase console, on the General Settings page
-   - emails: Comma separated list of tester emails to be deleted. A maximum of 1000 testers can be deleted at a time
-   - file: Path to a file containing a comma separated list of tester emails to be deleted. A maximum of 1000 testers can be deleted at a time
+   - emails: Comma separated list of tester emails to be deleted (or removed from a group if a group alias is specified). A maximum of 1000 testers can be deleted/removed at a time
+   - file: Path to a file containing a comma separated list of tester emails to be deleted (or removed from a group if a group alias is specified). A maximum of 1000 testers can be deleted/removed at a time
+   - groupAlias: Alias of the group to remove the specified testers from. Testers will not be deleted from the project
    - serviceCredentialsFile: Path to Google service credentials file
-   - firebaseCliToken: Auth token generated using 'fastlane run firebase_app_distribution_login', or the Firebase CLI's login:ci command
+   - firebaseCliToken: Auth token generated using the Firebase CLI's login:ci command
    - debug: Print verbose debug output
 
  Delete testers in bulk from a comma-separated list or a file
@@ -209,18 +278,21 @@ let command = RubyCommand(commandID: "", methodName: "firebase_app_distribution_
 public func firebaseAppDistributionRemoveTesters(projectNumber: Int,
                                                  emails: OptionalConfigValue<String?> = .fastlaneDefault(nil),
                                                  file: OptionalConfigValue<String?> = .fastlaneDefault(nil),
+                                                 groupAlias: OptionalConfigValue<String?> = .fastlaneDefault(nil),
                                                  serviceCredentialsFile: OptionalConfigValue<String?> = .fastlaneDefault(nil),
                                                  firebaseCliToken: OptionalConfigValue<String?> = .fastlaneDefault(nil),
                                                  debug: OptionalConfigValue<Bool> = .fastlaneDefault(false)) {
 let projectNumberArg = RubyCommand.Argument(name: "project_number", value: projectNumber, type: nil)
 let emailsArg = emails.asRubyArgument(name: "emails", type: nil)
 let fileArg = file.asRubyArgument(name: "file", type: nil)
+let groupAliasArg = groupAlias.asRubyArgument(name: "group_alias", type: nil)
 let serviceCredentialsFileArg = serviceCredentialsFile.asRubyArgument(name: "service_credentials_file", type: nil)
 let firebaseCliTokenArg = firebaseCliToken.asRubyArgument(name: "firebase_cli_token", type: nil)
 let debugArg = debug.asRubyArgument(name: "debug", type: nil)
 let array: [RubyCommand.Argument?] = [projectNumberArg,
 emailsArg,
 fileArg,
+groupAliasArg,
 serviceCredentialsFileArg,
 firebaseCliTokenArg,
 debugArg]
