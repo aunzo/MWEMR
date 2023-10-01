@@ -73,7 +73,7 @@ class CustomerViewModel {
             self.model[index].personalId = passport
             let cus = realm.objects(Customer.self).filter("customerId == \(self.model[index].customerId)").first
             cus?.personalId = passport
-            realm.add(cus!, update: true)
+            realm.add(cus!, update: .all)
         }
         
         let connect = Connection()
@@ -114,7 +114,7 @@ class CustomerViewModel {
                 var consultRes = ConsultResult()
                 if let obj = self.model.filter({$0.caseId == self.model[index].caseId}).first {
                     try! self.realm.write {
-                        self.realm.add(obj,update: true)
+                        self.realm.add(obj,update: .all)
                     }
                 }
                 
@@ -167,10 +167,10 @@ class CustomerViewModel {
             if report.count > indexFile {
                 if let reportFile = Mapper<SummaryReportResult>().map(JSON:report[indexFile]) {
                     self.downloadReport.onNext(0)
-                    let typeFile = reportFile.path.characters.split{$0 == "."}.map(String.init)
+                    let typeFile = reportFile.path.split{$0 == "."}.map(String.init)
                     let title = reportFile.title.replacingOccurrences(of: " ", with: "")
                     let pathComponent = "\(profile.caseId)\(profile.customerId)\(reportFile.id)\(title).\(typeFile.last!)"
-                    self.request = Alamofire.download(reportFile.path, to: { (temporaryURL, response) -> (destinationURL: URL, options: DownloadRequest.DownloadOptions) in
+                    self.request = AF.download(reportFile.path, to: { (temporaryURL, response) -> (destinationURL: URL, options: DownloadRequest.Options) in
                         let fileManager = FileManager.default
                         let directoryURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0]
                         
@@ -290,7 +290,7 @@ class CustomerViewModel {
                 try! realm.write {
                     if bagMed != nil {
                         bagMed?.amount = (bagMed?.amount)! + med.amount
-                        self.realm.add(bagMed!,update: true)
+                        self.realm.add(bagMed!,update: .all)
                     }
                     
                 }

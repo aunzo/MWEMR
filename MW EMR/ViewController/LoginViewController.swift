@@ -23,12 +23,12 @@ class LoginViewController: UIViewController {
         
         
         self.usernameTextField.rx.textInput.text.subscribe(onNext: { (text) in
-            self.loginButton.setTitle("Login", for: UIControlState.normal)
+            self.loginButton.setTitle("Login", for: UIControl.State.normal)
             self.loginButton.backgroundColor = UIColor(hexString: "#21529D")
         }).disposed(by: bag)
         
         self.passwordTextField.rx.textInput.text.subscribe(onNext: { (text) in
-            self.loginButton.setTitle("Login", for: UIControlState.normal)
+            self.loginButton.setTitle("Login", for: UIControl.State.normal)
             self.loginButton.backgroundColor = UIColor(hexString: "#21529D")
         }).disposed(by: bag)
         
@@ -50,11 +50,11 @@ class LoginViewController: UIViewController {
                 self.passwordTextField.text = ""
                 self.performSegue(withIdentifier: "finishLogin", sender: nil)
             }else{
-                self.loginButton.setTitle("Username or Password incorrect.", for: UIControlState.normal)
+                self.loginButton.setTitle("Username or Password incorrect.", for: UIControl.State.normal)
                 self.loginButton.backgroundColor = Material.Color.red.accent3
             }
         }else{
-            self.loginButton.setTitle("Please input username and password.", for: UIControlState.normal)
+            self.loginButton.setTitle("Please input username and password.", for: UIControl.State.normal)
             self.loginButton.backgroundColor = Material.Color.red.accent3
         }
     }

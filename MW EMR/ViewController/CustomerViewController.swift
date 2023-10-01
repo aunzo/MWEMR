@@ -37,18 +37,18 @@ class CustomerViewController: UIViewController {
             }
             else if status == .noConsult
             {
-                let alertEdit = UIAlertController(title: "Error", message: "This case can't get consult.\nPlease download agian or cancel.", preferredStyle: UIAlertControllerStyle.alert)
+                let alertEdit = UIAlertController(title: "Error", message: "This case can't get consult.\nPlease download agian or cancel.", preferredStyle: UIAlertController.Style.alert)
                 alertEdit
                     .addAction(
                         UIAlertAction(
                             title: "Download",
-                            style: UIAlertActionStyle.default) { [unowned self] _ in
+                            style: UIAlertAction.Style.default) { [unowned self] _ in
                                 self.viewModel.selectedItemAt(index: self.lastDownloadCustomerIndex)
                                 self.viewModel.downloadToLocal(index: self.lastDownloadCustomerIndex,view: self.view)
                                 self.customerTableView.reloadData()
                     })
                 
-                alertEdit.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel))
+                alertEdit.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel))
                 
                 self.present(alertEdit, animated: true, completion: nil)
             }
@@ -57,8 +57,8 @@ class CustomerViewController: UIViewController {
                 let alertEdit = UIAlertController(
                     title: "Error",
                     message: "Can't download this case.\nPlease check your internet.",
-                    preferredStyle: UIAlertControllerStyle.alert)
-                alertEdit.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.default))
+                    preferredStyle: UIAlertController.Style.alert)
+                alertEdit.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default))
                 
                 self.present(alertEdit, animated: true, completion: nil)
             }
@@ -74,8 +74,8 @@ class CustomerViewController: UIViewController {
                         self.hud2!.mode = MBProgressHUDMode.determinate
                         self.hud2!.labelText = "Downloading"
                         self.hud2!.show(true)
-//                        self.hud2!.button.button.setTitle("Cancel", for: UIControlState.normal)
-//                        self.hud2!.button.addTarget(self, action: #selector(ElearningViewController.cancelDownloadPDF), for: UIControlEvents.touchUpInside)
+//                        self.hud2!.button.button.setTitle("Cancel", for: UIControl.State.normal)
+//                        self.hud2!.button.addTarget(self, action: #selector(ElearningViewController.cancelDownloadPDF), for: UIControl.Event.touchUpInside)
                     }
                     
                     if self.hud2 != nil {
@@ -115,10 +115,10 @@ extension CustomerViewController {
     }
     
     @objc func loadData(sender:UIButton){
-        let alert = UIAlertController(title: "Confirm", message: "Do You want to download this case?", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel))
+        let alert = UIAlertController(title: "Confirm", message: "Do You want to download this case?", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel))
         
-        alert.addAction(UIAlertAction(title: "Download", style: UIAlertActionStyle.default) { [unowned self] _ in
+        alert.addAction(UIAlertAction(title: "Download", style: UIAlertAction.Style.default) { [unowned self] _ in
             self.lastDownloadCustomerIndex = sender.tag
             self.viewModel.selectedItemAt(index: sender.tag)
             self.viewModel.downloadToLocal(index: sender.tag,view: self.view)
@@ -140,11 +140,11 @@ extension CustomerViewController {
     }
     
     @objc func deleteCase(sender:UIButton){
-        let alert = UIAlertController(title: "Confirm", message: "Do You want to delete this case?", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: { (alert) in
+        let alert = UIAlertController(title: "Confirm", message: "Do You want to delete this case?", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: { (alert) in
         }))
         
-        alert.addAction(UIAlertAction(title: "Delete", style: UIAlertActionStyle.destructive, handler: { (alert) in
+        alert.addAction(UIAlertAction(title: "Delete", style: UIAlertAction.Style.destructive, handler: { (alert) in
             self.viewModel.deleteCase(index: sender.tag,isNotSend: true)
             self.customerTableView.reloadData()
         }))
@@ -174,11 +174,11 @@ extension CustomerViewController {
     }
     
     @objc func sentCaseToServer(sender:UIButton){
-        let alert = UIAlertController(title: "Confirm", message: "Do You want to Send this case?\n Case has been delete after send already.", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: { (alert) in
+        let alert = UIAlertController(title: "Confirm", message: "Do You want to Send this case?\n Case has been delete after send already.", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: { (alert) in
         }))
         
-        alert.addAction(UIAlertAction(title: "Send", style: UIAlertActionStyle.destructive, handler: { (alert) in
+        alert.addAction(UIAlertAction(title: "Send", style: UIAlertAction.Style.destructive, handler: { (alert) in
             self.viewModel.sendCaseToServer(index: sender.tag, view: self.view).subscribe(onError: { (error) in
                 var errorMsg = ""
                 
@@ -202,17 +202,17 @@ extension CustomerViewController {
                 }
                 
 
-                let alert = UIAlertController(title: "Send Failure", message: errorMsg , preferredStyle: UIAlertControllerStyle.alert)
+                let alert = UIAlertController(title: "Send Failure", message: errorMsg , preferredStyle: UIAlertController.Style.alert)
 
-                alert.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.default, handler: { (alert) in
+                alert.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: { (alert) in
                     self.customerTableView.reloadData()
                 }))
 
                 self.present(alert, animated: true, completion: nil)
                 }, onCompleted: {
-                    let alert = UIAlertController(title: "Send Success", message: "Case is already send.", preferredStyle: UIAlertControllerStyle.alert)
+                    let alert = UIAlertController(title: "Send Success", message: "Case is already send.", preferredStyle: UIAlertController.Style.alert)
 
-                    alert.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.default, handler: { (alert) in
+                    alert.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: { (alert) in
                         self.customerTableView.reloadData()
                     }))
 
@@ -254,14 +254,14 @@ extension CustomerViewController:UITableViewDataSource {
 
         if self.viewModel.itemIsDownloaded(index: indexPath.row) {
             cell.editIDButton.isHidden = false
-            cell.upDownButton.setImage(UIImage(named: "edit"), for: UIControlState.normal)
+            cell.upDownButton.setImage(UIImage(named: "edit"), for: UIControl.State.normal)
             cell.closeCaseButton.isEnabled = true
             cell.closeCaseButton.backgroundColor = UIColor(hexString: "#21529D")
-            cell.upDownButton.removeTarget(self, action: #selector(CustomerViewController.loadData(sender:)), for: UIControlEvents.touchUpInside)
-            cell.upDownButton.addTarget(self, action: #selector(CustomerViewController.openConsult(sender:)), for: UIControlEvents.touchUpInside)
+            cell.upDownButton.removeTarget(self, action: #selector(CustomerViewController.loadData(sender:)), for: UIControl.Event.touchUpInside)
+            cell.upDownButton.addTarget(self, action: #selector(CustomerViewController.openConsult(sender:)), for: UIControl.Event.touchUpInside)
             
-            cell.deleteCaseButton.addTarget(self, action: #selector(CustomerViewController.deleteCase(sender:)), for: UIControlEvents.touchUpInside)
-            cell.closeCaseButton.addTarget(self, action: #selector(CustomerViewController.sentCaseToServer(sender:)), for: UIControlEvents.touchUpInside)
+            cell.deleteCaseButton.addTarget(self, action: #selector(CustomerViewController.deleteCase(sender:)), for: UIControl.Event.touchUpInside)
+            cell.closeCaseButton.addTarget(self, action: #selector(CustomerViewController.sentCaseToServer(sender:)), for: UIControl.Event.touchUpInside)
             
             if selectedMenu == 2 {
                 if self.viewModel.itemIsDelete(index: indexPath.row) {
@@ -287,17 +287,17 @@ extension CustomerViewController:UITableViewDataSource {
                 cell.closedCaseLabel.isHidden = true
                 cell.closeCaseButton.isHidden = false
             }
-            cell.upDownButton.setImage(UIImage(named: "download"), for: UIControlState.normal)
+            cell.upDownButton.setImage(UIImage(named: "download"), for: UIControl.State.normal)
             cell.closeCaseButton.isEnabled = false
             cell.closeCaseButton.backgroundColor = Material.Color.grey.lighten1
-            cell.upDownButton.removeTarget(self, action: #selector(CustomerViewController.openConsult(sender:)), for: UIControlEvents.touchUpInside)
-            cell.upDownButton.addTarget(self, action: #selector(CustomerViewController.loadData(sender:)), for: UIControlEvents.touchUpInside)
+            cell.upDownButton.removeTarget(self, action: #selector(CustomerViewController.openConsult(sender:)), for: UIControl.Event.touchUpInside)
+            cell.upDownButton.addTarget(self, action: #selector(CustomerViewController.loadData(sender:)), for: UIControl.Event.touchUpInside)
             cell.deleteCaseButton.isHidden = true
         }
         
-        cell.deleteCaseButton.addTarget(self, action: #selector(CustomerViewController.deleteCase(sender:)), for: UIControlEvents.touchUpInside)
+        cell.deleteCaseButton.addTarget(self, action: #selector(CustomerViewController.deleteCase(sender:)), for: UIControl.Event.touchUpInside)
         
-        cell.editIDButton.addTarget(self, action: #selector(CustomerViewController.editPassport(sender:)), for: UIControlEvents.touchUpInside)
+        cell.editIDButton.addTarget(self, action: #selector(CustomerViewController.editPassport(sender:)), for: UIControl.Event.touchUpInside)
         
         
         return cell

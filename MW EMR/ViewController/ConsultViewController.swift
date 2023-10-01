@@ -168,12 +168,12 @@ class ConsultViewController: UIViewController {
             //GA
             for item in (consultResult?.ga)! {
                 if item.value == 178  {
-                    gaGroupButton[0].setImage(UIImage(named: "checked"), for: UIControlState.normal)
+                    gaGroupButton[0].setImage(UIImage(named: "checked"), for: UIControl.State.normal)
                     gaGroupButton[0].isEnabled = true
                 }else{
                     for button in gaGroupButton {
                         if button.tag ==  item.value {
-                            button.setImage(UIImage(named: "checked"), for: UIControlState.normal)
+                            button.setImage(UIImage(named: "checked"), for: UIControl.State.normal)
                             button.isEnabled = true
                         }
                         
@@ -190,12 +190,12 @@ class ConsultViewController: UIViewController {
             //Airway
             for item in (consultResult?.airway)! {
                 if item.value == 168  {
-                    airwayGroupButton[0].setImage(UIImage(named: "checked"), for: UIControlState.normal)
+                    airwayGroupButton[0].setImage(UIImage(named: "checked"), for: UIControl.State.normal)
                     airwayGroupButton[0].isEnabled = true
                 }else{
                     for button in airwayGroupButton {
                         if button.tag ==  item.value {
-                            button.setImage(UIImage(named: "checked"), for: UIControlState.normal)
+                            button.setImage(UIImage(named: "checked"), for: UIControl.State.normal)
                             button.isEnabled = true
                         }
                     }
@@ -204,10 +204,10 @@ class ConsultViewController: UIViewController {
                         self.airwayNoLabel.text = "No " + (consultResult?.tubeNo ?? "")
                         
                         if consultResult?.tubeCuffCheckValue == 166 {
-                            self.airwayTrachGroupButton[0].setImage(UIImage(named: "checkmark"), for: UIControlState.normal)
+                            self.airwayTrachGroupButton[0].setImage(UIImage(named: "checkmark"), for: UIControl.State.normal)
                             self.airwayTrachGroupButton[0].isEnabled = true
                         }else if consultResult?.tubeCuffCheckValue == 167 {
-                            self.airwayTrachGroupButton[1].setImage(UIImage(named: "checkmark"), for: UIControlState.normal)
+                            self.airwayTrachGroupButton[1].setImage(UIImage(named: "checkmark"), for: UIControl.State.normal)
                             self.airwayTrachGroupButton[1].isEnabled = true
                         }
                     }
@@ -220,12 +220,12 @@ class ConsultViewController: UIViewController {
             for item in (consultResult?.resp)! {
                 
                 if item.value == 159  {
-                    respGroupButton[0].setImage(UIImage(named: "checked"), for: UIControlState.normal)
+                    respGroupButton[0].setImage(UIImage(named: "checked"), for: UIControl.State.normal)
                     respGroupButton[0].isEnabled = false
                 }else{
                     for button in respGroupButton {
                         if button.tag ==  item.value {
-                            button.setImage(UIImage(named: "checked"), for: UIControlState.normal)
+                            button.setImage(UIImage(named: "checked"), for: UIControl.State.normal)
                             button.isEnabled = true
                         }
                         
@@ -242,7 +242,7 @@ class ConsultViewController: UIViewController {
                     }else if item.value == 198 {
                         for button in resp2ButtonGroup {
                             if consultResult?.ventialValue == button.tag {
-                                button.setImage(UIImage(named: "checkmark"), for: UIControlState.normal)
+                                button.setImage(UIImage(named: "checkmark"), for: UIControl.State.normal)
                                 button.isEnabled = true
                             }
                         }
@@ -263,7 +263,7 @@ class ConsultViewController: UIViewController {
             
             //Nero
             if consultResult?.neroNSFCheck == "True" {
-                self.neroNSFButton.setImage(UIImage(named: "checked"), for: UIControlState.normal)
+                self.neroNSFButton.setImage(UIImage(named: "checked"), for: UIControl.State.normal)
                 self.neroNSFButton.isEnabled = true
             }else{
                 self.neroMLabel.text = consultResult?.neroMDisplay
@@ -282,25 +282,25 @@ class ConsultViewController: UIViewController {
             self.pupilRtMMLabel.text = consultResult?.pupilRTMin
             
             if consultResult?.pupilRTTypeValue == 32 {
-                self.pupilRtGroupButton[0].setImage(UIImage(named: "checkmark"), for: UIControlState.normal)
+                self.pupilRtGroupButton[0].setImage(UIImage(named: "checkmark"), for: UIControl.State.normal)
                 self.pupilRtGroupButton[0].isEnabled = true
             }else{
-                self.pupilRtGroupButton[1].setImage(UIImage(named: "checkmark"), for: UIControlState.normal)
+                self.pupilRtGroupButton[1].setImage(UIImage(named: "checkmark"), for: UIControl.State.normal)
                 self.pupilRtGroupButton[1].isEnabled = true
             }
             
             if consultResult?.pupilLTTypeValue == 32 {
-                self.pupilLtGroupButton[0].setImage(UIImage(named: "checkmark"), for: UIControlState.normal)
+                self.pupilLtGroupButton[0].setImage(UIImage(named: "checkmark"), for: UIControl.State.normal)
                 self.pupilLtGroupButton[0].isEnabled = true
             }else{
-                self.pupilLtGroupButton[1].setImage(UIImage(named: "checkmark"), for: UIControlState.normal)
+                self.pupilLtGroupButton[1].setImage(UIImage(named: "checkmark"), for: UIControl.State.normal)
                 self.pupilLtGroupButton[1].isEnabled = true
             }
             
             //TempC
             for button in tempCGroupButton {
                 if button.tag ==  Int(consultResult?.tempCheck ?? "0") {
-                    button.setImage(UIImage(named: "checkmark"), for: UIControlState.normal)
+                    button.setImage(UIImage(named: "checkmark"), for: UIControl.State.normal)
                     button.isEnabled = true
                 }
             }
@@ -313,7 +313,7 @@ class ConsultViewController: UIViewController {
             //PR/Min
             for button in prminGroupButton {
                 if button.tag ==  Int(consultResult?.prMin ?? "0") {
-                    button.setImage(UIImage(named: "checkmark"), for: UIControlState.normal)
+                    button.setImage(UIImage(named: "checkmark"), for: UIControl.State.normal)
                     button.isEnabled = true
                 }
             }
@@ -323,7 +323,7 @@ class ConsultViewController: UIViewController {
             //BPmmHG
             for button in bpmmHgGroupButton {
                 if button.tag ==  Int(consultResult?.bmMinHg ?? "0") {
-                    button.setImage(UIImage(named: "checkmark"), for: UIControlState.normal)
+                    button.setImage(UIImage(named: "checkmark"), for: UIControl.State.normal)
                     button.isEnabled = true
                 }
             }
@@ -334,12 +334,12 @@ class ConsultViewController: UIViewController {
             //Deformity & Protection
             for item in (consultResult?.deform)! {
                 if item.value == 143  {
-                    dpGroupButton[0].setImage(UIImage(named: "checked"), for: UIControlState.normal)
+                    dpGroupButton[0].setImage(UIImage(named: "checked"), for: UIControl.State.normal)
                     dpGroupButton[0].isEnabled = true
                 }else{
                     for button in dpGroupButton {
                         if button.tag ==  item.value {
-                            button.setImage(UIImage(named: "checked"), for: UIControlState.normal)
+                            button.setImage(UIImage(named: "checked"), for: UIControl.State.normal)
                             button.isEnabled = true
                         }
                     }
@@ -363,12 +363,12 @@ class ConsultViewController: UIViewController {
             //Drain
             for item in (consultResult?.drains)! {
                 if item.value == 133  {
-                    drainGroupButton[0].setImage(UIImage(named: "checked"), for: UIControlState.normal)
+                    drainGroupButton[0].setImage(UIImage(named: "checked"), for: UIControl.State.normal)
                     drainGroupButton[0].isEnabled = true
                 }else{
                     for button in drainGroupButton {
                         if button.tag ==  item.value {
-                            button.setImage(UIImage(named: "checked"), for: UIControlState.normal)
+                            button.setImage(UIImage(named: "checked"), for: UIControl.State.normal)
                             button.isEnabled = true
                         }
                     }
@@ -383,7 +383,7 @@ class ConsultViewController: UIViewController {
             //dispal
             for button in dispalPulseGroupButton {
                 if button.tag ==  consultResult?.distalPulseValue {
-                    button.setImage(UIImage(named: "checkmark"), for: UIControlState.normal)
+                    button.setImage(UIImage(named: "checkmark"), for: UIControl.State.normal)
                     button.isEnabled = true
                 }
                 
@@ -419,15 +419,15 @@ class ConsultViewController: UIViewController {
                 self.LACTBrainTextField.text = consultResult?.ctBrain
                 self.LAOtherTextField.text = consultResult?.labOther
                 if consultResult?.pneumocepha == "True" {
-                    self.LAPneumocephalusGroupButton[0].setImage(UIImage(named: "checkmark"), for: UIControlState.normal)
+                    self.LAPneumocephalusGroupButton[0].setImage(UIImage(named: "checkmark"), for: UIControl.State.normal)
                 }else{
-                    self.LAPneumocephalusGroupButton[1].setImage(UIImage(named: "checkmark"), for: UIControlState.normal)
+                    self.LAPneumocephalusGroupButton[1].setImage(UIImage(named: "checkmark"), for: UIControl.State.normal)
                 }
                 
                 if consultResult?.pneumotholax == "True" {
-                    self.LAPneumothraxGroupButton[0].setImage(UIImage(named: "checkmark"), for: UIControlState.normal)
+                    self.LAPneumothraxGroupButton[0].setImage(UIImage(named: "checkmark"), for: UIControl.State.normal)
                 }else{
-                    self.LAPneumothraxGroupButton[1].setImage(UIImage(named: "checkmark"), for: UIControlState.normal)
+                    self.LAPneumothraxGroupButton[1].setImage(UIImage(named: "checkmark"), for: UIControl.State.normal)
                 }
             }
             

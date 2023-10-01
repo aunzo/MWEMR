@@ -60,7 +60,7 @@ class AddProgressionRecordViewController: UIViewController {
             self.outputLabel.text = editItem["output"]
             self.remarkLabel.text = editItem["remark"]
             
-            self.actionButton.setTitle("Edit", for: UIControlState.normal)
+            self.actionButton.setTitle("Edit", for: UIControl.State.normal)
             
             self.titleLabel.text = "Edit Progresion"
         }else{
@@ -70,14 +70,14 @@ class AddProgressionRecordViewController: UIViewController {
         
         self.viewModel.change
             .subscribe(onNext: { () in
-                let alert = UIAlertController(title: "Add Success", message: "You want to add item more?", preferredStyle: UIAlertControllerStyle.alert)
-                alert.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.cancel, handler: { (alert) in
+                let alert = UIAlertController(title: "Add Success", message: "You want to add item more?", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.cancel, handler: { (alert) in
                     self.dismiss(animated: true, completion: {
                         self.finishAddCallback!()
                     })
                 }))
                 
-                alert.addAction(UIAlertAction(title: "YES", style: UIAlertActionStyle.default, handler: { (alert) in
+                alert.addAction(UIAlertAction(title: "YES", style: UIAlertAction.Style.default, handler: { (alert) in
                     self.timeLabel.text = ""
                     self.pupilLabel.text = ""
                     self.prLabel.text = ""
@@ -99,8 +99,8 @@ class AddProgressionRecordViewController: UIViewController {
                 
                 }, onCompleted: {
                     if self.state == "edit" {
-                        let alertEdit = UIAlertController(title: "Edit Success", message: "item edited", preferredStyle: UIAlertControllerStyle.alert)
-                        alertEdit.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.default, handler: { (alert) in
+                        let alertEdit = UIAlertController(title: "Edit Success", message: "item edited", preferredStyle: UIAlertController.Style.alert)
+                        alertEdit.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: { (alert) in
                             self.dismiss(animated: true, completion: {
                                 self.finishAddCallback!()
                             })
@@ -108,8 +108,8 @@ class AddProgressionRecordViewController: UIViewController {
                         
                         self.present(alertEdit, animated: true, completion: nil)
                     }else{
-                        let alertError = UIAlertController(title: "Add Fail", message: "You've added this item already", preferredStyle: UIAlertControllerStyle.alert)
-                        alertError.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.default, handler: { (alert) in
+                        let alertError = UIAlertController(title: "Add Fail", message: "You've added this item already", preferredStyle: UIAlertController.Style.alert)
+                        alertError.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: { (alert) in
                             
                         }))
                         
@@ -165,9 +165,9 @@ extension AddProgressionRecordViewController {
                 viewModel.update(item: ["id":self.editItem["id"]!,"time":time,"cgs":cgs,"pupil":pupil,"bt":bt,"pr":pr,"rr":rr,"spo2":spo2,"etco2":etco2,"ekg":ekg,"painScore":painScore,"input":input,"output":output,"tm":tm,"remark":remark,"bp":bp])
             }
         }else{
-            let alert = UIAlertController(title: "Error", message: "Please input time and less than one field.", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: "Error", message: "Please input time and less than one field.", preferredStyle: UIAlertController.Style.alert)
             
-            alert.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.default, handler: { (alert) in
+            alert.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: { (alert) in
                 
             }))
             
@@ -176,12 +176,12 @@ extension AddProgressionRecordViewController {
     }
     
     @IBAction func deleteProgression(sender: AnyObject) {
-        let alert = UIAlertController(title: "Remove", message: "You want to remove this item?", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.cancel, handler: { (alert) in
+        let alert = UIAlertController(title: "Remove", message: "You want to remove this item?", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.cancel, handler: { (alert) in
             
         }))
         
-        alert.addAction(UIAlertAction(title: "Remove", style: UIAlertActionStyle.destructive, handler: { (alert) in
+        alert.addAction(UIAlertAction(title: "Remove", style: UIAlertAction.Style.destructive, handler: { (alert) in
             self.viewModel.remove(id: self.editItem["id"]!)
             self.dismiss(animated: true, completion: {
                 self.finishAddCallback!()
@@ -193,7 +193,7 @@ extension AddProgressionRecordViewController {
     }
     
     @IBAction func textFieldEditing(sender: TextField) {
-        let mode = UIDatePickerMode.time
+        let mode = UIDatePicker.Mode.time
         let dateFomatter = DateFormatter()
         dateFomatter.locale = Locale(identifier: "en_US")
         dateFomatter.dateFormat = "HH:mm"

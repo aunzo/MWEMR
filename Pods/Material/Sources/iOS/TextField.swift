@@ -233,7 +233,7 @@ open class TextField: UITextField {
   
   /// This property adds a padding to placeholder y position animation
   @IBInspectable
-  open var placeholderVerticalOffset: CGFloat = 8
+  open var placeholderVerticalOffset: CGFloat = 0
   
   /// This property adds a padding to placeholder y position animation
   @IBInspectable

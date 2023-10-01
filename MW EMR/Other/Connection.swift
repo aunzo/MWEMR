@@ -7,22 +7,19 @@ import ObjectMapper
 class Connection {
     func get<T : Mappable>(model : T,path: String) -> Observable<[T]>{
         return Observable.create({ (observer) -> Disposable in
-            Alamofire.request(path, method: .get).responseJSON(completionHandler: { (res) in
-                if res.result.isSuccess {
-                    if res.response?.statusCode == 200 {
-                        let model = Mapper<T>().mapArray(JSONObject:res.result.value)
-                        if model != nil {
-                            observer.onNext(model!)
-                        }else{
-                            
-                        }
+            AF.request(path, method: .get).responseJSON(completionHandler: { (res) in
+                if res.response?.statusCode == 200 {
+                    let model = Mapper<T>().mapArray(JSONObject:res.value)
+                    if model != nil {
+                        observer.onNext(model!)
                     }else{
-                        observer.onError(res.result.error!)
+                        observer.onError(res.error!)
                     }
-                }else{
-                    observer.onError(res.result.error!)
                 }
-
+                else
+                {
+                    observer.onError(res.error!)
+                }
             })
             
             return Disposables.create()
@@ -31,15 +28,22 @@ class Connection {
     
     func changePassportID(customerID:Int, passport:String) -> Observable<Void>{
         return Observable.create({ (observer) -> Disposable in
-            Alamofire.request(Constant.changePassportID, method: .post, parameters: ["customerID":customerID, "passportID":passport], encoding: JSONEncoding.default).responseString(completionHandler: { (res) in
-                if res.result.isSuccess {
-                    if res.result.value! == "Success" {
+            AF
+                .request(
+                    Constant.changePassportID,
+                    method: .post,
+                    parameters: ["customerID":customerID, "passportID":passport],
+                    encoding: JSONEncoding.default)
+                .responseString(completionHandler: { (res) in
+                    if res.value == "Success"
+                    {
                         observer.onCompleted()
-                    }else{
-                        observer.onError(caseError.UnexpectedError(message: res.result.value ?? ""))
                     }
-                }
-            })
+                    else
+                    {
+                        observer.onError(caseError.UnexpectedError(message: res.value ?? ""))
+                    }
+                })
             
             return Disposables.create()
         })
@@ -47,13 +51,22 @@ class Connection {
     
     func uploadCase(data: [String:Any]) -> Observable<Void>{
         return Observable.create({ (observer) -> Disposable in
-            Alamofire.request(Constant.uploadCase, method: .post, parameters: data, encoding: JSONEncoding.default).responseString(completionHandler: { (res) in
-                if res.result.value! == "Success" {
-                    observer.onCompleted()
-                }else{
-                    observer.onError(caseError.UnexpectedError(message: res.result.value ?? ""))
-                }
-            })
+            AF
+                .request(
+                    Constant.uploadCase,
+                    method: .post,
+                    parameters: data,
+                    encoding: JSONEncoding.default)
+                .responseString(completionHandler: { (res) in
+                    if res.value == "Success"
+                    {
+                        observer.onCompleted()
+                    }
+                    else
+                    {
+                        observer.onError(caseError.UnexpectedError(message: res.value ?? ""))
+                    }
+                })
             
             return Disposables.create()
         })
@@ -61,11 +74,11 @@ class Connection {
     
     func uploadBag(bagId: Int) -> Observable<Void>{
         return Observable.create({ (observer) -> Disposable in
-            Alamofire.request(Constant.uploadBag, method: .get, parameters: ["bagId":bagId]).responseString(completionHandler: { (res) in
-                if res.result.value! == "Success" {
+            AF.request(Constant.uploadBag, method: .get, parameters: ["bagId":bagId]).responseString(completionHandler: { (res) in
+                if res.value == "Success" {
                     observer.onCompleted()
                 }else{
-                    observer.onError(res.result.error!)
+                    observer.onError(res.error!)
                 }
                 
             })
@@ -76,17 +89,15 @@ class Connection {
     
     func getRawData(path: String) -> Observable<Any>{
         return Observable.create({ (observer) -> Disposable in
-            Alamofire.request(path, method: .get).responseJSON(completionHandler: { (res) in
-                if res.result.isSuccess {
-                    if res.response?.statusCode == 200 {
-                            observer.onNext(res.result.value!)
-                    }else{
-                        observer.onError(res.result.error!)
-                    }
-                }else{
-                    observer.onError(res.result.error!)
+            AF.request(path, method: .get).responseString(completionHandler: { res in
+                if res.response?.statusCode == 200 
+                {
+                        observer.onNext(res.value!)
                 }
-                
+                else
+                {
+                    observer.onError(res.error!)
+                }
             })
             return Disposables.create()
         })

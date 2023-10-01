@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		33013A4B4C75712972FCF7C5 /* Pods_MW_EMR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1BFB58AAABC36F854049E5B /* Pods_MW_EMR.framework */; };
 		3A5B63F21D25043200350989 /* CaseResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5B63F11D25043200350989 /* CaseResult.swift */; };
 		3A67209D1CC8DFFF000E905D /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A67209C1CC8DFFF000E905D /* MenuViewController.swift */; };
 		3A6720A01CC8E04F000E905D /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A67209F1CC8E04F000E905D /* MenuCollectionViewCell.swift */; };
@@ -15,7 +14,6 @@
 		3A6720A61CC8E39C000E905D /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6720A51CC8E39C000E905D /* MenuViewModel.swift */; };
 		3A6720A81CC8E919000E905D /* MedicalUsingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6720A71CC8E919000E905D /* MedicalUsingViewController.swift */; };
 		3AA023282025EE6C006CEA66 /* MWEMRUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA023272025EE6C006CEA66 /* MWEMRUITest.swift */; };
-		3AA023302025EE90006CEA66 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA0232F2025EE8F006CEA66 /* SnapshotHelper.swift */; };
 		3AA423851D07CFB400ED094A /* ArrayTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA423841D07CFB400ED094A /* ArrayTransform.swift */; };
 		3AA423871D08050C00ED094A /* UIColorWithhexString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA423861D08050C00ED094A /* UIColorWithhexString.swift */; };
 		3AC074BA1D0FE5F4006A9E58 /* ConsultPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC074B91D0FE5F4006A9E58 /* ConsultPageViewController.swift */; };
@@ -122,6 +120,7 @@
 		A6FEC37A1CFEE8FF00425438 /* MedicalBagTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FEC3791CFEE8FF00425438 /* MedicalBagTableViewCell.swift */; };
 		A6FEC37C1CFEF01D00425438 /* BagDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FEC37B1CFEF01D00425438 /* BagDetailViewController.swift */; };
 		A6FEC37E1CFEF02800425438 /* SuggestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6FEC37D1CFEF02800425438 /* SuggestionViewController.swift */; };
+		B983E9F79BD0C960F4C0390C /* Pods_MW_EMR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E79F3FE3751CD8C449DA3DB /* Pods_MW_EMR.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,7 +144,6 @@
 		3AA023252025EE6C006CEA66 /* MWEMRUITest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MWEMRUITest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AA023272025EE6C006CEA66 /* MWEMRUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWEMRUITest.swift; sourceTree = "<group>"; };
 		3AA023292025EE6C006CEA66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3AA0232F2025EE8F006CEA66 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		3AA423841D07CFB400ED094A /* ArrayTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayTransform.swift; sourceTree = "<group>"; };
 		3AA423861D08050C00ED094A /* UIColorWithhexString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorWithhexString.swift; sourceTree = "<group>"; };
 		3AC074B91D0FE5F4006A9E58 /* ConsultPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsultPageViewController.swift; sourceTree = "<group>"; };
@@ -154,7 +152,7 @@
 		3AC16C031CCF6883001EBF7C /* CustomerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerViewController.swift; sourceTree = "<group>"; };
 		3AC16C051CCF68D9001EBF7C /* CustomerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerTableViewCell.swift; sourceTree = "<group>"; };
 		3AE6ED221EC3445D0070687E /* UIButton+Selected.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Selected.swift"; sourceTree = "<group>"; };
-		420AF85D842AE506B781C2E4 /* Pods-MW EMR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MW EMR.release.xcconfig"; path = "Pods/Target Support Files/Pods-MW EMR/Pods-MW EMR.release.xcconfig"; sourceTree = "<group>"; };
+		7E79F3FE3751CD8C449DA3DB /* Pods_MW_EMR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MW_EMR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E0ADB80211F3503008C4F9A /* String+Empty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Empty.swift"; sourceTree = "<group>"; };
 		8E23C400214A2031001612F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E99FA5D24FBEA5C00E3ECB3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -275,8 +273,8 @@
 		A6FEC3791CFEE8FF00425438 /* MedicalBagTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalBagTableViewCell.swift; sourceTree = "<group>"; };
 		A6FEC37B1CFEF01D00425438 /* BagDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BagDetailViewController.swift; sourceTree = "<group>"; };
 		A6FEC37D1CFEF02800425438 /* SuggestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionViewController.swift; sourceTree = "<group>"; };
-		B8275EE0B6F3DF93223D976B /* Pods-MW EMR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MW EMR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MW EMR/Pods-MW EMR.debug.xcconfig"; sourceTree = "<group>"; };
-		C1BFB58AAABC36F854049E5B /* Pods_MW_EMR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MW_EMR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D20C953C3DBCA6884134915F /* Pods-MW EMR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MW EMR.release.xcconfig"; path = "Target Support Files/Pods-MW EMR/Pods-MW EMR.release.xcconfig"; sourceTree = "<group>"; };
+		F227C22CD0059A997F3F54B0 /* Pods-MW EMR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MW EMR.debug.xcconfig"; path = "Target Support Files/Pods-MW EMR/Pods-MW EMR.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -291,7 +289,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33013A4B4C75712972FCF7C5 /* Pods_MW_EMR.framework in Frameworks */,
+				B983E9F79BD0C960F4C0390C /* Pods_MW_EMR.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,20 +358,20 @@
 		3AA023262025EE6C006CEA66 /* MWEMRUITest */ = {
 			isa = PBXGroup;
 			children = (
-				3AA0232F2025EE8F006CEA66 /* SnapshotHelper.swift */,
 				3AA023272025EE6C006CEA66 /* MWEMRUITest.swift */,
 				3AA023292025EE6C006CEA66 /* Info.plist */,
 			);
 			path = MWEMRUITest;
 			sourceTree = "<group>";
 		};
-		61DECCF01A8EED38CB4005ED /* Pods */ = {
+		7F5839699CD2CA562CDF7D9D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B8275EE0B6F3DF93223D976B /* Pods-MW EMR.debug.xcconfig */,
-				420AF85D842AE506B781C2E4 /* Pods-MW EMR.release.xcconfig */,
+				F227C22CD0059A997F3F54B0 /* Pods-MW EMR.debug.xcconfig */,
+				D20C953C3DBCA6884134915F /* Pods-MW EMR.release.xcconfig */,
 			);
 			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		8E0ADB7E211F34E5008C4F9A /* Extension */ = {
@@ -390,6 +388,14 @@
 				8E0ADB80211F3503008C4F9A /* String+Empty.swift */,
 			);
 			path = String;
+			sourceTree = "<group>";
+		};
+		933765A89F231FFA9C5DE108 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7E79F3FE3751CD8C449DA3DB /* Pods_MW_EMR.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		A6090A401CFD6FD50083B9FD /* pdfviewer */ = {
@@ -446,8 +452,8 @@
 				A62FECD71CC50B5200AC285A /* MW EMR */,
 				3AA023262025EE6C006CEA66 /* MWEMRUITest */,
 				A62FECD61CC50B5200AC285A /* Products */,
-				61DECCF01A8EED38CB4005ED /* Pods */,
-				F5908CA074E9AA3519DE8B11 /* Frameworks */,
+				7F5839699CD2CA562CDF7D9D /* Pods */,
+				933765A89F231FFA9C5DE108 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -559,14 +565,6 @@
 			path = Other;
 			sourceTree = "<group>";
 		};
-		F5908CA074E9AA3519DE8B11 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C1BFB58AAABC36F854049E5B /* Pods_MW_EMR.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -592,12 +590,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A62FECF21CC50B5300AC285A /* Build configuration list for PBXNativeTarget "MW EMR" */;
 			buildPhases = (
-				9BEBB2181C2BFB11E193C4F0 /* [CP] Check Pods Manifest.lock */,
+				A287B82FF303651840A9E51F /* [CP] Check Pods Manifest.lock */,
 				A62FECD11CC50B5200AC285A /* Sources */,
 				A62FECD21CC50B5200AC285A /* Frameworks */,
 				A62FECD31CC50B5200AC285A /* Resources */,
-				E37D8266B1AC92B9DFE41EE4 /* 📦 Embed Pods Frameworks */,
 				3AA023202024C4E0006CEA66 /* Run Fabric */,
+				9FA051B7AA8A2A184E00A78A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -694,37 +692,98 @@
 			shellPath = /bin/sh;
 			shellScript = "./Fabric.framework/run cf7357b13e13fc8ea0f1347cfce7eef3723dcdb6 304daa17d7b6c21f4361a772edb368650821292cce4f86d687a69bf807ebb108\n";
 		};
-		9BEBB2181C2BFB11E193C4F0 /* [CP] Check Pods Manifest.lock */ = {
+		9FA051B7AA8A2A184E00A78A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MW EMR/Pods-MW EMR-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ActionSheetPicker-3.0/ActionSheetPicker_3_0.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/DACircularProgress/DACircularProgress.framework",
+				"${BUILT_PRODUCTS_DIR}/FirebaseCore/FirebaseCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FirebaseCoreInternal/FirebaseCoreInternal.framework",
+				"${BUILT_PRODUCTS_DIR}/FirebaseInstallations/FirebaseInstallations.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MGSwipeTableCell/MGSwipeTableCell.framework",
+				"${BUILT_PRODUCTS_DIR}/MWPhotoBrowser/MWPhotoBrowser.framework",
+				"${BUILT_PRODUCTS_DIR}/Material/Material.framework",
+				"${BUILT_PRODUCTS_DIR}/Motion/Motion.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
+				"${BUILT_PRODUCTS_DIR}/PryntTrimmerView/PryntTrimmerView.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SearchTextField/SearchTextField.framework",
+				"${BUILT_PRODUCTS_DIR}/SteviaLayout/Stevia.framework",
+				"${BUILT_PRODUCTS_DIR}/YPImagePicker/YPImagePicker.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ActionSheetPicker_3_0.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DACircularProgress.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseCoreInternal.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseInstallations.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MGSwipeTableCell.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MWPhotoBrowser.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Material.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Motion.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PryntTrimmerView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SearchTextField.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stevia.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YPImagePicker.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MW EMR/Pods-MW EMR-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A287B82FF303651840A9E51F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-MW EMR-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E37D8266B1AC92B9DFE41EE4 /* 📦 Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MW EMR/Pods-MW EMR-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -735,7 +794,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AA023282025EE6C006CEA66 /* MWEMRUITest.swift in Sources */,
-				3AA023302025EE90006CEA66 /* SnapshotHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1017,11 +1075,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
@@ -1065,10 +1124,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1076,19 +1136,21 @@
 		};
 		A62FECF31CC50B5300AC285A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B8275EE0B6F3DF93223D976B /* Pods-MW EMR.debug.xcconfig */;
+			baseConfigurationReference = F227C22CD0059A997F3F54B0 /* Pods-MW EMR.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = G24T9YMR7S;
 				INFOPLIST_FILE = "MW EMR/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 1.9.0;
+				MARKETING_VERSION = 1.10.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.devt.MW-EMR";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "c0619e47-beeb-4a0e-9737-a94c3895b669";
@@ -1097,7 +1159,7 @@
 				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Other/MWEMR-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1105,19 +1167,21 @@
 		};
 		A62FECF41CC50B5300AC285A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 420AF85D842AE506B781C2E4 /* Pods-MW EMR.release.xcconfig */;
+			baseConfigurationReference = D20C953C3DBCA6884134915F /* Pods-MW EMR.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = G24T9YMR7S;
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = G24T9YMR7S;
 				INFOPLIST_FILE = "MW EMR/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 1.9.0;
+				MARKETING_VERSION = 1.10.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.devt.MW-EMR";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "17168fc1-3a3e-417b-bb00-4f88eebce856";
@@ -1126,7 +1190,7 @@
 				SWIFT_INSTALL_OBJC_HEADER = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/Other/MWEMR-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 2;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

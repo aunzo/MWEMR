@@ -9,12 +9,12 @@ class MedicalBagDetail: Object,Mappable {
     var bagEquipments = List<MedicalBagDetailEquipments>()
     var bagMedications = List<MedicalBagDetailMedications>()
     
-    required convenience init?(map: Map) {
+    required convenience init?(map: ObjectMapper.Map) {
         self.init()
     }
     
     // Mappable
-    func mapping(map: Map) {
+    func mapping(map: ObjectMapper.Map) {
         bag_id <- map["BAG_ID"]
         name <- map["BAG_NAME"]
         bagEquipments <- (map["BagEquipments"], ArrayTransform<MedicalBagDetailEquipments>())
@@ -33,12 +33,12 @@ class MedicalBagDetailEquipments: Object,Mappable {
     @objc dynamic var name = ""
     @objc dynamic var type_name = ""
     
-    required convenience init?(map: Map) {
+    required convenience init?(map: ObjectMapper.Map) {
         self.init()
     }
     
     // Mappable
-    func mapping(map: Map) {
+    func mapping(map: ObjectMapper.Map) {
         id <- map["EQU_HISTORY_ID"]
         barcode <- map["EQUIP_BARCODE"]
         name <- map["EQUIP_NAME"]
@@ -60,12 +60,12 @@ class MedicalBagDetailMedications: Object,Mappable {
     @objc dynamic var group_name = ""
     @objc dynamic var type_name = ""
     
-    required convenience init?(map: Map) {
+    required convenience init?(map: ObjectMapper.Map) {
         self.init()
     }
     
     // Mappable
-    func mapping(map: Map) {
+    func mapping(map: ObjectMapper.Map) {
         id <- map["Medication_MEDICATION_ID"]
         amount <- map["BAG_MED_AMOUNT"]
         barcode <- map["MEDICATION_BARCODE"]

@@ -18,12 +18,12 @@ class FlightPerson: Object,Mappable {
     @objc dynamic var name = ""
     @objc dynamic var position = ""
     
-    required convenience init?(map: Map) {
+    required convenience init?(map: ObjectMapper.Map) {
         self.init()
     }
     
     // Mappable
-    func mapping(map: Map) {
+    func mapping(map: ObjectMapper.Map) {
         flightPersonId <- map["flightPersonId"]
         customerId <- map["customerId"]
         customerId <- map["caseId"]

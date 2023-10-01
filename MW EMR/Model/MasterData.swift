@@ -16,12 +16,12 @@ class MasterData: Object,Mappable {
     @objc dynamic var name = ""
     @objc dynamic var fieldID = 0
     
-    required convenience init?(map: Map) {
+    required convenience init?(map: ObjectMapper.Map) {
         self.init()
     }
     
     // Mappable
-    func mapping(map: Map) {
+    func mapping(map: ObjectMapper.Map) {
         masterID <- map["MD_ID"]
         name <- map["MD_DISPLAY"]
         fieldID <- map["MF_MF_ID"]

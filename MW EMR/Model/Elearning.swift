@@ -10,12 +10,12 @@ class Elearning: Object,Mappable {
     @objc dynamic var type_name = ""
     @objc dynamic var file_type = ""
     
-    required convenience init?(map: Map) {
+    required convenience init?(map: ObjectMapper.Map) {
         self.init()
     }
     
     // Mappable
-    func mapping(map: Map) {
+    func mapping(map: ObjectMapper.Map) {
         file_id <- map["ELEARNING_FILE_ID"]
         name <- map["ELEARNING_NAME"]
         path <- map["ELEARNING_PATH"]

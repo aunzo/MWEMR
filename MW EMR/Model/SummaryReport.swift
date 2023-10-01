@@ -10,12 +10,12 @@ class SummaryReport: Object,Mappable {
     @objc dynamic var title = ""
     @objc dynamic var path = ""
     @objc dynamic var isUpload = false
-    required convenience init?(map: Map) {
+    required convenience init?(map: ObjectMapper.Map) {
         self.init()
     }
     
     // Mappable
-    func mapping(map: Map) {
+    func mapping(map: ObjectMapper.Map) {
         customerId <- map["customerId"]
         caseId <- map["caseId"]
         id <- map["REPORT_FILE_ID"]

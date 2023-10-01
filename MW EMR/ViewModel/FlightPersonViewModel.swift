@@ -32,7 +32,7 @@ class FlightPersonViewModel:PreFlightViewModel {
         }
         item.customerId = customer.customerId
         item.caseId = customer.caseId
-        realm.add(item, update: false)
+        realm.add(item, update: .error)
         
         try? realm.commitWrite()
         
@@ -46,7 +46,7 @@ class FlightPersonViewModel:PreFlightViewModel {
         item.customerId = customer.customerId
         item.caseId = customer.caseId
         
-        realm.create(FlightPerson.self, value: item, update: true)
+        realm.create(FlightPerson.self, value: item, update: .all)
         
         try? realm.commitWrite()
         

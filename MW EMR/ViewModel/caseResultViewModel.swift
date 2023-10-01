@@ -566,47 +566,47 @@ class caseResultViewModel {
                     "MAC_ID":macId,
                     "path":item.path] as [String : Any]
                 if item.isUpload {
-                    Alamofire.upload(
-                        multipartFormData: { multipartFormData in
-                            let image = UIImage(contentsOfFile: filePath)
-                            
-                            for (key, value) in param {
-                                if key == "path" {
-                                    if  let imageData = UIImageJPEGRepresentation(image!, 0.6) {
-                                        multipartFormData.append(imageData, withName: "file", fileName: value as! String, mimeType: "image/png")
-                                    }
-                                }else{
-                                    multipartFormData.append("\(value)".data(using: String.Encoding.utf8)!, withName: key)
-                                }
-                                
-                            }
-                        },
-                        to: Constant.uploadReport,
-                        encodingCompletion: { encodingResult in
-                            switch encodingResult {
-                            case .success(let upload, _, _):
-                                
-                                upload.responseString(completionHandler: { (response) in
-                                    if response.result.value == "Success" {
-                                        print("Success")
-                                        self.uploadReport.onNext(index + 1)
-                                        self.removeFile(path: filePath)
-                                    }else{
-                                        print("error")
-                                        let error = NSError(domain: "", code: 500, userInfo: nil)
-                                        self.uploadReport.onError(error)
-                                        
-                                    }
-                                })
-                                
-                                
-                            case .failure(let encodingError):
-                                print(encodingError)
-                                self.uploadReport.onError(encodingError)
-                            }
-                        }
-                    )
-                    
+//                    AF.upload(
+//                        multipartFormData: { multipartFormData in
+//                            let image = UIImage(contentsOfFile: filePath)
+//                            
+//                            for (key, value) in param {
+//                                if key == "path" {
+//                                    if  let imageData = UIImageJPEGRepresentation(image!, 0.6) {
+//                                        multipartFormData.append(imageData, withName: "file", fileName: value as! String, mimeType: "image/png")
+//                                    }
+//                                }else{
+//                                    multipartFormData.append("\(value)".data(using: String.Encoding.utf8)!, withName: key)
+//                                }
+//                                
+//                            }
+//                        },
+//                        to: Constant.uploadReport,
+//                        encodingCompletion: { encodingResult in
+//                            switch encodingResult {
+//                            case .success(let upload, _, _):
+//                                
+//                                upload.responseString(completionHandler: { (response) in
+//                                    if response.result.value == "Success" {
+//                                        print("Success")
+//                                        self.uploadReport.onNext(index + 1)
+//                                        self.removeFile(path: filePath)
+//                                    }else{
+//                                        print("error")
+//                                        let error = NSError(domain: "", code: 500, userInfo: nil)
+//                                        self.uploadReport.onError(error)
+//                                        
+//                                    }
+//                                })
+//                                
+//                                
+//                            case .failure(let encodingError):
+//                                print(encodingError)
+//                                self.uploadReport.onError(encodingError)
+//                            }
+//                        }
+//                    )
+//                    
                 }
                 
             }

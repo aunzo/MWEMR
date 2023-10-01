@@ -26,7 +26,7 @@ class InterventionViewModel:PreFlightViewModel {
         
         item.customerId = customer.customerId
         item.caseId = customer.caseId
-        realm.add(item, update: false)
+        realm.add(item, update: .error)
         
         try? realm.commitWrite()
         
@@ -40,7 +40,7 @@ class InterventionViewModel:PreFlightViewModel {
         item.customerId = customer.customerId
         item.caseId = customer.caseId
         
-        realm.create(Intervention.self, value: item, update: true)
+        realm.create(Intervention.self, value: item, update: .all)
         
         try? realm.commitWrite()
         
@@ -54,7 +54,7 @@ class InterventionViewModel:PreFlightViewModel {
         
         realm.beginWrite()
         
-        realm.add(item, update: false)
+        realm.add(item, update: .error)
         
         try? realm.commitWrite()
         

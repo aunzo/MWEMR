@@ -27,7 +27,7 @@ class SummaryReportViewModel: PreFlightViewModel
         item.customerId = customer.customerId
         item.caseId = customer.caseId
         item.isUpload = true
-        realm.add(item, update: false)
+        realm.add(item, update: .error)
         
         try? realm.commitWrite()
         
@@ -41,7 +41,7 @@ class SummaryReportViewModel: PreFlightViewModel
         item.customerId = customer.customerId
         item.caseId = customer.caseId
         
-        realm.create(SummaryReport.self, value: item, update: true)
+        realm.create(SummaryReport.self, value: item, update: .all)
         
         try? realm.commitWrite()
         
@@ -55,7 +55,7 @@ class SummaryReportViewModel: PreFlightViewModel
         
         realm.beginWrite()
         
-        realm.add(item, update: false)
+        realm.add(item, update: .error)
         
         try? realm.commitWrite()
         
@@ -120,7 +120,7 @@ class SummaryReportViewModel: PreFlightViewModel
     
     func getTypeOfFile(index:Int) -> TypeFile {
         let item : SummaryReport = self.summaryReportItems![index]
-        let typeFile = item.path.characters.split{$0 == "."}.map(String.init).last
+        let typeFile = item.path.split{$0 == "."}.map(String.init).last
         if typeFile == "pdf" {
             return .pdf
         }else{

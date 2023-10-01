@@ -8,12 +8,12 @@ class User: Object,Mappable {
     @objc dynamic var username = ""
     @objc dynamic var password = ""
     
-    required convenience init?(map: Map) {
+    required convenience init?(map: ObjectMapper.Map) {
         self.init()
     }
     
     // Mappable
-    func mapping(map: Map) {
+    func mapping(map: ObjectMapper.Map) {
         id <- map["USER_ID"]
         userAuth <- map["USER_AUTHEN"]
         username <- map["USER_USERNAME"]

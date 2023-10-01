@@ -31,12 +31,12 @@ class MedicalUsingViewModel {
 
                 bagItem?.amount = (bagItem?.amount)! + (itemEdit["amountResult"]! as! Int)
                 
-                realm.add(bagItem!, update: true)
+                realm.add(bagItem!, update: .all)
             }else{
                 itemEdit["amount"] = 1
             }
             
-            realm.create(MedicalUsing.self, value: itemEdit, update: true)
+            realm.create(MedicalUsing.self, value: itemEdit, update: .all)
         }
         
         self.change.onNext(.addOrUpdate)
@@ -50,7 +50,7 @@ class MedicalUsingViewModel {
             if bag.first != nil && itemFind.first != nil {
                 bag.first?.amount = (bag.first?.amount)! + (itemFind.first?.amount)!
             }
-            realm.add(bag, update: true)
+            realm.add(bag, update: .all)
             realm.delete(itemFind)
             self.change.onNext(.delete)
         }

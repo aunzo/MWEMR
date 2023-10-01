@@ -53,23 +53,23 @@ extension MedicalBagViewController {
     }
     
     @objc func loadData(sender:UIButton){
-        let alert = UIAlertController(title: "Confirm", message: "Do You want to download this bag?", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: { (alert) in
+        let alert = UIAlertController(title: "Confirm", message: "Do You want to download this bag?", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: { (alert) in
             
         }))
         
-        alert.addAction(UIAlertAction(title: "Download", style: UIAlertActionStyle.default, handler: { (alert) in
+        alert.addAction(UIAlertAction(title: "Download", style: UIAlertAction.Style.default, handler: { (alert) in
             self.viewModel.downloadToLocal(index: sender.tag)
             self.viewModel.loadDetailBag(view: self.view, index: sender.tag).subscribe(onCompleted: { 
-                let alert = UIAlertController(title: "Success", message: "Bag is already download.\n You want to open this bag?", preferredStyle: UIAlertControllerStyle.alert)
-                alert.addAction(UIAlertAction(title: "Close", style: UIAlertActionStyle.cancel, handler: { (alert) in
+                let alert = UIAlertController(title: "Success", message: "Bag is already download.\n You want to open this bag?", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "Close", style: UIAlertAction.Style.cancel, handler: { (alert) in
                     self.isNotLoadBagCallback!()
                     self.dismiss(animated: true) {
                         
                     }
                 }))
                 
-                alert.addAction(UIAlertAction(title: "Open", style: UIAlertActionStyle.default, handler: { (alert) in
+                alert.addAction(UIAlertAction(title: "Open", style: UIAlertAction.Style.default, handler: { (alert) in
                     self.dismiss(animated: true) {
                         self.isLoadBagCallback!()
                     }
@@ -105,14 +105,14 @@ extension MedicalBagViewController:UITableViewDataSource {
         cell.configure(item: self.viewModel.itemAt(index: indexPath.row))
         
         if self.viewModel.itemIsDownloaded(index: indexPath.row) {
-            cell.downloadButton.setImage(UIImage(named: "see_detail"), for: UIControlState.normal)
-            cell.downloadButton.removeTarget(self, action: #selector(MedicalBagViewController.loadData(sender:)), for: UIControlEvents.touchUpInside)
-            cell.downloadButton.addTarget(self, action: #selector(MedicalBagViewController.seeDetailBag(sender:)), for: UIControlEvents.touchUpInside) 
+            cell.downloadButton.setImage(UIImage(named: "see_detail"), for: UIControl.State.normal)
+            cell.downloadButton.removeTarget(self, action: #selector(MedicalBagViewController.loadData(sender:)), for: UIControl.Event.touchUpInside)
+            cell.downloadButton.addTarget(self, action: #selector(MedicalBagViewController.seeDetailBag(sender:)), for: UIControl.Event.touchUpInside)
         }else{
-            cell.downloadButton.setImage(UIImage(named: "download"), for: UIControlState.normal)
+            cell.downloadButton.setImage(UIImage(named: "download"), for: UIControl.State.normal)
             cell.downloadButton.tag = indexPath.row
-            cell.downloadButton.removeTarget(self, action: #selector(MedicalBagViewController.seeDetailBag(sender:)), for: UIControlEvents.touchUpInside)
-            cell.downloadButton.addTarget(self, action: #selector(MedicalBagViewController.loadData(sender:)), for: UIControlEvents.touchUpInside)
+            cell.downloadButton.removeTarget(self, action: #selector(MedicalBagViewController.seeDetailBag(sender:)), for: UIControl.Event.touchUpInside)
+            cell.downloadButton.addTarget(self, action: #selector(MedicalBagViewController.loadData(sender:)), for: UIControl.Event.touchUpInside)
         }
         
         

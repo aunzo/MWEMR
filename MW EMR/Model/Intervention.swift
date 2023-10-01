@@ -10,12 +10,12 @@ class Intervention: Object,Mappable {
     @objc dynamic var intervention = ""
     @objc dynamic var date = ""
     
-    required convenience init?(map: Map) {
+    required convenience init?(map: ObjectMapper.Map) {
         self.init()
     }
     
     // Mappable
-    func mapping(map: Map) {
+    func mapping(map: ObjectMapper.Map) {
         interventionId <- map["interventionId"]
         customerId <- map["customerId"]
         caseId <- map["caseId"]

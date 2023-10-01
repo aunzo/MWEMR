@@ -204,7 +204,7 @@ let command = RubyCommand(commandID: "", methodName: "firebase_app_distribution_
    - serviceCredentialsFile: Path to Google service account json
    - debug: Print verbose debug output
 
- - returns: Hash representation of the lastest release created in Firebase App Distribution (see https://firebase.google.com/docs/reference/app-distribution/rest/v1/projects.apps.releases#resource:-release). Example: {:name=>"projects/123456789/apps/1:1234567890:ios:0a1b2c3d4e5f67890/releases/0a1b2c3d4", :releaseNotes=>{:text=>"Here are some release notes!"}, :displayVersion=>"1.2.3", :buildVersion=>"10", :createTime=>"2021-10-06T15:01:23Z"}
+ - returns: Hash representation of the lastest release created in Firebase App Distribution (see https://firebase.google.com/docs/reference/app-distribution/rest/v1/projects.apps.releases#resource:-release). Example: {:name=>"projects/123456789/apps/1:1234567890:ios:0a1b2c3d4e5f67890/releases/0a1b2c3d4", :releaseNotes=>{:text=>"Here are some release notes!"}, :displayVersion=>"1.2.3", :buildVersion=>"10", :binaryDownloadUri=>"<URI>", :firebaseConsoleUri=>"<URI>", :testingUri=>"<URI>", :createTime=>"2021-10-06T15:01:23Z"}
 
  Fetches information about the most recently created release in App Distribution, including the version and release notes. Returns nil if no releases are found.
 */

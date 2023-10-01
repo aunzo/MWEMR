@@ -23,7 +23,7 @@ class ConsultPageViewController: UIPageViewController {
                     let startingViewController = self.viewControllerAtIndex(index: self.index)
                     let viewControllers = [startingViewController]
                     
-                    self.setViewControllers(viewControllers, direction: UIPageViewControllerNavigationDirection.forward, animated: false, completion: nil)
+                    self.setViewControllers(viewControllers, direction: UIPageViewController.NavigationDirection.forward, animated: false, completion: nil)
                 }
             }
         }

@@ -78,7 +78,7 @@ class AddMedicalUsingViewController: UIViewController {
             self.amountTextField.text = editItem["amount"]
             
             self.noteTextField.text = editItem["note"]
-            self.actionButton.setTitle("Edit", for: UIControlState.normal)
+            self.actionButton.setTitle("Edit", for: UIControl.State.normal)
             self.itemMedSelect = (Int(editItem["itemId"]!)!,editItem["barcode"]!,editItem["name"]!,editItem["type"]!,Int(editItem["amount"]!)!)
             
             for (index,name) in (itemMed?.value)!.enumerated() {
@@ -100,14 +100,14 @@ class AddMedicalUsingViewController: UIViewController {
         viewModel.change.subscribe(onNext: { (action) in
             if action == .addOrUpdate {
                 if self.state == "add" {
-                    let alert = UIAlertController(title: "Add Success", message: "You want to add item more?", preferredStyle: UIAlertControllerStyle.alert)
-                    alert.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.cancel, handler: { (alert) in
+                    let alert = UIAlertController(title: "Add Success", message: "You want to add item more?", preferredStyle: UIAlertController.Style.alert)
+                    alert.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.cancel, handler: { (alert) in
                         self.dismiss(animated: true, completion: {
                             self.finishAddCallback!()
                         })
                     }))
                     
-                    alert.addAction(UIAlertAction(title: "YES", style: UIAlertActionStyle.default, handler: { (alert) in
+                    alert.addAction(UIAlertAction(title: "YES", style: UIAlertAction.Style.default, handler: { (alert) in
                         self.noteTextField.text = ""
                         self.typeNameLabel.text = "-"
                         self.maxAmountLabel.text = ""
@@ -117,8 +117,8 @@ class AddMedicalUsingViewController: UIViewController {
                     
                     self.present(alert, animated: true, completion: nil)
                 }else{
-                    let alertEdit = UIAlertController(title: "Edit Success", message: "item edited", preferredStyle: UIAlertControllerStyle.alert)
-                    alertEdit.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.default, handler: { (alert) in
+                    let alertEdit = UIAlertController(title: "Edit Success", message: "item edited", preferredStyle: UIAlertController.Style.alert)
+                    alertEdit.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: { (alert) in
                         self.dismiss(animated: true, completion: {
                             self.finishAddCallback!()
                         })
@@ -236,8 +236,8 @@ extension AddMedicalUsingViewController {
             if self.searchItemTextField.text != "" || self.state == "edit" {
                 if amount != 0 || self.selectTypeSegment.selectedSegmentIndex == 1 {
                     if amount > (lastAmount + remain!) {
-                        let alertEdit = UIAlertController(title: "Error", message: "Your can't add amount more than max amount.", preferredStyle: UIAlertControllerStyle.alert)
-                        alertEdit.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.default, handler: { (alert) in
+                        let alertEdit = UIAlertController(title: "Error", message: "Your can't add amount more than max amount.", preferredStyle: UIAlertController.Style.alert)
+                        alertEdit.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: { (alert) in
                             
                         }))
                         
@@ -255,8 +255,8 @@ extension AddMedicalUsingViewController {
                         viewModel.addOrUpdate(item: item,state: state)
                     }
                 }else{
-                    let alertEdit = UIAlertController(title: "Error", message: "Can't add without amount.", preferredStyle: UIAlertControllerStyle.alert)
-                    alertEdit.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.default, handler: { (alert) in
+                    let alertEdit = UIAlertController(title: "Error", message: "Can't add without amount.", preferredStyle: UIAlertController.Style.alert)
+                    alertEdit.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: { (alert) in
                         
                     }))
                     
@@ -264,16 +264,16 @@ extension AddMedicalUsingViewController {
                 }
                 
             }else{
-                let alertEdit = UIAlertController(title: "Error", message: "Can't add without item.", preferredStyle: UIAlertControllerStyle.alert)
-                alertEdit.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.default, handler: { (alert) in
+                let alertEdit = UIAlertController(title: "Error", message: "Can't add without item.", preferredStyle: UIAlertController.Style.alert)
+                alertEdit.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: { (alert) in
                     
                 }))
                 
                 self.present(alertEdit, animated: true, completion: nil)
             }
         }else{
-            let alertEdit = UIAlertController(title: "Error", message: "Please choose medication or equipment correct.", preferredStyle: UIAlertControllerStyle.alert)
-            alertEdit.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.default, handler: { (alert) in
+            let alertEdit = UIAlertController(title: "Error", message: "Please choose medication or equipment correct.", preferredStyle: UIAlertController.Style.alert)
+            alertEdit.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: { (alert) in
                 
             }))
             
@@ -282,12 +282,12 @@ extension AddMedicalUsingViewController {
     }
     
     @IBAction func deleteMedicalUsing(sender: AnyObject) {
-        let alert = UIAlertController(title: "Remove", message: "You want to remove this item?", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.cancel, handler: { (alert) in
+        let alert = UIAlertController(title: "Remove", message: "You want to remove this item?", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.cancel, handler: { (alert) in
             
         }))
         
-        alert.addAction(UIAlertAction(title: "Remove", style: UIAlertActionStyle.destructive, handler: { (alert) in
+        alert.addAction(UIAlertAction(title: "Remove", style: UIAlertAction.Style.destructive, handler: { (alert) in
             self.viewModel.remove(id: self.editItem["id"]!)
             self.dismiss(animated: true, completion: {
                 self.finishAddCallback!()

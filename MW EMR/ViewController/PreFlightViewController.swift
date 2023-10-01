@@ -228,9 +228,9 @@ class PreFlightViewController: UIViewController {
                 self.interventionTableView.reloadData()
             }else if action == .addOrUpdate {
                 self.summaryViewModel.setSelectIndex(index: 0)
-                let alert = UIAlertController(title: (self.addInterventionButton.titleLabel?.text)! + " Success.", message: "", preferredStyle: UIAlertControllerStyle.alert)
-                alert.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.default, handler: { (alert) in
-                    self.addInterventionButton.setTitle("Add", for: UIControlState.normal)
+                let alert = UIAlertController(title: (self.addInterventionButton.titleLabel?.text)! + " Success.", message: "", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: { (alert) in
+                    self.addInterventionButton.setTitle("Add", for: UIControl.State.normal)
                     self.interventionItem = nil
                 }))
                 self.present(alert, animated: true, completion: nil)
@@ -255,9 +255,9 @@ class PreFlightViewController: UIViewController {
                 
                 self.sumaryReportTableView.reloadData()
             }else if action == .addOrUpdate {
-                let alert = UIAlertController(title: "Success.", message: "", preferredStyle: UIAlertControllerStyle.alert)
-                alert.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.default, handler: { (alert) in
-//                    self.addInterventionButton.setTitle("Add", for: UIControlState.normal)
+                let alert = UIAlertController(title: "Success.", message: "", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: { (alert) in
+//                    self.addInterventionButton.setTitle("Add", for: UIControl.State.normal)
                     self.summaryReportItem = nil
                 }))
                 self.present(alert, animated: true, completion: nil)
@@ -284,9 +284,9 @@ class PreFlightViewController: UIViewController {
                 
                 self.otherPhysicalTableView.reloadData()
             }else if action == .addOrUpdate {
-                let alert = UIAlertController(title: (self.addOtherPhysicalButton.titleLabel?.text)! + " Success.", message: "", preferredStyle: UIAlertControllerStyle.alert)
-                alert.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.default, handler: { (alert) in
-                    self.addOtherPhysicalButton.setTitle("Add", for: UIControlState.normal)
+                let alert = UIAlertController(title: (self.addOtherPhysicalButton.titleLabel?.text)! + " Success.", message: "", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: { (alert) in
+                    self.addOtherPhysicalButton.setTitle("Add", for: UIControl.State.normal)
                     self.flightPositionItem = nil
                 }))
                 self.present(alert, animated: true, completion: nil)
@@ -367,13 +367,13 @@ extension PreFlightViewController
     
     //MARK:- date textField
     @IBAction func textFieldEditing(sender: TextField) {
-        var mode = UIDatePickerMode.date
+        var mode = UIDatePicker.Mode.date
         let dateFomatter = DateFormatter()
         dateFomatter.locale = Locale(identifier: "en_US")
         
         
         if sender == self.gaRestraintTimeTextField || sender == self.gaSedatedLastDiseAtTextField {
-            mode = UIDatePickerMode.time
+            mode = UIDatePicker.Mode.time
             dateFomatter.dateFormat = "HH:mm"
         }else{
             dateFomatter.dateFormat = "d / M / yyyy"
@@ -436,33 +436,33 @@ extension PreFlightViewController
     func setValueToButton(value:String, button:RaisedButton) {
         
         if button == self.painScoreButton {
-            self.painScoreButton.setTitle(value, for: UIControlState.normal)
+            self.painScoreButton.setTitle(value, for: UIControl.State.normal)
         }else if button == self.motorPowerButton[0] || button ==  self.motorPowerButton[1] || button ==  self.motorPowerButton[2] || button == self.motorPowerButton[3] {
-            self.motorPowerButton[button.tag].setTitle(value, for: UIControlState.normal)
+            self.motorPowerButton[button.tag].setTitle(value, for: UIControl.State.normal)
         }else if button == self.aircraftButton {
-            self.aircraftButton.setTitle(value, for: UIControlState.normal)
+            self.aircraftButton.setTitle(value, for: UIControl.State.normal)
         }else if button == self.neuroEButton {
-            self.neuroEButton.setTitle(value, for: UIControlState.normal)
+            self.neuroEButton.setTitle(value, for: UIControl.State.normal)
         }else if button == self.neuroMButton {
-            self.neuroMButton.setTitle(value, for: UIControlState.normal)
+            self.neuroMButton.setTitle(value, for: UIControl.State.normal)
         }else if button == self.neuroVButton {
-            self.neuroVButton.setTitle(value, for: UIControlState.normal)
+            self.neuroVButton.setTitle(value, for: UIControl.State.normal)
         }else if button == self.tempCSelectButton {
-            self.tempCSelectButton.setTitle(value, for: UIControlState.normal)
+            self.tempCSelectButton.setTitle(value, for: UIControl.State.normal)
         }else if button == self.cvsButton {
-            self.cvsButton.setTitle(value, for: UIControlState.normal)
+            self.cvsButton.setTitle(value, for: UIControl.State.normal)
         }else if button == self.FAEatButton {
-            self.FAEatButton.setTitle(value, for: UIControlState.normal)
+            self.FAEatButton.setTitle(value, for: UIControl.State.normal)
         }else if button == self.FASitButton {
-            self.FASitButton.setTitle(value, for: UIControlState.normal)
+            self.FASitButton.setTitle(value, for: UIControl.State.normal)
         }else if button == self.FAWalkButton {
-            self.FAWalkButton.setTitle(value, for: UIControlState.normal)
+            self.FAWalkButton.setTitle(value, for: UIControl.State.normal)
         }else if button == self.FAUrinationButton {
-            self.FAUrinationButton.setTitle(value, for: UIControlState.normal)
+            self.FAUrinationButton.setTitle(value, for: UIControl.State.normal)
         }else if button == self.FABowlMovementButton {
-            self.FABowlMovementButton.setTitle(value, for: UIControlState.normal)
+            self.FABowlMovementButton.setTitle(value, for: UIControl.State.normal)
         }else if button == self.otherPhycicalPositionButton {
-            self.otherPhycicalPositionButton.setTitle(value, for: UIControlState.normal)
+            self.otherPhycicalPositionButton.setTitle(value, for: UIControl.State.normal)
         }
     }
     
@@ -488,8 +488,8 @@ extension PreFlightViewController
         guard let interventionText = interventionTextField.text?.mapEmptyStringToNil(),
             let interventionDate = interventionDateTextField.text?.mapEmptyStringToNil() else
         {
-            let alertEdit = UIAlertController(title: "Can't Add Intervention", message: "Please input all data.", preferredStyle: UIAlertControllerStyle.alert)
-            alertEdit.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.default, handler: { (alert) in
+            let alertEdit = UIAlertController(title: "Can't Add Intervention", message: "Please input all data.", preferredStyle: UIAlertController.Style.alert)
+            alertEdit.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: { (alert) in
             }))
             
             present(alertEdit, animated: true, completion: nil)
@@ -515,18 +515,18 @@ extension PreFlightViewController
     func actionInterventionData(action : DataAction,indexPath : IndexPath){
         let item = self.interventionViewModel.listItem(index: indexPath.row)
         if action == .addOrUpdate  {
-            self.addInterventionButton.setTitle("Edit", for: UIControlState.normal)
+            self.addInterventionButton.setTitle("Edit", for: UIControl.State.normal)
             
             self.interventionTextField.text = item["intervention"]
             self.interventionDateTextField.text = item["date"]
             interventionItem = item
         }else{
-            let alert = UIAlertController(title: "Remove", message: "You want to remove this item?", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.cancel, handler: { (alert) in
+            let alert = UIAlertController(title: "Remove", message: "You want to remove this item?", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.cancel, handler: { (alert) in
                 
             }))
             
-            alert.addAction(UIAlertAction(title: "Remove", style: UIAlertActionStyle.destructive, handler: { (alert) in
+            alert.addAction(UIAlertAction(title: "Remove", style: UIAlertAction.Style.destructive, handler: { (alert) in
                 self.interventionViewModel.remove(id: item["id"]!)
                 
             }))
@@ -556,12 +556,12 @@ extension PreFlightViewController
             self.summaryViewModel.setSelectIndex(index: indexPath.row)
             self.addSummaryReport(sender: indexPath)
         }else{
-            let alert = UIAlertController(title: "Remove", message: "You want to remove this item?", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.cancel, handler: { (alert) in
+            let alert = UIAlertController(title: "Remove", message: "You want to remove this item?", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.cancel, handler: { (alert) in
                 
             }))
             
-            alert.addAction(UIAlertAction(title: "Remove", style: UIAlertActionStyle.destructive, handler: { (alert) in
+            alert.addAction(UIAlertAction(title: "Remove", style: UIAlertAction.Style.destructive, handler: { (alert) in
                 let item = self.summaryViewModel.listItem(index: indexPath.row)
                 self.summaryViewModel.remove(id: item["id"]!)
                 
@@ -584,7 +584,7 @@ extension PreFlightViewController
         }
         
         if button.isChecked {
-            button.setImage(#imageLiteral(resourceName: "unchecked"), for: UIControlState.normal)
+            button.setImage(#imageLiteral(resourceName: "unchecked"), for: UIControl.State.normal)
             button.isChecked = false
             if sender.tag == 178 {
                 gaGroupButton
@@ -604,7 +604,7 @@ extension PreFlightViewController
             }
 
         }else{
-            button.setImage(#imageLiteral(resourceName: "checked"), for: UIControlState.normal)
+            button.setImage(#imageLiteral(resourceName: "checked"), for: UIControl.State.normal)
             button.isChecked = true
             if sender.tag == 178
             {
@@ -618,7 +618,7 @@ extension PreFlightViewController
                     .filter { $0.tag != 178 }
                     .forEach {
                         $0.isChecked = false
-                        $0.setImage(#imageLiteral(resourceName: "unchecked"), for: UIControlState.normal)
+                        $0.setImage(#imageLiteral(resourceName: "unchecked"), for: UIControl.State.normal)
                         $0.isEnabled = false }
             }
             else if sender.tag == 186
@@ -641,7 +641,7 @@ extension PreFlightViewController
         }
         
         if button.isChecked {
-            button.setImage(#imageLiteral(resourceName: "unchecked"), for: UIControlState.normal)
+            button.setImage(#imageLiteral(resourceName: "unchecked"), for: UIControl.State.normal)
             button.isChecked = false
             if sender.tag == 168 {
                 self.cSpineTextField.isEnabled = true
@@ -656,24 +656,24 @@ extension PreFlightViewController
                 tracheostomyTubeGroupButton
                     .forEach {
                         $0.isChecked = false
-                        $0.setImage(UIImage(named: "nonfilled"), for: UIControlState.normal)
+                        $0.setImage(UIImage(named: "nonfilled"), for: UIControl.State.normal)
                         $0.isEnabled = false }
             }
         }else{
-            button.setImage(#imageLiteral(resourceName: "checked"), for: UIControlState.normal)
+            button.setImage(#imageLiteral(resourceName: "checked"), for: UIControl.State.normal)
             button.isChecked = true
             if sender.tag == 168 {
                 airwayGroupButton
                     .filter { $0.tag != 168 }
                     .forEach {
-                        $0.setImage(UIImage(named: "unchecked"), for: UIControlState.normal)
+                        $0.setImage(UIImage(named: "unchecked"), for: UIControl.State.normal)
                         $0.isChecked = false
                         $0.isEnabled = false }
                 
                 tracheostomyTubeGroupButton
                     .forEach {
                         $0.isChecked = false
-                        $0.setImage(UIImage(named: "nonfilled"), for: UIControlState.normal)
+                        $0.setImage(UIImage(named: "nonfilled"), for: UIControl.State.normal)
                         $0.isEnabled = false }
                 
                 self.trachFixTextField.isEnabled = false
@@ -689,7 +689,7 @@ extension PreFlightViewController
                 tracheostomyTubeGroupButton
                     .forEach {
                         $0.isChecked = false
-                        $0.setImage(UIImage(named: "nonfilled"), for: UIControlState.normal)
+                        $0.setImage(UIImage(named: "nonfilled"), for: UIControl.State.normal)
                         $0.isEnabled = true }
             }
         }
@@ -700,10 +700,10 @@ extension PreFlightViewController
             tracheostomyTubeGroupButton
                 .forEach {
                     if $0.tag == sender.tag {
-                        $0.setImage(#imageLiteral(resourceName: "checkmark"), for: UIControlState.normal)
+                        $0.setImage(#imageLiteral(resourceName: "checkmark"), for: UIControl.State.normal)
                         $0.isChecked = true
                     }else{
-                        $0.setImage(#imageLiteral(resourceName: "nonfilled"), for: UIControlState.normal)
+                        $0.setImage(#imageLiteral(resourceName: "nonfilled"), for: UIControl.State.normal)
                         $0.isChecked = false
                     } }
         }
@@ -718,20 +718,20 @@ extension PreFlightViewController
         }
         
         if button.isChecked {
-            button.setImage(#imageLiteral(resourceName: "unchecked"), for: UIControlState.normal)
+            button.setImage(#imageLiteral(resourceName: "unchecked"), for: UIControl.State.normal)
             button.isChecked = false
             if sender.tag == 159 {
                 respButtonGroup
                     .filter { $0.tag != 159 }
                     .forEach {
-                        $0.setImage(UIImage(named: "unchecked"), for: UIControlState.normal)
+                        $0.setImage(UIImage(named: "unchecked"), for: UIControl.State.normal)
                         $0.isChecked = false
                         $0.isEnabled = true }
             }else if sender.tag == 198 {
                 self.ventialtorView.isUserInteractionEnabled = false
                 resp2ButtonGroup
                     .forEach {
-                        $0.setImage(UIImage(named: "nonfilled"), for: UIControlState.normal)
+                        $0.setImage(UIImage(named: "nonfilled"), for: UIControl.State.normal)
                         $0.isChecked = false
                         $0.isEnabled = false }
             }else if sender.tag == 165 {
@@ -744,19 +744,19 @@ extension PreFlightViewController
                 self.respCollarMaskTextField.isEnabled = false
             }
         }else{
-            button.setImage(#imageLiteral(resourceName: "checked"), for: UIControlState.normal)
+            button.setImage(#imageLiteral(resourceName: "checked"), for: UIControl.State.normal)
             button.isChecked = true
             if sender.tag == 159 {
                 respButtonGroup
                     .filter { $0.tag != 159 }
                     .forEach {
-                        $0.setImage(UIImage(named: "unchecked"), for: UIControlState.normal)
+                        $0.setImage(UIImage(named: "unchecked"), for: UIControl.State.normal)
                         $0.isChecked = false
                         $0.isEnabled = false }
                 
                 resp2ButtonGroup
                     .forEach {
-                        $0.setImage(UIImage(named: "nonfilled"), for: UIControlState.normal)
+                        $0.setImage(UIImage(named: "nonfilled"), for: UIControl.State.normal)
                         $0.isChecked = false
                         $0.isEnabled = false }
                 
@@ -773,7 +773,7 @@ extension PreFlightViewController
                 self.ventialtorView.isUserInteractionEnabled = true
                 resp2ButtonGroup
                     .forEach {
-                        $0.setImage(UIImage(named: "nonfilled"), for: UIControlState.normal)
+                        $0.setImage(UIImage(named: "nonfilled"), for: UIControl.State.normal)
                         $0.isChecked = false
                         $0.isEnabled = true }
             }else if sender.tag == 165 {
@@ -792,10 +792,10 @@ extension PreFlightViewController
         resp2ButtonGroup
             .forEach {
                 if $0.tag == sender.tag {
-                    $0.setImage(#imageLiteral(resourceName: "checkmark"), for: UIControlState.normal)
+                    $0.setImage(#imageLiteral(resourceName: "checkmark"), for: UIControl.State.normal)
                     $0.isChecked = true
                 }else{
-                    $0.setImage(#imageLiteral(resourceName: "nonfilled"), for: UIControlState.normal)
+                    $0.setImage(#imageLiteral(resourceName: "nonfilled"), for: UIControl.State.normal)
                     $0.isChecked = false
                 } }
     }
@@ -806,16 +806,16 @@ extension PreFlightViewController
         
         if neuroButton.isChecked {
             self.neuroButton.isChecked = false
-            self.neuroButton.setImage(UIImage(named: "unchecked"), for: UIControlState.normal)
+            self.neuroButton.setImage(UIImage(named: "unchecked"), for: UIControl.State.normal)
             self.neuroMButton.isEnabled = true
             self.neuroEButton.isEnabled = true
             self.neuroVButton.isEnabled = true
         }else{
             self.neuroButton.isChecked = true
-            self.neuroButton.setImage(UIImage(named: "checked"), for: UIControlState.normal)
-            self.neuroMButton.setTitle("0", for: UIControlState.normal)
-            self.neuroEButton.setTitle("0", for: UIControlState.normal)
-            self.neuroVButton.setTitle("0", for: UIControlState.normal)
+            self.neuroButton.setImage(UIImage(named: "checked"), for: UIControl.State.normal)
+            self.neuroMButton.setTitle("0", for: UIControl.State.normal)
+            self.neuroEButton.setTitle("0", for: UIControl.State.normal)
+            self.neuroVButton.setTitle("0", for: UIControl.State.normal)
             self.neuroMButton.isEnabled = false
             self.neuroEButton.isEnabled = false
             self.neuroVButton.isEnabled = false
@@ -826,10 +826,10 @@ extension PreFlightViewController
         tempCGroupButton
             .forEach {
                 if $0.tag == sender.tag {
-                    $0.setImage(#imageLiteral(resourceName: "checkmark"), for: UIControlState.normal)
+                    $0.setImage(#imageLiteral(resourceName: "checkmark"), for: UIControl.State.normal)
                     $0.isChecked = true
                 }else{
-                    $0.setImage(#imageLiteral(resourceName: "nonfilled"), for: UIControlState.normal)
+                    $0.setImage(#imageLiteral(resourceName: "nonfilled"), for: UIControl.State.normal)
                     $0.isChecked = false
                 } }
     }
@@ -838,10 +838,10 @@ extension PreFlightViewController
         prminGroupButton
             .forEach {
                 if $0.tag == sender.tag {
-                    $0.setImage(#imageLiteral(resourceName: "checkmark"), for: UIControlState.normal)
+                    $0.setImage(#imageLiteral(resourceName: "checkmark"), for: UIControl.State.normal)
                     $0.isChecked = true
                 }else{
-                    $0.setImage(#imageLiteral(resourceName: "nonfilled"), for: UIControlState.normal)
+                    $0.setImage(#imageLiteral(resourceName: "nonfilled"), for: UIControl.State.normal)
                     $0.isChecked = false
                 } }
     }
@@ -854,24 +854,24 @@ extension PreFlightViewController
         }
         
         if button.isChecked {
-            button.setImage(#imageLiteral(resourceName: "unchecked"), for: UIControlState.normal)
+            button.setImage(#imageLiteral(resourceName: "unchecked"), for: UIControl.State.normal)
             button.isChecked = false
             if sender.tag == 143 {
                 DPGroupButton
                     .filter { $0.tag != 143 }
                     .forEach {
-                        $0.setImage(UIImage(named: "unchecked"), for: UIControlState.normal)
+                        $0.setImage(UIImage(named: "unchecked"), for: UIControl.State.normal)
                         $0.isChecked = false
                         $0.isEnabled = true }
             }
         }else{
-            button.setImage(#imageLiteral(resourceName: "checked"), for: UIControlState.normal)
+            button.setImage(#imageLiteral(resourceName: "checked"), for: UIControl.State.normal)
             button.isChecked = true
             if sender.tag == 143 {
                 DPGroupButton
                     .filter { $0.tag != 143 }
                     .forEach {
-                        $0.setImage(UIImage(named: "unchecked"), for: UIControlState.normal)
+                        $0.setImage(UIImage(named: "unchecked"), for: UIControl.State.normal)
                         $0.isChecked = false
                         $0.isEnabled = false }
             }
@@ -885,13 +885,13 @@ extension PreFlightViewController
         }
         
         if button.isChecked {
-            button.setImage(#imageLiteral(resourceName: "unchecked"), for: UIControlState.normal)
+            button.setImage(#imageLiteral(resourceName: "unchecked"), for: UIControl.State.normal)
             button.isChecked = false
             if sender.tag == 133 {
                 drainsGroupButton
                     .filter { $0.tag != 133 }
                     .forEach {
-                        $0.setImage(UIImage(named: "unchecked"), for: UIControlState.normal)
+                        $0.setImage(UIImage(named: "unchecked"), for: UIControl.State.normal)
                         $0.isChecked = false
                         $0.isEnabled = true }
             }
@@ -901,13 +901,13 @@ extension PreFlightViewController
                 self.drainsOtherTextField.isEnabled = false
             }
         }else{
-            button.setImage(#imageLiteral(resourceName: "checked"), for: UIControlState.normal)
+            button.setImage(#imageLiteral(resourceName: "checked"), for: UIControl.State.normal)
             button.isChecked = true
             if sender.tag == 133 {
                 drainsGroupButton
                     .filter { $0.tag != 133 }
                     .forEach {
-                        $0.setImage(UIImage(named: "unchecked"), for: UIControlState.normal)
+                        $0.setImage(UIImage(named: "unchecked"), for: UIControl.State.normal)
                         $0.isChecked = false
                         $0.isEnabled = false }
                 self.drainsOtherTextField.isEnabled = false
@@ -927,10 +927,10 @@ extension PreFlightViewController
         pupilRtGroupButton
             .forEach {
                 if $0.tag == sender.tag {
-                    $0.setImage(#imageLiteral(resourceName: "checkmark"), for: UIControlState.normal)
+                    $0.setImage(#imageLiteral(resourceName: "checkmark"), for: UIControl.State.normal)
                     $0.isChecked = true
                 }else{
-                    $0.setImage(#imageLiteral(resourceName: "nonfilled"), for: UIControlState.normal)
+                    $0.setImage(#imageLiteral(resourceName: "nonfilled"), for: UIControl.State.normal)
                     $0.isChecked = false
                 } }
     }
@@ -939,10 +939,10 @@ extension PreFlightViewController
         pupilLtGroupButton
             .forEach {
                 if $0.tag == sender.tag {
-                    $0.setImage(#imageLiteral(resourceName: "checkmark"), for: UIControlState.normal)
+                    $0.setImage(#imageLiteral(resourceName: "checkmark"), for: UIControl.State.normal)
                     $0.isChecked = true
                 }else{
-                    $0.setImage(#imageLiteral(resourceName: "nonfilled"), for: UIControlState.normal)
+                    $0.setImage(#imageLiteral(resourceName: "nonfilled"), for: UIControl.State.normal)
                     $0.isChecked = false
                 } }
     }
@@ -951,10 +951,10 @@ extension PreFlightViewController
         BPmmHgGroupButton
             .forEach {
                 if $0.tag == sender.tag {
-                    $0.setImage(#imageLiteral(resourceName: "checkmark"), for: UIControlState.normal)
+                    $0.setImage(#imageLiteral(resourceName: "checkmark"), for: UIControl.State.normal)
                     $0.isChecked = true
                 }else{
-                    $0.setImage(#imageLiteral(resourceName: "nonfilled"), for: UIControlState.normal)
+                    $0.setImage(#imageLiteral(resourceName: "nonfilled"), for: UIControl.State.normal)
                     $0.isChecked = false
                 } }
     }
@@ -965,13 +965,13 @@ extension PreFlightViewController
         distalPulseGroupButton
             .forEach {
                 if $0.tag == sender.tag {
-                    $0.setImage(#imageLiteral(resourceName: "checkmark"), for: UIControlState.normal)
+                    $0.setImage(#imageLiteral(resourceName: "checkmark"), for: UIControl.State.normal)
                     $0.isChecked = true
                     if sender.tag == 199 {
                         self.distalPulseOtherTextField.isEnabled = true
                     }
                 }else{
-                    $0.setImage(#imageLiteral(resourceName: "nonfilled"), for: UIControlState.normal)
+                    $0.setImage(#imageLiteral(resourceName: "nonfilled"), for: UIControl.State.normal)
                     $0.isChecked = false
                     if sender.tag == 199 {
                         self.distalPulseOtherTextField.isEnabled = false
@@ -984,10 +984,10 @@ extension PreFlightViewController
         painAssToolButton
             .forEach {
                 if $0.tag == sender.tag {
-                    $0.setImage(#imageLiteral(resourceName: "checkmark"), for: UIControlState.normal)
+                    $0.setImage(#imageLiteral(resourceName: "checkmark"), for: UIControl.State.normal)
                     $0.isChecked = true
                 }else{
-                    $0.setImage(#imageLiteral(resourceName: "nonfilled"), for: UIControlState.normal)
+                    $0.setImage(#imageLiteral(resourceName: "nonfilled"), for: UIControl.State.normal)
                     $0.isChecked = false
                 } }
     }
@@ -996,10 +996,10 @@ extension PreFlightViewController
         charateristicButton
             .forEach {
                 if $0.tag == sender.tag {
-                    $0.setImage(#imageLiteral(resourceName: "checkmark"), for: UIControlState.normal)
+                    $0.setImage(#imageLiteral(resourceName: "checkmark"), for: UIControl.State.normal)
                     $0.isChecked = true
                 }else{
-                    $0.setImage(#imageLiteral(resourceName: "nonfilled"), for: UIControlState.normal)
+                    $0.setImage(#imageLiteral(resourceName: "nonfilled"), for: UIControl.State.normal)
                     $0.isChecked = false
                 } }
         
@@ -1016,10 +1016,10 @@ extension PreFlightViewController
         frequenceButton
             .forEach {
                 if $0.tag == sender.tag {
-                    $0.setImage(#imageLiteral(resourceName: "checkmark"), for: UIControlState.normal)
+                    $0.setImage(#imageLiteral(resourceName: "checkmark"), for: UIControl.State.normal)
                     $0.isChecked = true
                 }else{
-                    $0.setImage(#imageLiteral(resourceName: "nonfilled"), for: UIControlState.normal)
+                    $0.setImage(#imageLiteral(resourceName: "nonfilled"), for: UIControl.State.normal)
                     $0.isChecked = false
                 } }
     }
@@ -1027,11 +1027,11 @@ extension PreFlightViewController
     //MARK:- LabAssessment
     @IBAction func nsfClick(sender: AnyObject) {
         if nsfButton.isChecked {
-            self.nsfButton.setImage(UIImage(named: "unchecked_white"), for: UIControlState.normal)
+            self.nsfButton.setImage(UIImage(named: "unchecked_white"), for: UIControl.State.normal)
             self.nsfButton.isChecked = false
             self.labAssessmentView.isUserInteractionEnabled = true
         }else{
-            self.nsfButton.setImage(UIImage(named: "checked_white"), for: UIControlState.normal)
+            self.nsfButton.setImage(UIImage(named: "checked_white"), for: UIControl.State.normal)
             self.nsfButton.isChecked = true
             self.labAssessmentView.isUserInteractionEnabled = false
         }
@@ -1040,10 +1040,10 @@ extension PreFlightViewController
         LAPneumothraxGroupButton
             .forEach {
                 if $0.tag == sender.tag {
-                    $0.setImage(#imageLiteral(resourceName: "checkmark"), for: UIControlState.normal)
+                    $0.setImage(#imageLiteral(resourceName: "checkmark"), for: UIControl.State.normal)
                     $0.isChecked = true
                 }else{
-                    $0.setImage(#imageLiteral(resourceName: "nonfilled"), for: UIControlState.normal)
+                    $0.setImage(#imageLiteral(resourceName: "nonfilled"), for: UIControl.State.normal)
                     $0.isChecked = false
                 } }
     }
@@ -1052,10 +1052,10 @@ extension PreFlightViewController
         LAPneumocephalusGroupButton
             .forEach {
                 if $0.tag == sender.tag {
-                    $0.setImage(#imageLiteral(resourceName: "checkmark"), for: UIControlState.normal)
+                    $0.setImage(#imageLiteral(resourceName: "checkmark"), for: UIControl.State.normal)
                     $0.isChecked = true
                 }else{
-                    $0.setImage(#imageLiteral(resourceName: "nonfilled"), for: UIControlState.normal)
+                    $0.setImage(#imageLiteral(resourceName: "nonfilled"), for: UIControl.State.normal)
                     $0.isChecked = false
                 } }
     }
@@ -1066,8 +1066,8 @@ extension PreFlightViewController
         guard let name = otherPhysicalNameTextField.text?.mapEmptyStringToNil(),
             let position = otherPhycicalPositionButton.titleLabel?.text?.mapEmptyStringToNil() else
         {
-            let alertEdit = UIAlertController(title: "Can't Add Flight Person", message: "Please input all data.", preferredStyle: UIAlertControllerStyle.alert)
-            alertEdit.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.default, handler: { (alert) in
+            let alertEdit = UIAlertController(title: "Can't Add Flight Person", message: "Please input all data.", preferredStyle: UIAlertController.Style.alert)
+            alertEdit.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: { (alert) in
             }))
             
             present(alertEdit, animated: true, completion: nil)
@@ -1095,17 +1095,17 @@ extension PreFlightViewController
         
         let item = self.flightPersonViewModel.listItem(index: indexPath.row)
         if action == .addOrUpdate {
-            self.addOtherPhysicalButton.setTitle("Edit", for: UIControlState.normal)
+            self.addOtherPhysicalButton.setTitle("Edit", for: UIControl.State.normal)
             self.otherPhysicalNameTextField.text = item["name"]
-            self.otherPhycicalPositionButton.setTitle(item["position"], for: UIControlState.normal)
+            self.otherPhycicalPositionButton.setTitle(item["position"], for: UIControl.State.normal)
             flightPositionItem = item
         }else{
-            let alert = UIAlertController(title: "Remove", message: "You want to remove this item?", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.cancel, handler: { (alert) in
+            let alert = UIAlertController(title: "Remove", message: "You want to remove this item?", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.cancel, handler: { (alert) in
                 
             }))
             
-            alert.addAction(UIAlertAction(title: "Remove", style: UIAlertActionStyle.destructive, handler: { (alert) in
+            alert.addAction(UIAlertAction(title: "Remove", style: UIAlertAction.Style.destructive, handler: { (alert) in
                 self.flightPersonViewModel.remove(id: item["id"]!)
                 
             }))
@@ -1116,9 +1116,9 @@ extension PreFlightViewController
     
     @IBAction func savePreflight(sender: AnyObject) {
         self.savePreflightTolocal()
-        let alert = UIAlertController(title: "Save Success", message: "Preflight has been save.", preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "Save Success", message: "Preflight has been save.", preferredStyle: UIAlertController.Style.alert)
         
-        alert.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.default, handler: { (alert) in
+        alert.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: { (alert) in
             
         }))
         
@@ -1383,7 +1383,7 @@ extension PreFlightViewController
         self.hospitalTextField.text = otherData.caseHospital
         self.visitDateTextField.text = otherData.caseVisitDate
         self.symptomTextField.text = otherData.caseSymptomDate
-        self.aircraftButton.setTitle(otherData.aircraftName, for: UIControlState.normal)
+        self.aircraftButton.setTitle(otherData.aircraftName, for: UIControl.State.normal)
         self.capitalLetterTextField.text = otherData.caseDicgnosis
         let caseRes = vm.loadPreflight().caseResult
         
@@ -1473,9 +1473,9 @@ extension PreFlightViewController
                         }
                         
                         if preflight.tubeCuffCheckId == 166 {
-                            self.tracheostomyTubeGroupButton[0].setImage(#imageLiteral(resourceName: "checkmark"), for: UIControlState.normal)
+                            self.tracheostomyTubeGroupButton[0].setImage(#imageLiteral(resourceName: "checkmark"), for: UIControl.State.normal)
                         }else if preflight.tubeCuffCheckId == 167 {
-                            self.tracheostomyTubeGroupButton[1].setImage(#imageLiteral(resourceName: "checkmark"), for: UIControlState.normal)
+                            self.tracheostomyTubeGroupButton[1].setImage(#imageLiteral(resourceName: "checkmark"), for: UIControl.State.normal)
                         }
                     } }
             
@@ -1532,11 +1532,11 @@ extension PreFlightViewController
             
             //CVS
             let csvTitle = try! Realm().objects(MasterData.self).filter("masterID == \(preflight.csvId == 0 ? 54 : preflight.csvId)").first?.name
-            self.cvsButton.setTitle(csvTitle ?? "NSF", for: UIControlState.normal)
+            self.cvsButton.setTitle(csvTitle ?? "NSF", for: UIControl.State.normal)
             
             //Nero
             if preflight.neroNSFCheck {
-                self.neuroButton.setImage(#imageLiteral(resourceName: "checked"), for: UIControlState.normal)
+                self.neuroButton.setImage(#imageLiteral(resourceName: "checked"), for: UIControl.State.normal)
                 self.neuroButton.isChecked = true
                 self.neuroMButton.isEnabled = false
                 self.neuroEButton.isEnabled = false
@@ -1545,16 +1545,16 @@ extension PreFlightViewController
                 let neroE = try! Realm().objects(MasterData.self).filter("masterID == \(preflight.neroE)").first?.name ?? "0"
                 let neroM = try! Realm().objects(MasterData.self).filter("masterID == \(preflight.neroM)").first?.name ?? "0"
                 let neroV = try! Realm().objects(MasterData.self).filter("masterID == \(preflight.neroV)").first?.name ?? "0"
-                self.neuroMButton.setTitle(neroM, for: UIControlState.normal)
-                self.neuroEButton.setTitle(neroE, for: UIControlState.normal)
-                self.neuroVButton.setTitle(neroV, for: UIControlState.normal)
+                self.neuroMButton.setTitle(neroM, for: UIControl.State.normal)
+                self.neuroEButton.setTitle(neroE, for: UIControl.State.normal)
+                self.neuroVButton.setTitle(neroV, for: UIControl.State.normal)
             }
             
             //MotoPower
-            self.motorPowerButton[0].setTitle("\(preflight.mpTL)", for: UIControlState.normal)
-            self.motorPowerButton[1].setTitle("\(preflight.mpTR)", for: UIControlState.normal)
-            self.motorPowerButton[2].setTitle("\(preflight.mpBL)", for: UIControlState.normal)
-            self.motorPowerButton[3].setTitle("\(preflight.mpBR)", for: UIControlState.normal)
+            self.motorPowerButton[0].setTitle("\(preflight.mpTL)", for: UIControl.State.normal)
+            self.motorPowerButton[1].setTitle("\(preflight.mpTR)", for: UIControl.State.normal)
+            self.motorPowerButton[2].setTitle("\(preflight.mpBL)", for: UIControl.State.normal)
+            self.motorPowerButton[3].setTitle("\(preflight.mpBR)", for: UIControl.State.normal)
             
             //pupil
             self.pupilLtmmTextField.text  = preflight.pupilLTMin
@@ -1562,18 +1562,18 @@ extension PreFlightViewController
             
             if preflight.pupilRTTypeId == 32 {
                 self.pupilRtGroupButton[0].isChecked = true
-                self.pupilRtGroupButton[0].setImage(#imageLiteral(resourceName: "checkmark"), for: UIControlState.normal)
+                self.pupilRtGroupButton[0].setImage(#imageLiteral(resourceName: "checkmark"), for: UIControl.State.normal)
             }else{
                 self.pupilRtGroupButton[1].isChecked = true
-                self.pupilRtGroupButton[1].setImage(#imageLiteral(resourceName: "checkmark"), for: UIControlState.normal)
+                self.pupilRtGroupButton[1].setImage(#imageLiteral(resourceName: "checkmark"), for: UIControl.State.normal)
             }
             
             if preflight.pupilLTTypeId == 32 {
                 self.pupilLtGroupButton[0].isChecked = true
-                self.pupilLtGroupButton[0].setImage(#imageLiteral(resourceName: "checkmark"), for: UIControlState.normal)
+                self.pupilLtGroupButton[0].setImage(#imageLiteral(resourceName: "checkmark"), for: UIControl.State.normal)
             }else{
                 self.pupilLtGroupButton[0].isChecked = true
-                self.pupilLtGroupButton[1].setImage(#imageLiteral(resourceName: "checkmark"), for: UIControlState.normal)
+                self.pupilLtGroupButton[1].setImage(#imageLiteral(resourceName: "checkmark"), for: UIControl.State.normal)
             }
             
             //TempC
@@ -1585,7 +1585,7 @@ extension PreFlightViewController
             
             self.tempCTextField.text = preflight.tempValue
             let tempDisplay = try! Realm().objects(MasterData.self).filter("masterID == \(preflight.tempType)").first?.name ?? "°C"
-            self.tempCSelectButton.setTitle(tempDisplay, for: UIControlState.normal)
+            self.tempCSelectButton.setTitle(tempDisplay, for: UIControl.State.normal)
             
             //PR/Min
             prminGroupButton
@@ -1626,7 +1626,7 @@ extension PreFlightViewController
             self.O2SatTextField.text = "\(preflight.o2Sat)"
             
             //pain score
-            self.painScoreButton.setTitle(preflight.painScore, for: UIControlState.normal)
+            self.painScoreButton.setTitle(preflight.painScore, for: UIControl.State.normal)
             
             //functional assessment
             let walkDisplay = try! Realm().objects(MasterData.self).filter("masterID == \(preflight.walkId)").first?.name ?? "-"
@@ -1635,11 +1635,11 @@ extension PreFlightViewController
             let urinationDisplay = try! Realm().objects(MasterData.self).filter("masterID == \(preflight.urinationId)").first?.name ?? "-"
             let bowelMovmentDisplay = try! Realm().objects(MasterData.self).filter("masterID == \(preflight.bowelMovmentId)").first?.name ?? "-"
             
-            self.FAWalkButton.setTitle(walkDisplay, for: UIControlState.normal)
-            self.FASitButton.setTitle(sitDisplay, for: UIControlState.normal)
-            self.FAEatButton.setTitle(eatDisplay, for: UIControlState.normal)
-            self.FAUrinationButton.setTitle(urinationDisplay, for: UIControlState.normal)
-            self.FABowlMovementButton.setTitle(bowelMovmentDisplay, for: UIControlState.normal)
+            self.FAWalkButton.setTitle(walkDisplay, for: UIControl.State.normal)
+            self.FASitButton.setTitle(sitDisplay, for: UIControl.State.normal)
+            self.FAEatButton.setTitle(eatDisplay, for: UIControl.State.normal)
+            self.FAUrinationButton.setTitle(urinationDisplay, for: UIControl.State.normal)
+            self.FABowlMovementButton.setTitle(bowelMovmentDisplay, for: UIControl.State.normal)
             
             //Drain
             preflight
@@ -1702,7 +1702,7 @@ extension PreFlightViewController
             //Lab Assessment
             if preflight.labNSFCheck {
                 self.nsfButton.isChecked = true
-                self.nsfButton.setImage(#imageLiteral(resourceName: "checked_white"), for: UIControlState.normal)
+                self.nsfButton.setImage(#imageLiteral(resourceName: "checked_white"), for: UIControl.State.normal)
                 self.labAssessmentView.isUserInteractionEnabled = false
             }else{
                 self.LAHBTextField.text = preflight.hb
@@ -1729,18 +1729,18 @@ extension PreFlightViewController
             
             if preflight.pneumocephalus {
                 self.LAPneumocephalusGroupButton[0].isChecked = true
-                self.LAPneumocephalusGroupButton[0].setImage(#imageLiteral(resourceName: "checkmark"), for: UIControlState.normal)
+                self.LAPneumocephalusGroupButton[0].setImage(#imageLiteral(resourceName: "checkmark"), for: UIControl.State.normal)
             }else{
                 self.LAPneumocephalusGroupButton[1].isChecked = true
-                self.LAPneumocephalusGroupButton[1].setImage(#imageLiteral(resourceName: "checkmark"), for: UIControlState.normal)
+                self.LAPneumocephalusGroupButton[1].setImage(#imageLiteral(resourceName: "checkmark"), for: UIControl.State.normal)
             }
             
             if preflight.pneumothorax {
                 self.LAPneumothraxGroupButton[0].isChecked = true
-                self.LAPneumothraxGroupButton[0].setImage(#imageLiteral(resourceName: "checkmark"), for: UIControlState.normal)
+                self.LAPneumothraxGroupButton[0].setImage(#imageLiteral(resourceName: "checkmark"), for: UIControl.State.normal)
             }else{
                 self.LAPneumothraxGroupButton[1].isChecked = true
-                self.LAPneumothraxGroupButton[1].setImage(#imageLiteral(resourceName: "checkmark"), for: UIControlState.normal)
+                self.LAPneumothraxGroupButton[1].setImage(#imageLiteral(resourceName: "checkmark"), for: UIControl.State.normal)
             }
             
         }
@@ -1952,7 +1952,7 @@ extension PreFlightViewController {
         
         alert.addAction(UIAlertAction(title: "Save", style: .default, handler: { [unowned self] (action) -> Void in
             let textField = alert.textFields![0] as UITextField
-            if let data = UIImagePNGRepresentation(pickedImage) {
+            if let data = pickedImage.pngData() {
                 let profile = CustomerSingleton.sharedInstance.customerProfile
                 var imageName = "\(profile.caseId)\(profile.customerId)\(self.randomStringWithLength(len: 16)).png"
                 var id = 0

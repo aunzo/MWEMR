@@ -15,7 +15,7 @@ class UserViewModel: NSObject {
                 try! self.realm.write {
                     let result = self.realm.objects(User.self)
                     self.realm.delete(result)
-                    self.realm.add(model,update: true)
+                    self.realm.add(model,update: .all)
                 }
                 self.change.onCompleted()
                 }, onError: { (error) in

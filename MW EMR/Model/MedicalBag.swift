@@ -15,12 +15,12 @@ class MedicalBag: Object,Mappable {
     @objc dynamic var bag_id = 0
     @objc dynamic var name = ""
     
-    required convenience init?(map: Map) {
+    required convenience init?(map: ObjectMapper.Map) {
         self.init()
     }
     
     // Mappable
-    func mapping(map: Map) {
+    func mapping(map: ObjectMapper.Map) {
         bag_id <- map["BAG_ID"]
         name <- map["BAG_NAME"]
         

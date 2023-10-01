@@ -63,7 +63,7 @@ class SuggestionViewController: UIViewController {
                 
                 for b in button! {
                     if b.tag == score {
-                        b.setImage(UIImage(named: "checkmark"), for: UIControlState.normal)
+                        b.setImage(UIImage(named: "checkmark"), for: UIControl.State.normal)
                     }
                 }
             }
@@ -91,10 +91,10 @@ extension SuggestionViewController {
     @IBAction func personalityClick(sender: AnyObject) {
         for button in personalityGroupButton {
             if button.tag == sender.tag {
-                button.setImage(UIImage(named: "checkmark"), for: UIControlState.normal)
+                button.setImage(UIImage(named: "checkmark"), for: UIControl.State.normal)
                 
             }else{
-                button.setImage(UIImage(named: "nonfilled"), for: UIControlState.normal)
+                button.setImage(UIImage(named: "nonfilled"), for: UIControl.State.normal)
             }
         }
         
@@ -104,9 +104,9 @@ extension SuggestionViewController {
     @IBAction func communicationClick(sender: AnyObject) {
         for button in communicationGroupButton {
             if button.tag == sender.tag {
-                button.setImage(UIImage(named: "checkmark"), for: UIControlState.normal)
+                button.setImage(UIImage(named: "checkmark"), for: UIControl.State.normal)
             }else{
-                button.setImage(UIImage(named: "nonfilled"), for: UIControlState.normal)
+                button.setImage(UIImage(named: "nonfilled"), for: UIControl.State.normal)
             }
         }
         
@@ -116,9 +116,9 @@ extension SuggestionViewController {
     @IBAction func attentivenessClick(sender: AnyObject) {
         for button in attentivenessGroupButton {
             if button.tag == sender.tag {
-                button.setImage(UIImage(named: "checkmark"), for: UIControlState.normal)
+                button.setImage(UIImage(named: "checkmark"), for: UIControl.State.normal)
             }else{
-                button.setImage(UIImage(named: "nonfilled"), for: UIControlState.normal)
+                button.setImage(UIImage(named: "nonfilled"), for: UIControl.State.normal)
             }
         }
         
@@ -128,9 +128,9 @@ extension SuggestionViewController {
     @IBAction func skillClick(sender: AnyObject) {
         for button in skillGroupButton {
             if button.tag == sender.tag {
-                button.setImage(UIImage(named: "checkmark"), for: UIControlState.normal)
+                button.setImage(UIImage(named: "checkmark"), for: UIControl.State.normal)
             }else{
-                button.setImage(UIImage(named: "nonfilled"), for: UIControlState.normal)
+                button.setImage(UIImage(named: "nonfilled"), for: UIControl.State.normal)
             }
         }
         
@@ -140,9 +140,9 @@ extension SuggestionViewController {
     @IBAction func CleanOfMedClick(sender: AnyObject) {
         for button in CleanOfMedGroupButton {
             if button.tag == sender.tag {
-                button.setImage(UIImage(named: "checkmark"), for: UIControlState.normal)
+                button.setImage(UIImage(named: "checkmark"), for: UIControl.State.normal)
             }else{
-                button.setImage(UIImage(named: "nonfilled"), for: UIControlState.normal)
+                button.setImage(UIImage(named: "nonfilled"), for: UIControl.State.normal)
             }
         }
         
@@ -152,9 +152,9 @@ extension SuggestionViewController {
     @IBAction func cleanOfAircarftClick(sender: AnyObject) {
         for button in cleanOfAircarftGroupButton {
             if button.tag == sender.tag {
-                button.setImage(UIImage(named: "checkmark"), for: UIControlState.normal)
+                button.setImage(UIImage(named: "checkmark"), for: UIControl.State.normal)
             }else{
-                button.setImage(UIImage(named: "nonfilled"), for: UIControlState.normal)
+                button.setImage(UIImage(named: "nonfilled"), for: UIControl.State.normal)
             }
         }
         
@@ -164,9 +164,9 @@ extension SuggestionViewController {
     @IBAction func overallClick(sender: AnyObject) {
         for button in overallGroupButton {
             if button.tag == sender.tag {
-                button.setImage(UIImage(named: "checkmark"), for: UIControlState.normal)
+                button.setImage(UIImage(named: "checkmark"), for: UIControl.State.normal)
             }else{
-                button.setImage(UIImage(named: "nonfilled"), for: UIControlState.normal)
+                button.setImage(UIImage(named: "nonfilled"), for: UIControl.State.normal)
             }
         }
         
@@ -189,9 +189,9 @@ extension SuggestionViewController {
         
         
         if sender is UIBarButtonItem || sender is UIButton {
-            let alert = UIAlertController(title: "Completed", message: "Thank you for you suggestion", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: "Completed", message: "Thank you for you suggestion", preferredStyle: UIAlertController.Style.alert)
             
-            alert.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.default, handler: { (alert) in
+            alert.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: { (alert) in
                 
             }))
             
@@ -200,50 +200,50 @@ extension SuggestionViewController {
         
     }
     @IBAction func clearSuggestionClick(sender: AnyObject) {
-        let alert = UIAlertController(title: "Clear Suggestion", message: "Do You want to clear all suggestion?", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.cancel, handler: { (alert) in
+        let alert = UIAlertController(title: "Clear Suggestion", message: "Do You want to clear all suggestion?", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.cancel, handler: { (alert) in
            
         }))
         
-        alert.addAction(UIAlertAction(title: "Clear", style: UIAlertActionStyle.destructive, handler: { (alert) in
+        alert.addAction(UIAlertAction(title: "Clear", style: UIAlertAction.Style.destructive, handler: { (alert) in
             for button in self.personalityGroupButton {
-                button.setImage(UIImage(named: "nonfilled"), for: UIControlState.normal)
+                button.setImage(UIImage(named: "nonfilled"), for: UIControl.State.normal)
             }
             
             
             self.personality.score = 0
             for button in self.communicationGroupButton {
-                button.setImage(UIImage(named: "nonfilled"), for: UIControlState.normal)
+                button.setImage(UIImage(named: "nonfilled"), for: UIControl.State.normal)
             }
             
             
             self.communication.score = 0
             for button in self.attentivenessGroupButton {
-                button.setImage(UIImage(named: "nonfilled"), for: UIControlState.normal)
+                button.setImage(UIImage(named: "nonfilled"), for: UIControl.State.normal)
             }
             
             
             self.attentiveness.score = 0
             for button in self.skillGroupButton {
-                button.setImage(UIImage(named: "nonfilled"), for: UIControlState.normal)
+                button.setImage(UIImage(named: "nonfilled"), for: UIControl.State.normal)
             }
             
             
             self.skill.score = 0
             for button in self.CleanOfMedGroupButton {
-                button.setImage(UIImage(named: "nonfilled"), for: UIControlState.normal)
+                button.setImage(UIImage(named: "nonfilled"), for: UIControl.State.normal)
             }
             
             
             self.CleanOfMed.score = 0
             for button in self.cleanOfAircarftGroupButton {
-                button.setImage(UIImage(named: "nonfilled"), for: UIControlState.normal)
+                button.setImage(UIImage(named: "nonfilled"), for: UIControl.State.normal)
             }
             
             
             self.cleanOfAircarft.score = sender.tag
             for button in self.overallGroupButton {
-                button.setImage(UIImage(named: "nonfilled"), for: UIControlState.normal)
+                button.setImage(UIImage(named: "nonfilled"), for: UIControl.State.normal)
             }
             
             

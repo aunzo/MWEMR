@@ -13,12 +13,12 @@ class Customer: Object,Mappable {
     @objc dynamic var age = 0
     @objc dynamic var isDelete = 0
     
-    required convenience init?(map: Map) {
+    required convenience init?(map: ObjectMapper.Map) {
         self.init()
     }
     
     // Mappable
-    func mapping(map: Map) {
+    func mapping(map: ObjectMapper.Map) {
         customerId <- map["customerId"]
         caseId <- map["caseId"]
         personalId <- map["personalId"]

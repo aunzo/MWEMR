@@ -72,6 +72,7 @@
 #
 # NB: slash on the end, so we only remove the FOLDER, not any files that were badly named "DerivedData"
 
+derivedData/
 DerivedData/
 
 # NB: slash on the end, so we only remove the FOLDER, not any files that were badly named "build"
@@ -260,12 +261,28 @@ fastlane/Preview.html
 # fastlane/screenshots
 
 # scan temporary files
+output
+fastlane/output
+test_output
 fastlane/test_output
 
-/fastlane/FastlaneRunner
+fastlane/FastlaneRunner
 
 ####
 # UNKNOWN: recommended by others, but I can't discover what these files are
 #
 
 *.xcscmblueprint
+
+APIGatewayService/node_modules/
+
+# *.generated.swift
+
+swiftlint.result.junit
+swiftlint.result.xml
+
+/Icon
+
+FailureDiffs
+
+logs/

@@ -116,7 +116,7 @@ class AssessmentViewController: UIViewController {
     }
     
     @IBAction func textFieldEditing(_ sender: TextField) {
-        let mode = UIDatePickerMode.time
+        let mode = UIDatePicker.Mode.time
         let dateFomatter = DateFormatter()
         dateFomatter.locale = Locale(identifier: "en_US")
         dateFomatter.dateFormat = "HH:mm"
@@ -165,9 +165,9 @@ extension AssessmentViewController {
     @IBAction func saveAllAssessment(sender: AnyObject) {
         self.saveAssessmentToLocal()
 
-        let alert = UIAlertController(title: "Save Success", message: "Onboard Assessment has been save.", preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "Save Success", message: "Onboard Assessment has been save.", preferredStyle: UIAlertController.Style.alert)
         
-        alert.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.default, handler: { (alert) in
+        alert.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: { (alert) in
             
         }))
         
@@ -181,10 +181,10 @@ extension AssessmentViewController {
         }
         
         if button.isChecked {
-            button.setImage(UIImage(named: "unchecked"), for: UIControlState.normal)
+            button.setImage(UIImage(named: "unchecked"), for: UIControl.State.normal)
             button.isChecked = false
         }else{
-            button.setImage(UIImage(named: "checked"), for: UIControlState.normal)
+            button.setImage(UIImage(named: "checked"), for: UIControl.State.normal)
             button.isChecked = true
         }
     }
@@ -196,10 +196,10 @@ extension AssessmentViewController {
         }
         
         if button.isChecked {
-            button.setImage(#imageLiteral(resourceName: "unchecked"), for: UIControlState.normal)
+            button.setImage(#imageLiteral(resourceName: "unchecked"), for: UIControl.State.normal)
             button.isChecked = false
         }else{
-            button.setImage(#imageLiteral(resourceName: "checked"), for: UIControlState.normal)
+            button.setImage(#imageLiteral(resourceName: "checked"), for: UIControl.State.normal)
             button.isChecked = true
         }
     }

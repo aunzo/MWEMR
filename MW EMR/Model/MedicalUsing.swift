@@ -14,12 +14,12 @@ class MedicalUsing: Object,Mappable {
     @objc dynamic var amount = 0
     @objc dynamic var note = ""
     
-    required convenience init?(map: Map) {
+    required convenience init?(map: ObjectMapper.Map) {
         self.init()
     }
     
     // Mappable
-    func mapping(map: Map) {
+    func mapping(map: ObjectMapper.Map) {
         id <- map["id"]
         itemId <- map["itemId"]
         barcode <- map["barcode"]

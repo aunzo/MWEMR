@@ -17,7 +17,7 @@ struct Constant {
     static let uploadReport = Constant.mainUrl + "UploadReportFile"
     static let changePassportID = Constant.mainUrl + "UpdatePassport"
     
-//    http://testemr.azurewebsites.net/WSDownLoad/LoadMasterData
+//    http://mwemr.azurewebsites.net/WSDownLoad/LoadMasterData
 //    http://testemr.azurewebsites.net/wSDownLoad/UploadBag/?bagId=1
 //    All Case :
 //    http://testemr.azurewebsites.net/WSDownLoad/LoadCaseDataList

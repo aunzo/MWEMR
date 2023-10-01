@@ -46,18 +46,18 @@ extension ElearningViewController {
     }
     
     @objc func loadData(sender:UIButton){
-        let alert = UIAlertController(title: "Confirm", message: "Do You want to download this elearning?", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: { (alert) in
+        let alert = UIAlertController(title: "Confirm", message: "Do You want to download this elearning?", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: { (alert) in
         }))
         
-        alert.addAction(UIAlertAction(title: "Download", style: UIAlertActionStyle.default, handler: { (alert) in
+        alert.addAction(UIAlertAction(title: "Download", style: UIAlertAction.Style.default, handler: { (alert) in
             self.hud2 = MBProgressHUD.showAdded(to: self.view, animated: true)
             
             self.hud2!.mode = MBProgressHUDMode.determinate
             self.hud2!.labelText = "Downloading"
             self.hud2!.show(true)
-//            self.hud2!.button.setTitle("Cancel", for: UIControlState.normal)
-//            self.hud2!.button.addTarget(self, action: #selector(ElearningViewController.cancelDownloadPDF), for: UIControlEvents.touchUpInside)
+//            self.hud2!.button.setTitle("Cancel", for: UIControl.State.normal)
+//            self.hud2!.button.addTarget(self, action: #selector(ElearningViewController.cancelDownloadPDF), for: UIControl.Event.touchUpInside)
             self.viewModel.downloadToLocal(index: sender.tag).subscribe(onNext: { (progress) in
                 self.hud2!.progress = progress
                     if progress == 1 {
@@ -72,11 +72,11 @@ extension ElearningViewController {
     }
     
     @objc func deleteFile(sender:UIButton) {
-        let alert = UIAlertController(title: "Confirm", message: "Do You want to delete this elearning?", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: { (alert) in
+        let alert = UIAlertController(title: "Confirm", message: "Do You want to delete this elearning?", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: { (alert) in
         }))
         
-        alert.addAction(UIAlertAction(title: "Delete", style: UIAlertActionStyle.destructive, handler: { (alert) in
+        alert.addAction(UIAlertAction(title: "Delete", style: UIAlertAction.Style.destructive, handler: { (alert) in
             self.viewModel.removePdf(index: sender.tag).subscribe(onNext: {
                 self.elearningTableView.reloadData()
                 }, onError: { (error) in
@@ -147,22 +147,22 @@ extension ElearningViewController:UITableViewDataSource {
         
         if self.viewModel.itemIsDownloaded(index: indexPath.row) {
             cell.viewPdfButton.isEnabled = true
-            cell.downloadFileButton.setImage(UIImage(named: "delete"), for: UIControlState.normal)
+            cell.downloadFileButton.setImage(UIImage(named: "delete"), for: UIControl.State.normal)
             cell.viewPdfButton.backgroundColor = UIColor(hexString: "#21529D")
             cell.downloadFileButton.backgroundColor = Material.Color.red.accent3
-            cell.downloadFileButton.removeTarget(self, action: #selector(ElearningViewController.loadData(sender:)), for: UIControlEvents.touchUpInside)
-            cell.downloadFileButton.addTarget(self, action: #selector(ElearningViewController.deleteFile(sender:)), for: UIControlEvents.touchUpInside)
+            cell.downloadFileButton.removeTarget(self, action: #selector(ElearningViewController.loadData(sender:)), for: UIControl.Event.touchUpInside)
+            cell.downloadFileButton.addTarget(self, action: #selector(ElearningViewController.deleteFile(sender:)), for: UIControl.Event.touchUpInside)
         }else{
             cell.viewPdfButton.isEnabled = false
             cell.viewPdfButton.backgroundColor = Material.Color.grey.lighten1
             cell.downloadFileButton.backgroundColor = UIColor(hexString: "#21529D")
-            cell.downloadFileButton.setImage(UIImage(named: "download"), for: UIControlState.normal)
-            cell.downloadFileButton.removeTarget(self, action: #selector(ElearningViewController.deleteFile(sender:)), for: UIControlEvents.touchUpInside)
-            cell.downloadFileButton.addTarget(self, action: #selector(ElearningViewController.loadData(sender:)), for: UIControlEvents.touchUpInside)
+            cell.downloadFileButton.setImage(UIImage(named: "download"), for: UIControl.State.normal)
+            cell.downloadFileButton.removeTarget(self, action: #selector(ElearningViewController.deleteFile(sender:)), for: UIControl.Event.touchUpInside)
+            cell.downloadFileButton.addTarget(self, action: #selector(ElearningViewController.loadData(sender:)), for: UIControl.Event.touchUpInside)
         }
         cell.downloadFileButton.tag = indexPath.row
         cell.viewPdfButton.tag = indexPath.row
-        cell.viewPdfButton.addTarget(self, action: #selector(ElearningViewController.openPDFFile(sender:)), for: UIControlEvents.touchUpInside)
+        cell.viewPdfButton.addTarget(self, action: #selector(ElearningViewController.openPDFFile(sender:)), for: UIControl.Event.touchUpInside)
         
         
         return cell

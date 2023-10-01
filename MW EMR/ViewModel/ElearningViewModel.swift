@@ -87,12 +87,12 @@ class ElearningViewModel {
             let typeFile = obj.path.split(separator: ".").map(String.init).last ?? "pdf"
             obj.file_type = typeFile
             try! realm.write {
-                realm.add(obj,update: true)
+                realm.add(obj,update: .all)
             }
             
             let pathComponent = "\(obj.file_id)_\(obj.name)_\(obj.type_name).\(typeFile)"
             return Observable.create({ (observer) -> Disposable in
-                self.request = Alamofire.download(obj.path, to: { (temporaryURL, response) -> (destinationURL: URL, options: DownloadRequest.DownloadOptions) in
+                self.request = AF.download(obj.path, to: { (temporaryURL, response) -> (destinationURL: URL, options: DownloadRequest.Options) in
                     let fileManager = FileManager.default
                     let directoryURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0]
                     

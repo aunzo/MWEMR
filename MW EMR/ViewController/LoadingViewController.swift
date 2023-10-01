@@ -12,8 +12,8 @@ class LoadingViewController: UIViewController {
         self.masterDataViewModel.load()
         self.masterDataViewModel.change.subscribe(onError: { (error) in
             if !self.masterDataViewModel.checkDataInLocal() {
-                let alertEdit = UIAlertController(title: "Error", message: "No internet connection.\nPleace check your internet.", preferredStyle: UIAlertControllerStyle.alert)
-                alertEdit.addAction(UIAlertAction(title: "Exit", style: UIAlertActionStyle.default, handler: { (alert) in
+                let alertEdit = UIAlertController(title: "Error", message: "No internet connection.\nPleace check your internet.", preferredStyle: UIAlertController.Style.alert)
+                alertEdit.addAction(UIAlertAction(title: "Exit", style: UIAlertAction.Style.default, handler: { (alert) in
                     exit(0)
                 }))
                 
@@ -25,8 +25,8 @@ class LoadingViewController: UIViewController {
             }, onCompleted: {
                 self.userViewModel.load()
                 self.userViewModel.change.subscribe(onError: { (error) in
-                    let alertEdit = UIAlertController(title: "Error", message: "No internet connection.\nPleace check your internet.", preferredStyle: UIAlertControllerStyle.alert)
-                    alertEdit.addAction(UIAlertAction(title: "Exit", style: UIAlertActionStyle.default, handler: { (alert) in
+                    let alertEdit = UIAlertController(title: "Error", message: "No internet connection.\nPleace check your internet.", preferredStyle: UIAlertController.Style.alert)
+                    alertEdit.addAction(UIAlertAction(title: "Exit", style: UIAlertAction.Style.default, handler: { (alert) in
                         exit(0)
                     }))
                     

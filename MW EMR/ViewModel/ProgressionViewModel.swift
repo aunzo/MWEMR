@@ -34,7 +34,7 @@ class ProgressionViewModel {
         let mu = createItem(item: item,action: "update")
         
         try! realm.write {
-            realm.add(mu,update: true)
+            realm.add(mu,update: .all)
         }
         self.change.onCompleted()
     }

@@ -22,12 +22,12 @@ class Progression: Object,Mappable {
     @objc dynamic var tm = ""
     @objc dynamic var remark = ""
     
-    required convenience init?(map: Map) {
+    required convenience init?(map: ObjectMapper.Map) {
         self.init()
     }
     
     // Mappable
-    func mapping(map: Map) {
+    func mapping(map: ObjectMapper.Map) {
         customerId <- map["customerId"]
         caseId <- map["caseId"]
         id <- map["id"]

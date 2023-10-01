@@ -35,11 +35,11 @@ class BagDetailViewController: UIViewController {
         caseViewModel.loadFromLocal()
         if caseViewModel.numberOfItems() == 0 {
             
-            let alert = UIAlertController(title: "Confirm", message: "Do You want sent all item in bag?\nWhen you sent bag has been remove.", preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: { (alert) in
+            let alert = UIAlertController(title: "Confirm", message: "Do You want sent all item in bag?\nWhen you sent bag has been remove.", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: { (alert) in
             }))
             
-            alert.addAction(UIAlertAction(title: "Sent", style: UIAlertActionStyle.destructive, handler: { (alert) in
+            alert.addAction(UIAlertAction(title: "Sent", style: UIAlertAction.Style.destructive, handler: { (alert) in
                 self.viewModel.sendBagToServer(view: self.view).subscribe(onCompleted: {
                     self.dismiss(animated: true, completion: nil)
                 }).disposed(by: self.bag)
@@ -47,8 +47,8 @@ class BagDetailViewController: UIViewController {
             
             self.present(alert, animated: true, completion: nil)
         }else{
-            let alertEdit = UIAlertController(title: "Error", message: "Your can't remove bag. Please clear all case before.", preferredStyle: UIAlertControllerStyle.alert)
-            alertEdit.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.default, handler: { (alert) in
+            let alertEdit = UIAlertController(title: "Error", message: "Your can't remove bag. Please clear all case before.", preferredStyle: UIAlertController.Style.alert)
+            alertEdit.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.default, handler: { (alert) in
                 
             }))
             

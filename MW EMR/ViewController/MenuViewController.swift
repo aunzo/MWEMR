@@ -72,11 +72,11 @@ class MenuViewController: UIViewController {
     
     
     @IBAction func logoutClick(sender: AnyObject) {
-        let alert = UIAlertController(title: "Log out", message: "Do You want to log out?", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: { (alert) in
+        let alert = UIAlertController(title: "Log out", message: "Do You want to log out?", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: { (alert) in
         }))
         
-        alert.addAction(UIAlertAction(title: "Log out", style: UIAlertActionStyle.destructive, handler: { (alert) in
+        alert.addAction(UIAlertAction(title: "Log out", style: UIAlertAction.Style.destructive, handler: { (alert) in
             UserDefaults.standard.set(false, forKey: "isLogined")
             UserDefaults.standard.set(0, forKey: "userAuth")
             UserDefaults.standard.synchronize()
